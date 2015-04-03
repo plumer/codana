@@ -16,3 +16,8 @@ Debian-based:
     python-numpy  \
     python-networkx
 ```
+
+## TODO
+
+Add file-reading-based visualization: 
+needing graph files
