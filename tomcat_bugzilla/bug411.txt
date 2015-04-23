@@ -1,0 +1,62 @@
+Bug #411: Cannot Start Tomcat (Resource Bundle not found) BugRat Report#713
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2001-01-08 10:38 UTC by Tony Chao
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">cmanolache
+        </td>
+        <td rowspan="7" valign="top">2001-03-21 13:23:57 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>713
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1
+  </td><td>Nightly Build
+  </td>
+      </tr>
+  

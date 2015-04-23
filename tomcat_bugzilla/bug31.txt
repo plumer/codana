@@ -1,0 +1,53 @@
+Bug #31: Conversion of log4j Priority types to NT EventLog types not working
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Appender
+Hardware: PC All 
+Importance: P1 minor 
+Version: 1.0 
+Reported: 2001-01-11 16:56 UTC by Jennifer
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-01-11 17:29:02 UTC
+        </td>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-01-11 17:32:56 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

@@ -1,0 +1,58 @@
+Bug #523: nested classpath not possible with taskdef
+
+Status: CLOSED WORKSFORME 
+Product: Ant
+Component: Build Process
+Hardware: PC All 
+Importance: P3 normal
+Version: unspecified 
+Reported: 2001-02-04 23:01 UTC by jtfox 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">conor
+        </td>
+        <td rowspan="4" valign="top">2001-02-05 01:28:02 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>1.2
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-06 04:55:45 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

@@ -1,0 +1,78 @@
+Bug #359: New Feature: basedir not found reports value of basedir BugRat Report#643
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Build Process
+Hardware: All All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-12-20 18:58 UTC by marvin greenberg
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">dfs
+        </td>
+        <td rowspan="7" valign="top">2001-06-08 14:15:16 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Build Process
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>ORO
+  </td><td>Ant
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-06-21 08:23:25 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

@@ -1,0 +1,42 @@
+Bug #525: bean initialization not guaranteed to be complete
+
+Status: RESOLVED LATER 
+Product: Tomcat 3
+Component: Jasper
+Hardware: PC Linux 
+Importance: P1 major
+Version: 3.1 Final 
+Reported: 2001-02-05 05:29 UTC by Mat Diss
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">marc.saegesser
+        </td>
+        <td rowspan="3" valign="top">2001-03-20 12:38:13 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+  

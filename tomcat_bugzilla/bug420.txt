@@ -1,0 +1,95 @@
+Bug #420: dir attribute on \x3cexec\x3e not working BugRat Report#727
+
+Status: CLOSED INVALID 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P1 normal
+Version: 1.2 
+Reported: 2001-01-09 10:31 UTC by Andrew Goodnough
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-02-01 01:51:00 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>727
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 04:06:19 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-02-04 06:46:44 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:05:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

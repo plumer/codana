@@ -1,0 +1,152 @@
+Bug #468: Waiting 1 minute for response after Netscape issue a POST method to Tomcat BugRat Report#794
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 major
+Version: 3.2.3 Final 
+Reported: 2001-01-17 17:51 UTC by test
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">danmil
+        </td>
+        <td rowspan="7" valign="top">2001-02-13 12:41:54 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>794
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2
+  </td><td>3.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-04-22 10:55:24 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="4" valign="top">t-g-p
+        </td>
+        <td rowspan="4" valign="top">2001-05-03 09:36:37 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Major
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>CLOSED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>LATER
+  </td><td>---
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1 Final
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="2" valign="top">2001-09-11 13:23:56 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">jonathon_parker
+        </td>
+        <td rowspan="3" valign="top">2001-10-31 11:27:02 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1 Final
+  </td><td>3.2.3 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-11-07 07:22:39 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

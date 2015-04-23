@@ -1,0 +1,78 @@
+Bug #417: Unable to load class instead of java.lang.NoClassDefFoundError BugRat Report#719
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Jasper
+Hardware: All All 
+Importance: P1 enhancement
+Version: 3.1.1 Final 
+Reported: 2001-01-08 18:27 UTC by shobha
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-03 11:33:07 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>719
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.1.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-17 10:22:45 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

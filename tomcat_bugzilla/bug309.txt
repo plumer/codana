@@ -1,0 +1,62 @@
+Bug #309: startup .bat files use old paths BugRat Report#564
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-10 11:35 UTC by Nasir Noor
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">marc.saegesser
+        </td>
+        <td rowspan="7" valign="top">2001-03-11 13:13:31 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>564
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

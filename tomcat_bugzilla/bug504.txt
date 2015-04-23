@@ -1,0 +1,53 @@
+Bug #504: valid sessions are replaced during forward
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Unknown
+Hardware: PC Linux 
+Importance: P3 normal
+Version: 3.2.1 Final 
+Reported: 2001-01-31 11:59 UTC by J
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">danmil
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 16:22:00 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>craig.mcclanahan
+  </td><td>danmil
+  </td></tr><tr>
+            <td>
+                Summary
+            </td><td>valid sessions are replaced during forward 
+  </td><td>valid sessions are replaced during forward
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">kief
+        </td>
+        <td rowspan="2" valign="top">2001-02-13 01:13:14 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

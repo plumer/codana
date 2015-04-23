@@ -1,0 +1,59 @@
+Bug #512: mod_jk can\'t be loaded from within \x3cVirtualHost\x3e
+
+Status: RESOLVED LATER 
+Product: Tomcat 3
+Component: Config
+Hardware: PC Linux 
+Importance: P3 normal
+Version: 3.2.1 Final 
+Reported: 2001-02-01 16:37 UTC by Jean-Paul Abgrall
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="1" valign="top">jean-paul_abgrall
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 16:42:31 UTC
+        </td>
+            <td>
+                Priority
+            </td><td>
+  </td><td>Medium
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 21:51:33 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>cmanolache
+  </td><td>danmil
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-19 14:38:15 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+  

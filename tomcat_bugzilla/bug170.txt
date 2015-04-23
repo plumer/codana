@@ -1,0 +1,67 @@
+Bug #170: How to reproduce and Known work around doesn\'t get submitted BugRat Report#228
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-10-07 11:34 UTC by Daniel Bruce Lynes
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="8" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="8" valign="top">2001-02-03 11:21:05 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>228
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Bug Report
+  </td><td>Unknown
+  </td>
+      </tr>
+  

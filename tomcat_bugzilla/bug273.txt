@@ -1,0 +1,100 @@
+Bug #273: Request for added functionallity for SqlExec task BugRat Report#514
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P1 enhancement
+Version: 1.2 
+Reported: 2000-12-04 04:15 UTC by Johan Adel
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-02-01 01:43:00 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>514
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 03:56:30 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-07-07 01:00:13 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>ant-dev
+  </td><td>conor
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-07-07 03:24:04 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

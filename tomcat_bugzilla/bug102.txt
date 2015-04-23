@@ -1,0 +1,62 @@
+Bug #102: decoding of URL is never necessary BugRat Report#97
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2000-09-11 06:20 UTC by Bernd Eilers
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">remm
+        </td>
+        <td rowspan="7" valign="top">2001-01-30 13:26:19 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>97
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>current toplevel
+  </td><td>4.0 Beta 1
+  </td>
+      </tr>
+  

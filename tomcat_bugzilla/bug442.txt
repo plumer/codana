@@ -1,0 +1,94 @@
+Bug #442: tomcat dying after some time BugRat Report#760
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2001-01-14 05:17 UTC by Ralf Eichinger
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">cmanolache
+        </td>
+        <td rowspan="7" valign="top">2001-02-15 22:14:23 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>760
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>REMIND
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>3.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-09 15:36:53 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>REMIND
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-09 15:37:34 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

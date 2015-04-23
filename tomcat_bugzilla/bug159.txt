@@ -1,0 +1,94 @@
+Bug #159: xml.jar or parser.jar incompatible with latest Xerces parser BugRat Report#191
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Jasper
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-10-02 15:35 UTC by Marc McDonald
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">nacho
+        </td>
+        <td rowspan="7" valign="top">2001-03-09 14:22:06 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>Justyna.Horwat
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>191
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>tomcat 3.1 and 3
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nacho
+        </td>
+        <td rowspan="2" valign="top">2001-03-09 14:22:37 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nacho
+        </td>
+        <td rowspan="2" valign="top">2001-03-09 14:23:28 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

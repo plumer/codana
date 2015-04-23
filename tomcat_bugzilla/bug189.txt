@@ -1,0 +1,57 @@
+Bug #189: Session BugRat Report#275
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Jasper
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-10-18 07:39 UTC by Tomcat Alias
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">marc.saegesser
+        </td>
+        <td rowspan="6" valign="top">2001-03-07 16:50:04 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>275
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

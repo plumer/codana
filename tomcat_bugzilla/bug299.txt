@@ -1,0 +1,62 @@
+Bug #299: upgraded b7--\x3eb8, Tomcat hags. Conditions hard to identify BugRat Report#552
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-07 14:28 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">nacho
+        </td>
+        <td rowspan="7" valign="top">2001-03-09 22:03:57 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>552
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2b8
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

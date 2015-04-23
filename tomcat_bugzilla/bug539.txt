@@ -1,0 +1,42 @@
+Bug #539: Access Interceptor bug
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Auth
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2001-02-07 00:53 UTC by dcernahoschi 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">nacho
+        </td>
+        <td rowspan="3" valign="top">2001-03-09 14:58:03 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

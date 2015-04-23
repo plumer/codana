@@ -1,0 +1,69 @@
+Bug #324: Pattern Matching with or\'s isn\'t correct BugRat Report#589
+
+Status: CLOSED INVALID 
+Product: ORO
+Component: Main
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-12-13 11:28 UTC by Chris Gruwier
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">dfs
+        </td>
+        <td rowspan="3" valign="top">2001-06-08 14:08:29 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>oro-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">dfs
+        </td>
+        <td rowspan="2" valign="top">2001-06-08 14:11:00 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">dfs
+        </td>
+        <td rowspan="1" valign="top">2001-06-08 14:12:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

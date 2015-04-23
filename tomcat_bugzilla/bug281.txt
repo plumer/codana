@@ -1,0 +1,94 @@
+Bug #281: Reloadable WAR Archives BugRat Report#525
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P5 enhancement
+Version: 3.3.x Nightly 
+Reported: 2000-12-05 10:24 UTC by Sean Blaes
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-03 11:22:42 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>525
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>High
+  </td><td>Low
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Future
+  </td><td>Nightly Build
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-03-07 15:20:33 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-22 08:58:50 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.x Nightly Bu
+  </td><td>3.3.x Nightly Bu
+  </td>
+      </tr>
+  

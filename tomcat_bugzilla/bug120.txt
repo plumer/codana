@@ -1,0 +1,62 @@
+Bug #120: StopTomcat.java has \"localhost\" hardcoded BugRat Report#128
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2000-09-16 15:34 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">cmanolache
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 23:30:58 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>128
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2b4
+  </td><td>Nightly Build
+  </td>
+      </tr>
+  

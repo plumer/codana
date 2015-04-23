@@ -1,0 +1,62 @@
+Bug #446: The size of jasper.log can\'t be configured ?! BugRat Report#767
+
+Status: RESOLVED WONTFIX 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2001-01-15 05:57 UTC by Reinhard Schick
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">cmanolache
+        </td>
+        <td rowspan="7" valign="top">2001-02-15 22:04:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>767
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

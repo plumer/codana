@@ -1,0 +1,143 @@
+Bug #413: ant exec command fails with jdk1.3 BugRat Report#715
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P1 normal
+Version: 1.2 
+Reported: 2001-01-08 14:11 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-02-01 01:50:52 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>715
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 04:05:55 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nico
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 15:54:45 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-03-15 05:33:57 UTC
+        </td>
+            <td>
+                OS
+            </td><td>All
+  </td><td>Windows NT/2K
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-07-07 16:18:31 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">lalehbaheri
+        </td>
+        <td rowspan="2" valign="top">2002-03-14 22:51:01 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>REOPENED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">steve_l
+        </td>
+        <td rowspan="2" valign="top">2002-03-18 08:04:30 UTC
+        </td>
+            <td>
+                Status
+            </td><td>REOPENED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

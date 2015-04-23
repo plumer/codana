@@ -1,0 +1,105 @@
+Bug #353: ClassLoader fails to load org.w3c.dom.Document when using junit BugRat Report#633
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Core
+Hardware: All All 
+Importance: P1 normal
+Version: 1.2 
+Reported: 2000-12-20 05:00 UTC by Anders Janmyr
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">pier
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 01:45:37 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>633
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Ant version 1.2
+  </td><td>1.2
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 04:01:59 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-02-15 06:34:48 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-03-15 05:21:26 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

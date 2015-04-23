@@ -1,0 +1,105 @@
+Bug #439: Cannot use custom tags, illegalAccessError BugRat Report#755
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2001-01-12 13:31 UTC by Thomas Gideon
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">y.hackl
+        </td>
+        <td rowspan="6" valign="top">2001-03-05 07:21:37 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>y.hackl
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>755
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>Unknown
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-07 16:54:02 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">y.hackl
+        </td>
+        <td rowspan="2" valign="top">2001-03-08 01:47:00 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>WORKSFORME
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="2" valign="top">2001-09-11 19:38:09 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

@@ -1,0 +1,89 @@
+Bug #395: Character encoding in request.getParameter() BugRat Report#689
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2001-01-02 14:19 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-05-20 19:16:58 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>Larry.Isaacs
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>SAPI
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>Unknown
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">maskitit
+        </td>
+        <td rowspan="2" valign="top">2001-05-24 16:37:51 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-06-19 22:39:08 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

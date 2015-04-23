@@ -1,0 +1,47 @@
+Bug #540: error in examples and documentation
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Servlet
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2001-02-07 07:08 UTC by Yuri Dumchikov
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">marc.saegesser
+        </td>
+        <td rowspan="4" valign="top">2001-02-12 11:36:57 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

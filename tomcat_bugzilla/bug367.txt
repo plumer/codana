@@ -1,0 +1,62 @@
+Bug #367: Incorrect HTTP header returns source file (jsp) BugRat Report#653
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-22 07:51 UTC by Manoel Sa
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="7" valign="top">2001-02-21 12:20:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>653
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>tomcat 3.2.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

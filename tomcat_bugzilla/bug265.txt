@@ -1,0 +1,62 @@
+Bug #265: mod_jk gets in an infinite loop when client does not send content-length # of bytes to server BugRat Report#469
+
+Status: RESOLVED DUPLICATE of 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2000-11-28 13:05 UTC by Brian Vetter
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">bjv
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 13:47:36 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>469
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2b6
+  </td><td>3.2 Final
+  </td>
+      </tr>
+  

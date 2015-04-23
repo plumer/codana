@@ -1,0 +1,62 @@
+Bug #150: valueUnbound not getting called on server shutdown BugRat Report#175
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2000-09-27 22:48 UTC by Michael P. McCutcheon
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">marc.saegesser
+        </td>
+        <td rowspan="7" valign="top">2001-03-05 10:37:48 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>175
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2 B4
+  </td><td>3.2 Final
+  </td>
+      </tr>
+  

@@ -1,0 +1,62 @@
+Bug #394: Classes not in WEB-INF\/classes not recognized as a Servlet (followup to Bug 604) BugRat Report#688
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Milestone 5 
+Reported: 2001-01-02 13:49 UTC by Mayank Shah
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-06 17:05:28 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>688
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>M5
+  </td><td>4.0 Milestone 5
+  </td>
+      </tr>
+  

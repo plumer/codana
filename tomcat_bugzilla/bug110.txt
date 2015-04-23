@@ -1,0 +1,78 @@
+Bug #110: JCE 1.2.1 support is not handled correctly BugRat Report#116
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1.1 Final 
+Reported: 2000-09-14 08:36 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">nacho
+        </td>
+        <td rowspan="7" valign="top">2001-03-09 17:04:08 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>Larry.Isaacs
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>116
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.1.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="2" valign="top">2001-09-10 19:10:19 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

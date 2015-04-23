@@ -1,0 +1,78 @@
+Bug #335: Servlet works on M4 but on M5 the following exception is thrown. javax.servlet.ServletException: Class mydomain.servlets.util.RequestManagerServlet is not a Servlet BugRat Report#604
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Milestone 5 
+Reported: 2000-12-17 17:35 UTC by Mayank Shah
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-03 16:34:30 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>craig.mcclanahan
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>604
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>M5
+  </td><td>4.0 Milestone 5
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="2" valign="top">2001-02-21 10:55:13 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

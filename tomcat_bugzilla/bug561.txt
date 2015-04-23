@@ -1,0 +1,47 @@
+Bug #561: org.apache.jasper.JasperException: Unable to compile class for JSPerror: Can\'t write:
+
+Status: RESOLVED WONTFIX 
+Product: Tomcat 3
+Component: Jasper
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2001-02-09 06:42 UTC by cvoelker 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">marc.saegesser
+        </td>
+        <td rowspan="4" valign="top">2001-02-14 08:00:18 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+  

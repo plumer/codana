@@ -1,0 +1,99 @@
+Bug #196: WAR deplyment enhancement BugRat Report#290
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P1 enhancement
+Version: 3.2.1 Final 
+Reported: 2000-10-20 16:07 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">marc.saegesser
+        </td>
+        <td rowspan="7" valign="top">2001-03-08 14:16:36 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>290
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">cmanolache
+        </td>
+        <td rowspan="3" valign="top">2001-04-21 15:37:07 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>LATER
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-21 18:08:54 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

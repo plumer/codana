@@ -1,0 +1,73 @@
+Bug #310: Labels in jspc.bat and jasper.bat should not have more than 8 chars BugRat Report#566
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2000-12-11 09:37 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="6" valign="top">2001-02-03 11:27:10 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>566
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 4
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>4.01
+  </td><td>4.0 Beta 1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="2" valign="top">2001-02-06 16:47:04 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

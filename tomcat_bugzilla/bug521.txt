@@ -1,0 +1,37 @@
+Bug #521: Jsp file generating CLASSNOT FOUND exception during compliation
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Jasper
+Hardware: Sun Solaris 
+Importance: P1 blocker
+Version: 3.2 Final 
+Reported: 2001-02-03 12:08 UTC by Jean
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-20 14:21:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

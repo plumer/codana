@@ -1,0 +1,73 @@
+Bug #83: the init() function may be called twice BugRat Report#50
+
+Status: RESOLVED WONTFIX 
+Product: Tomcat 3
+Component: Jasper
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2000-08-29 15:04 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-03 17:38:54 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>50
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">nacho
+        </td>
+        <td rowspan="1" valign="top">2001-05-21 07:50:14 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>tomcat-dev
+  </td>
+      </tr>
+  

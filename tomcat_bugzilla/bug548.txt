@@ -1,0 +1,112 @@
+Bug #548: DOMParser namespaces feature defaults to true
+
+Status: CLOSED FIXED 
+Product: Xerces-J
+Component: Core
+Hardware: PC All 
+Importance: P1 normal 
+Version: unspecified 
+Reported: 2001-02-08 06:24 UTC by robert.onslow 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">neilg
+        </td>
+        <td rowspan="3" valign="top">2001-03-19 10:43:05 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>ASSIGNED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">mhuffman
+        </td>
+        <td rowspan="2" valign="top">2001-06-04 09:02:11 UTC
+        </td>
+            <td>
+                Status
+            </td><td>ASSIGNED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">mhuffman
+        </td>
+        <td rowspan="1" valign="top">2001-06-04 09:04:00 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">hauser
+        </td>
+        <td rowspan="2" valign="top">2003-10-13 14:20:30 UTC
+        </td>
+            <td>
+                Status
+            </td><td>CLOSED
+  </td><td>REOPENED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">hauser
+        </td>
+        <td rowspan="2" valign="top">2003-10-13 14:21:35 UTC
+        </td>
+            <td>
+                Status
+            </td><td>REOPENED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">hauser
+        </td>
+        <td rowspan="1" valign="top">2003-10-13 14:22:18 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

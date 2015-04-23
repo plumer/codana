@@ -1,0 +1,47 @@
+Bug #506: JspC relative taglib URI not resolved correctly
+
+Status: RESOLVED LATER 
+Product: Tomcat 3
+Component: Jasper
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2001-01-31 18:47 UTC by Ken Chan
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">marc.saegesser
+        </td>
+        <td rowspan="4" valign="top">2001-02-12 20:00:50 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+  

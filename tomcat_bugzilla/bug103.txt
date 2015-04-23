@@ -1,0 +1,68 @@
+Bug #103: decoding of URL is never necessary BugRat Report#98
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-09-11 06:29 UTC by Bernd Eilers
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="5" valign="top">2001-02-03 11:47:33 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>98
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-02-23 16:05:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

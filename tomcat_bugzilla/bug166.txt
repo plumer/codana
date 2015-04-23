@@ -1,0 +1,73 @@
+Bug #166: conf\/wrapper.properties seems to lack jar descriptions BugRat Report#217
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-10-05 05:35 UTC by AKIMOTO, Hiroki
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">marc.saegesser
+        </td>
+        <td rowspan="7" valign="top">2001-03-05 16:25:30 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>217
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2 Beta4
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-09-27 12:49:42 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

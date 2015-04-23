@@ -1,0 +1,62 @@
+Bug #344: TcpEndpoint stops running after encountering SocketException on accept() BugRat Report#618
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2000-12-19 03:34 UTC by Martin Pihlak
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">marc.saegesser
+        </td>
+        <td rowspan="7" valign="top">2001-03-21 11:34:23 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>618
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.2 Final
+  </td>
+      </tr>
+  

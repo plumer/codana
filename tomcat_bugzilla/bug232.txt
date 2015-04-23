@@ -1,0 +1,68 @@
+Bug #232: tomcat.sh needs to handle start_msg and stop_msg args for System V style init scripts BugRat Report#369
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Unknown
+Hardware: HP All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-11-10 10:23 UTC by Mark Norman
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">marc.saegesser
+        </td>
+        <td rowspan="6" valign="top">2001-03-09 12:23:14 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>369
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-04-22 08:55:36 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

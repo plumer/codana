@@ -1,0 +1,62 @@
+Bug #315: setting \x3cerror-page\x3e\x3clocation\x3e to an html file causes a stack overflow BugRat Report#573
+
+Status: RESOLVED DUPLICATE of 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-12 08:46 UTC by Kief Morris
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">nacho
+        </td>
+        <td rowspan="7" valign="top">2001-03-11 15:16:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>573
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2 final
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

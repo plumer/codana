@@ -1,0 +1,42 @@
+Bug #67: request.getInputStream() returns an empty stream(?)
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Servlet
+Hardware: PC All 
+Importance: P1 blocker
+Version: 3.2.1 Final 
+Reported: 2001-01-26 08:06 UTC by Tomas Lapienis
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">tomlap
+        </td>
+        <td rowspan="3" valign="top">2001-01-26 11:53:31 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

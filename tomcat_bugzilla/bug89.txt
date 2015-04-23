@@ -1,0 +1,94 @@
+Bug #89: URLs changed by mod_rewrite are not taken into account by AjpConnectionHandler BugRat Report#64
+
+Status: RESOLVED WONTFIX 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2000-09-01 19:28 UTC by Jean-Paul Abgrall
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">danmil
+        </td>
+        <td rowspan="7" valign="top">2001-02-04 11:01:02 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>danmil
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>64
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>tomcat 3.1
+  </td><td>3.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">jp
+        </td>
+        <td rowspan="2" valign="top">2001-07-30 00:20:31 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-08-25 16:45:28 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+  

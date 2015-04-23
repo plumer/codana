@@ -1,0 +1,73 @@
+Bug #342: \x3cjsp:param\x3e tag produces \x3cEMBED\x3e applet parameter value without double quotes BugRat Report#616
+
+Status: RESOLVED DUPLICATE of 
+Product: Tomcat 3
+Component: Jasper
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1.1 Final 
+Reported: 2000-12-18 16:23 UTC by Jeffrey M. Metcalf
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="6" valign="top">2001-02-03 11:28:45 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>616
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.1.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nacho
+        </td>
+        <td rowspan="2" valign="top">2001-03-11 14:23:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td>
+      </tr>
+  

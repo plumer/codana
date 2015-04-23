@@ -1,0 +1,94 @@
+Bug #97: If \'default servlet\' defined, I can\'t refer to static resources (images, stylesheets) BugRat Report#87
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Auth
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1.1 Final 
+Reported: 2000-09-08 03:03 UTC by Maxim Omelianenko
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-03 17:55:21 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Auth
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>87
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.1.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">huegen
+        </td>
+        <td rowspan="2" valign="top">2001-08-17 07:46:52 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>WORKSFORME
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="2" valign="top">2001-09-10 18:38:09 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

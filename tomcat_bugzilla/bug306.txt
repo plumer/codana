@@ -1,0 +1,95 @@
+Bug #306: Why is the RE class not Serializable? BugRat Report#559
+
+Status: CLOSED DUPLICATE of 
+Product: Regexp
+Component: Other
+Hardware: All All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-12-09 01:11 UTC by Carlos Bueno
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">nacho
+        </td>
+        <td rowspan="5" valign="top">2001-05-21 07:52:48 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Regexp
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">gholam
+        </td>
+        <td rowspan="2" valign="top">2001-09-08 15:40:38 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>ASSIGNED
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">vgritsenko
+        </td>
+        <td rowspan="2" valign="top">2003-04-25 17:54:17 UTC
+        </td>
+            <td>
+                Status
+            </td><td>ASSIGNED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">vgritsenko
+        </td>
+        <td rowspan="1" valign="top">2003-05-02 01:08:38 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

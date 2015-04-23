@@ -1,0 +1,78 @@
+Bug #471: Problem using jk_nt_service (with a blank space in tomcat_home directory path) BugRat Report#797
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Connectors
+Hardware: PC All 
+Importance: P5 minor
+Version: 3.2 Final 
+Reported: 2001-01-17 19:40 UTC by Amit Sarkar
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="8" valign="top">cmanolache
+        </td>
+        <td rowspan="8" valign="top">2001-03-07 12:53:18 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Minor
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>797
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>High
+  </td><td>Low
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2
+  </td><td>3.2 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2002-10-02 18:37:35 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

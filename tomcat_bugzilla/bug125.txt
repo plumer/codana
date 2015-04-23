@@ -1,0 +1,58 @@
+Bug #125: jakarta-oro (Perl5) regexp classes: MULTILINE_MASK seems to ignore multiline ^ BugRat Report#134
+
+Status: CLOSED FIXED 
+Product: ORO
+Component: Main
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-09-18 15:15 UTC by JMB
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">dfs
+        </td>
+        <td rowspan="4" valign="top">2001-06-08 13:57:26 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">dfs
+        </td>
+        <td rowspan="1" valign="top">2001-06-08 13:58:34 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

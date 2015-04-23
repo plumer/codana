@@ -1,0 +1,47 @@
+Bug #532: JDBCRealm auth fails using interbase interclient
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Auth
+Hardware: PC All 
+Importance: P3 major
+Version: 3.2.1 Final 
+Reported: 2001-02-05 16:44 UTC by labiance 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="4" valign="top">2001-02-05 18:20:17 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>tomcat-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

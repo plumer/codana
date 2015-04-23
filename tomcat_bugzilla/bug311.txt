@@ -1,0 +1,62 @@
+Bug #311: Form based authentication gives 404 - File not found error. BugRat Report#568
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Auth
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-12 05:54 UTC by Allan Schweitz
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">nacho
+        </td>
+        <td rowspan="7" valign="top">2001-03-11 14:57:32 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Auth
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>568
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

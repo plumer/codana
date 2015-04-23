@@ -1,0 +1,57 @@
+Bug #499: web.xml broken. Jikes compilation broken. BugRat Report#834
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Servlet
+Hardware: Sun All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2001-01-24 11:22 UTC by Tim Taylor
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">cmanolache
+        </td>
+        <td rowspan="6" valign="top">2001-02-01 11:41:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>834
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

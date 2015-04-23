@@ -1,0 +1,83 @@
+Bug #434: java.io.IOException shouldn\'t be imported BugRat Report#748
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Jasper
+Hardware: All All 
+Importance: P1 major
+Version: 3.2.x Nightly 
+Reported: 2001-01-11 22:27 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="6" valign="top">2001-02-03 11:34:11 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>748
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="4" valign="top">cmanolache
+        </td>
+        <td rowspan="4" valign="top">2001-03-09 14:27:51 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Major
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1 Final
+  </td><td>Nightly Build
+  </td>
+      </tr>
+  

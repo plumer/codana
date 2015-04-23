@@ -1,0 +1,111 @@
+Bug #559: Error when using ForTag
+
+Status: CLOSED INVALID 
+Product: Taglibs
+Component: Unknown Taglib
+Hardware: Other All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2001-02-09 04:23 UTC by Lee Ball
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">pier
+        </td>
+        <td rowspan="4" valign="top">2001-05-20 19:37:32 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Utility
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Taglibs
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>PC
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>unspecified
+  </td><td>Unknown
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">nacho
+        </td>
+        <td rowspan="3" valign="top">2001-05-21 07:33:08 UTC
+        </td>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Taglibs
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">glenn
+        </td>
+        <td rowspan="3" valign="top">2002-04-04 19:54:05 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Unknown Taglib
+  </td><td>Utility Taglib
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">glenn
+        </td>
+        <td rowspan="1" valign="top">2002-04-04 19:54:19 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">glenn
+        </td>
+        <td rowspan="1" valign="top">2002-12-01 23:41:56 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Utility Taglib
+  </td><td>Unknown Taglib
+  </td>
+      </tr>
+  

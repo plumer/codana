@@ -1,0 +1,47 @@
+Bug #572: Invalid regular expression causes NullPointerException
+
+Status: RESOLVED FIXED 
+Product: Xerces-J
+Component: Schema-Datatypes
+Hardware: PC All 
+Importance: P1 normal 
+Version: unspecified 
+Reported: 2001-02-11 05:07 UTC by James Clark
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">elena
+        </td>
+        <td rowspan="4" valign="top">2001-03-12 12:08:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

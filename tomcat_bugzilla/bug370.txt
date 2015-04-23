@@ -1,0 +1,133 @@
+Bug #370: exec and execon tasks ignore dir BugRat Report#658
+
+Status: RESOLVED WORKSFORME 
+Product: Ant
+Component: Core tasks
+Hardware: PC All 
+Importance: P1 normal
+Version: 1.2 
+Reported: 2000-12-22 15:49 UTC by CJ Holmes
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">pier
+        </td>
+        <td rowspan="5" valign="top">2001-02-01 01:45:59 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>658
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 04:02:33 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-02-15 06:37:52 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:03:24 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">lee.murray
+        </td>
+        <td rowspan="2" valign="top">2001-03-07 15:35:55 UTC
+        </td>
+            <td>
+                Status
+            </td><td>CLOSED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>WORKSFORME
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">lee.murray
+        </td>
+        <td rowspan="1" valign="top">2001-03-07 15:37:57 UTC
+        </td>
+            <td>
+                Hardware
+            </td><td>Macintosh
+  </td><td>PC
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nico
+        </td>
+        <td rowspan="2" valign="top">2001-07-07 09:43:30 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

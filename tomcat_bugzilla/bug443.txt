@@ -1,0 +1,90 @@
+Bug #443: incomplete classpath when running from BugRat Report#761
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2001-01-14 15:44 UTC by Victor Wynnytsky
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">cmanolache
+        </td>
+        <td rowspan="7" valign="top">2001-02-15 22:09:50 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>761
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>Nightly Build
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bjw
+        </td>
+        <td rowspan="1" valign="top">2013-02-06 08:01:54 UTC
+        </td>
+            <td>
+                Depends on
+            </td><td>
+  </td><td><a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - mod_ssl should allow to disable ssl compression"
+   href="show_bug.cgi?id=53219">53219</a>
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">reed
+        </td>
+        <td rowspan="1" valign="top">2013-02-06 08:07:57 UTC
+        </td>
+            <td>
+                Depends on
+            </td><td><a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED FIXED - mod_ssl should allow to disable ssl compression"
+   href="show_bug.cgi?id=53219">53219</a>
+  </td><td>
+  </td>
+      </tr>
+  

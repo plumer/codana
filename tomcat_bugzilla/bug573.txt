@@ -1,0 +1,47 @@
+Bug #573: Java Security: sealing exception
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Catalina
+Hardware: PC All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2001-02-11 07:24 UTC by Jean-Fran
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="4" valign="top">2001-02-21 11:05:38 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

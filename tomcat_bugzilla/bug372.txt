@@ -1,0 +1,73 @@
+Bug #372: examples\/ShowSource always reports \"Invalid JSP file\" due to logic error in ShowSource.java BugRat Report#661
+
+Status: RESOLVED FIXED 
+Product: Tomcat 5
+Component: Jasper
+Hardware: PC FreeBSD 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-12-22 23:19 UTC by Tony Robertson
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">marc.saegesser
+        </td>
+        <td rowspan="4" valign="top">2001-06-14 08:26:25 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="4" valign="top">michal.grudzien
+        </td>
+        <td rowspan="4" valign="top">2006-09-19 09:03:15 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>All
+  </td><td>FreeBSD
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Tomcat 5
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>All
+  </td><td>PC
+  </td>
+      </tr>
+  

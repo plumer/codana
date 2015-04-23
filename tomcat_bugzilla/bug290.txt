@@ -1,0 +1,105 @@
+Bug #290: It would be a nice feature to be able to include build files. BugRat Report#537
+
+Status: CLOSED WORKSFORME 
+Product: Ant
+Component: Core
+Hardware: All All 
+Importance: P1 enhancement
+Version: 1.2 
+Reported: 2000-12-06 09:05 UTC by Zack Grossbart
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">pier
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 01:45:03 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>537
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>NA
+  </td><td>1.2
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 03:57:06 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-02-15 06:45:34 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:03:11 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

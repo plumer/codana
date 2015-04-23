@@ -1,0 +1,78 @@
+Bug #171: Auto xfer of DocBase info from server.xml to tomcat-apache.conf is not accurate BugRat Report#229
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Config
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1.1 Final 
+Reported: 2000-10-08 23:36 UTC by Nasir Noor
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">nacho
+        </td>
+        <td rowspan="7" valign="top">2001-03-09 14:27:37 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>cmanolache
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>229
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.1.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="2" valign="top">2001-05-02 20:37:49 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

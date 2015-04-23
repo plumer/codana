@@ -1,0 +1,37 @@
+Bug #526: ajp13 hangs with multipart\/form-data e.g. HTTP upload
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Connectors
+Hardware: PC Linux 
+Importance: P3 normal
+Version: 3.2.1 Final 
+Reported: 2001-02-05 07:16 UTC by Martin Algesten
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">danmil
+        </td>
+        <td rowspan="2" valign="top">2001-02-05 13:34:47 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

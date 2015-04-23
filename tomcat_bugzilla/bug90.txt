@@ -1,0 +1,68 @@
+Bug #90: Get Unable to compile class for JSPerror: Can\'t read: JasperException compiling SECOND jsp page BugRat Report#66
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Jasper
+Hardware: Sun All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2000-09-02 17:31 UTC by Todd Eisemann
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="5" valign="top">2001-02-03 11:10:08 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>66
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>jasper
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1 ???
+  </td><td>3.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-02-22 19:16:44 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

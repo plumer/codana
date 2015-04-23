@@ -1,0 +1,42 @@
+Bug #520: Nonfatal internal JIT (3.10.107(x)) error \'Relocation error: NULL relocation target\'
+
+Status: RESOLVED INVALID 
+Product: Tomcat 4
+Component: Catalina
+Hardware: PC All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2001-02-02 16:28 UTC by Phil Welch
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="3" valign="top">2001-02-02 16:30:21 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

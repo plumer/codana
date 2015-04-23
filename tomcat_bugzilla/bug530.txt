@@ -1,0 +1,53 @@
+Bug #530: problem with HTML form data upload (via HTTP POST) to a JSP
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Unknown
+Hardware: PC All 
+Importance: P1 major
+Version: 3.2.1 Final 
+Reported: 2001-02-05 11:19 UTC by Brent Boyer
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">marc.saegesser
+        </td>
+        <td rowspan="3" valign="top">2001-03-20 14:42:26 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-04-22 11:48:53 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

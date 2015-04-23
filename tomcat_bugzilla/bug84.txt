@@ -1,0 +1,62 @@
+Bug #84: Tomcat server won\'t start with strange char\'s in pathname BugRat Report#51
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Auth
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2000-08-30 03:59 UTC by Alex den Heijer
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="7" valign="top">2001-02-21 11:06:06 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Auth
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>51
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.1 Final
+  </td>
+      </tr>
+  

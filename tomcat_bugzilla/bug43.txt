@@ -1,0 +1,37 @@
+Bug #43: appletviewer\/Category bug
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Other
+Hardware: PC All 
+Importance: P3 major 
+Version: 1.0 
+Reported: 2001-01-21 18:15 UTC by Timur Zambalayev
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-01-22 05:21:24 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

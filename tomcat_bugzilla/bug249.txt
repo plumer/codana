@@ -1,0 +1,111 @@
+Bug #249: Copy command is not case retentive BugRat Report#401
+
+Status: RESOLVED WONTFIX 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P1 normal
+Version: 1.2 
+Reported: 2000-11-16 19:10 UTC by Jonathan Keller
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-02-01 01:42:45 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>401
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 03:55:09 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nico
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 14:56:28 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-03-15 05:18:53 UTC
+        </td>
+            <td>
+                OS
+            </td><td>All
+  </td><td>Windows NT/2K
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-06-21 08:16:34 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+  

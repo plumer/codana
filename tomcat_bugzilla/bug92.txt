@@ -1,0 +1,68 @@
+Bug #92: request.getSession() fails when followed by RequestDispatcher.include() BugRat Report#68
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Servlet
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2000-09-05 05:59 UTC by Lamberton
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">marc.saegesser
+        </td>
+        <td rowspan="6" valign="top">2001-02-23 15:29:28 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>68
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2 beta 3
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">Larry.Isaacs
+        </td>
+        <td rowspan="1" valign="top">2001-02-23 17:46:26 UTC
+        </td>
+            <td>
+                Version
+            </td><td>3.2.1 Final
+  </td><td>3.1 Final
+  </td>
+      </tr>
+  

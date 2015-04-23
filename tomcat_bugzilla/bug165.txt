@@ -1,0 +1,111 @@
+Bug #165: Unable to rmic (compile) inner classes using the \'$\' notation. BugRat Report#211
+
+Status: CLOSED WORKSFORME 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P1 critical
+Version: unspecified 
+Reported: 2000-10-04 13:25 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">pier
+        </td>
+        <td rowspan="5" valign="top">2001-02-01 01:38:07 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>211
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2b6
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">pier
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 01:41:20 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 03:52:51 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Critical
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">nico
+        </td>
+        <td rowspan="2" valign="top">2001-02-04 07:09:25 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:01:01 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

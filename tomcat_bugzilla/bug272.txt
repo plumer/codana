@@ -1,0 +1,83 @@
+Bug #272: BugRat Report#512
+
+Status: CLOSED INVALID 
+Product: Ant
+Component: Other
+Hardware: All All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-12-01 00:00 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="9" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="9" valign="top">2001-02-03 11:51:10 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>512
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>
+  </td><td>Ant
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td></tr><tr>
+            <td>
+                Summary
+            </td><td> BugRat Report#512
+  </td><td>BugRat Report#512
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:02:35 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

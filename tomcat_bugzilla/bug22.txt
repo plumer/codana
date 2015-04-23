@@ -1,0 +1,69 @@
+Bug #22: Need hooks for user-defined error handling
+
+Status: CLOSED WONTFIX 
+Product: Apache httpd-2
+Component: All
+Hardware: All All 
+Importance: P5 enhancement
+Version: 2.0-HEAD 
+Reported: 2001-01-09 15:53 UTC by Robin Green
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">vgritsenko
+        </td>
+        <td rowspan="2" valign="top">2003-06-28 15:44:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">vgritsenko
+        </td>
+        <td rowspan="1" valign="top">2003-06-28 15:44:47 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">fifa66
+        </td>
+        <td rowspan="3" valign="top">2004-11-24 01:47:00 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Miscellaneous
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Cocoon 1
+  </td><td>Apache httpd-2.0
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>1.8.1-dev
+  </td><td>2.0-HEAD
+  </td>
+      </tr>
+  

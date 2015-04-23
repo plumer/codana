@@ -1,0 +1,37 @@
+Bug #522: Resources Implementation Logs Too Many Exceptions
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P3 normal
+Version: Nightly Build 
+Reported: 2001-02-03 17:56 UTC by Craig McClanahan
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">remm
+        </td>
+        <td rowspan="2" valign="top">2001-02-06 18:52:38 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

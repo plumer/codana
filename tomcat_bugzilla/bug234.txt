@@ -1,0 +1,131 @@
+Bug #234: Can\'t set multiple cookies in servlet response headers through Ajp13 BugRat Report#371
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Servlet &amp; JSP API
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0.1 Final 
+Reported: 2000-11-10 22:47 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">danmil
+        </td>
+        <td rowspan="7" valign="top">2001-02-02 13:54:47 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>371
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2 beta 6
+  </td><td>Nightly Build
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">milos
+        </td>
+        <td rowspan="3" valign="top">2002-09-26 15:53:21 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Connectors
+  </td><td>Servlet &amp; JSP API
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Tomcat 4
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.x Nightly
+  </td><td>4.0.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">webmaster
+        </td>
+        <td rowspan="2" valign="top">2003-06-16 16:14:01 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">mvanr
+        </td>
+        <td rowspan="2" valign="top">2003-06-26 09:56:46 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>0
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">medthomas
+        </td>
+        <td rowspan="2" valign="top">2003-08-28 21:49:07 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

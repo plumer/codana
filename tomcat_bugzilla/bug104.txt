@@ -1,0 +1,67 @@
+Bug #104: Add do not decode description to getRequestURI BugRat Report#99
+
+Status: RESOLVED DUPLICATE of 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-09-11 06:43 UTC by Bernd Eilers
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="8" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="8" valign="top">2001-02-03 11:48:42 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>99
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>SAPI
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>Unknown
+  </td>
+      </tr>
+  

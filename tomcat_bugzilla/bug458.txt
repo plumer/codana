@@ -1,0 +1,94 @@
+Bug #458: Error Mounting a WebApp over mod_webapp with Apache BugRat Report#782
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Connector:Other
+Hardware: PC Linux 
+Importance: P3 normal
+Version: 4.0 Beta 1 
+Reported: 2001-01-16 10:27 UTC by Matthias Brantner
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">brantner
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 05:51:46 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>782
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>Linux
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>High
+  </td><td>Medium
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>tomcat
+  </td><td>Tomcat 4
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>PC
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Apache Tomcat Ve
+  </td><td>4.0 Beta 1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="2" valign="top">2001-02-21 11:03:24 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>pier
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="2" valign="top">2001-09-04 15:07:03 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

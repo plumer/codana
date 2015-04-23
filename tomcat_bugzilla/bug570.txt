@@ -1,0 +1,69 @@
+Bug #570: Session expiry -- StandardManager incorrectly uses getLastAccessedTime
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Servlet
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2001-02-09 18:47 UTC by murthy 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">murthy
+        </td>
+        <td rowspan="3" valign="top">2001-02-09 18:49:03 UTC
+        </td>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Summary
+            </td><td>Session bug -- getLastAccessedTime returns prior-to-last hit time
+  </td><td>Session timeout -- getLastAccessedTime returns prior-to-last hit time
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">murthy
+        </td>
+        <td rowspan="1" valign="top">2001-02-12 16:29:26 UTC
+        </td>
+            <td>
+                Summary
+            </td><td>Session timeout -- getLastAccessedTime returns prior-to-last hit time
+  </td><td>Session expiry -- StandardManager incorrectly uses getLastAccessedTime
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-16 16:12:05 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

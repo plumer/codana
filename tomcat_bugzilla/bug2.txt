@@ -1,0 +1,73 @@
+Bug #2: Just testing the Boogzeela setup for log4j
+
+Status: CLOSED FIXED 
+Product: Log4j
+Component: Layout
+Hardware: Other other 
+Importance: P3 normal 
+Version: unspecified 
+Reported: 2001-01-08 09:17 UTC by BugZilla Maintainer Account
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-04-26 01:50:56 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">smeduri
+        </td>
+        <td rowspan="1" valign="top">2006-01-10 11:28:28 UTC
+        </td>
+            <td>
+                Depends on
+            </td><td>
+  </td><td><a class="bz_bug_link 
+          bz_status_RESOLVED  bz_closed"
+   title="RESOLVED INVALID - adfaf"
+   href="show_bug.cgi?id=38212">38212</a>
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">ceki
+        </td>
+        <td rowspan="1" valign="top">2006-01-11 18:57:41 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">nhung.nnguyen
+        </td>
+        <td rowspan="1" valign="top">2006-05-13 22:08:05 UTC
+        </td>
+            <td>
+                Depends on
+            </td><td>
+  </td><td>39576
+  </td>
+      </tr>
+  

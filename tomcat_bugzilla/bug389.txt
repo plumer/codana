@@ -1,0 +1,78 @@
+Bug #389: Security Issue? Important attributes exposed by ServletContext can be modified BugRat Report#682
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2001-01-01 22:52 UTC by Ramesh. Mandava
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-03-12 13:27:36 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>craig.mcclanahan
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>682
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>m5
+  </td><td>4.0 Beta 1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">remm
+        </td>
+        <td rowspan="2" valign="top">2001-03-21 18:45:16 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

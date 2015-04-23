@@ -1,0 +1,115 @@
+Bug #307: Authentication failes using the JDBCRealm with Sybase ASE 11.9.2 for Linux BugRat Report#560
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Auth
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-09 03:11 UTC by Allan Schweitz
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-02 15:58:35 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>nacho
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Config
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>560
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>3.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="2" valign="top">2001-02-03 12:48:11 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="1" valign="top">2001-02-03 12:48:37 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Config
+  </td><td>Auth
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="4" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="4" valign="top">2001-02-05 18:18:02 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>tomcat-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1 Final
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+  

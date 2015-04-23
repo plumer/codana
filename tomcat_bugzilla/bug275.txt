@@ -1,0 +1,62 @@
+Bug #275: If nothing is mounted to \"\/\" and a request is made that doesn\'t get mapped to any of the mounted contextes, then Tomcat doesn\'t give any reply and eats up all the CPU time it can BugRat Report#517
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2000-12-04 11:28 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-01-29 18:21:59 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>517
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2b8
+  </td><td>3.2 Final
+  </td>
+      </tr>
+  

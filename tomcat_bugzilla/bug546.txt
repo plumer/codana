@@ -1,0 +1,37 @@
+Bug #546: [PATCH] TAGDEPENDENT body content processing not implemented
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Jasper
+Hardware: PC Linux 
+Importance: P1 major
+Version: 4.0 Beta 1 
+Reported: 2001-02-07 19:34 UTC by bonevich 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">justyna.horwat
+        </td>
+        <td rowspan="2" valign="top">2001-02-08 16:26:08 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

@@ -1,0 +1,42 @@
+Bug #227: reload .class BugRat Report#358
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Unknown
+Hardware: PC All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-11-08 07:21 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">marc.saegesser
+        </td>
+        <td rowspan="3" valign="top">2001-06-15 08:56:53 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

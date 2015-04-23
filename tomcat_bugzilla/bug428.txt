@@ -1,0 +1,110 @@
+Bug #428: JSP tags names must be valid variable names BugRat Report#738
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Jasper
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2001-01-11 01:06 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-06 17:17:48 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>Justyna.Horwat
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>738
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>4.0 b1
+  </td><td>4.0 Beta 1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">justyna.horwat
+        </td>
+        <td rowspan="2" valign="top">2001-07-10 12:27:56 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">kin-man.chung
+        </td>
+        <td rowspan="2" valign="top">2001-09-24 11:52:34 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>LATER
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">kin-man.chung
+        </td>
+        <td rowspan="2" valign="top">2001-09-24 11:53:55 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

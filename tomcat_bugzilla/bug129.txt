@@ -1,0 +1,57 @@
+Bug #129: Cannont disable the display of a vitural directory and all its subdirectories\' contents in a Tomcat+Apache configuration when the index.html is not present BugRat Report#142
+
+Status: RESOLVED WONTFIX 
+Product: Tomcat 3
+Component: Connectors
+Hardware: Sun All 
+Importance: P1 normal
+Version: 3.1.1 Final 
+Reported: 2000-09-20 07:40 UTC by Dana Ritter
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="6" valign="top">2001-02-03 18:16:27 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>142
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>3.1.1 Final
+  </td>
+      </tr>
+  

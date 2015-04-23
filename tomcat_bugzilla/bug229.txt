@@ -1,0 +1,74 @@
+Bug #229: fix \"build-oro.xml\" BugRat Report#364
+
+Status: CLOSED FIXED 
+Product: ORO
+Component: Main
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-11-09 03:39 UTC by J
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">dfs
+        </td>
+        <td rowspan="4" valign="top">2001-06-08 14:04:56 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>oro-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">dfs
+        </td>
+        <td rowspan="2" valign="top">2001-06-08 14:06:27 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">dfs
+        </td>
+        <td rowspan="1" valign="top">2001-06-08 14:07:08 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

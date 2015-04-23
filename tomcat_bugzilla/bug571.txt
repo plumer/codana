@@ -1,0 +1,85 @@
+Bug #571: unresolved symbols in mod_jk
+
+Status: RESOLVED WONTFIX 
+Product: Tomcat 3
+Component: Unknown
+Hardware: HP HP-UX 
+Importance: P1 critical
+Version: 3.2.1 Final 
+Reported: 2001-02-11 03:05 UTC by brightice 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">marc.saegesser
+        </td>
+        <td rowspan="3" valign="top">2001-03-21 12:23:26 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-04-09 15:42:42 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-18 16:02:45 UTC
+        </td>
+            <td>
+                Status
+            </td><td>CLOSED
+  </td><td>REOPENED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>LATER
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-18 16:04:07 UTC
+        </td>
+            <td>
+                Status
+            </td><td>REOPENED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+  

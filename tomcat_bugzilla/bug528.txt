@@ -1,0 +1,42 @@
+Bug #528: can\'t define simple types with tei definitions in taglib
+
+Status: RESOLVED INVALID 
+Product: Tomcat 3
+Component: Jasper
+Hardware: All All 
+Importance: P1 normal
+Version: 3.1 Final 
+Reported: 2001-02-05 07:48 UTC by Kjeld Poulsen
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">marc.saegesser
+        </td>
+        <td rowspan="3" valign="top">2001-02-12 19:34:38 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+  

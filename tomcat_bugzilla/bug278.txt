@@ -1,0 +1,62 @@
+Bug #278: Bug in GetParameterValuesTestServlet.java file BugRat Report#521
+
+Status: UNCONFIRMED 
+Product: Watchdog
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-12-04 19:24 UTC by Srinivasa Villuri
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">pier
+        </td>
+        <td rowspan="7" valign="top">2001-05-20 19:40:57 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>craig.mcclanahan
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Watchdog
+  </td><td>Wachtdog
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>November 29th bu
+  </td><td>unspecified
+  </td>
+      </tr>
+  

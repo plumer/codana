@@ -1,0 +1,59 @@
+Bug #517: Response problems when using IE
+
+Status: CLOSED FIXED 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2001-02-02 05:59 UTC by Dwight Smith
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">adslivan
+        </td>
+        <td rowspan="2" valign="top">2001-02-18 13:43:08 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">adslivan
+        </td>
+        <td rowspan="1" valign="top">2001-02-18 13:46:59 UTC
+        </td>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-04-04 10:45:53 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

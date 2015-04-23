@@ -1,0 +1,90 @@
+Bug #296: After recompiling a servlet, i receive this error message: BugRat Report#548
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Servlet
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.1 Final 
+Reported: 2000-12-07 02:52 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">nacho
+        </td>
+        <td rowspan="6" valign="top">2001-03-11 15:10:26 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>548
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-08-25 16:59:54 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">nacho
+        </td>
+        <td rowspan="1" valign="top">2001-08-26 11:39:14 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>laker8
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">nacho
+        </td>
+        <td rowspan="1" valign="top">2001-08-26 12:02:28 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>jbaccash
+  </td>
+      </tr>
+  

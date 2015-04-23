@@ -1,0 +1,100 @@
+Bug #163: Update archive BugRat Report#203
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Other
+Hardware: All All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-10-04 00:00 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">nacho
+        </td>
+        <td rowspan="5" valign="top">2001-05-21 07:49:31 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Ant
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-05-22 03:01:51 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-07-04 04:45:07 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>ant-dev
+  </td><td>bodewig
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">bodewig
+        </td>
+        <td rowspan="3" valign="top">2001-07-12 01:08:10 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

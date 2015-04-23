@@ -1,0 +1,85 @@
+Bug #27: Error in the formatting of the (%F:%L) layout options
+
+Status: RESOLVED INVALID 
+Product: Log4j
+Component: Layout
+Hardware: PC All 
+Importance: P1 normal 
+Version: 1.0 
+Reported: 2001-01-10 10:32 UTC by Richard McCarthy
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">ceki
+        </td>
+        <td rowspan="3" valign="top">2001-01-10 10:56:36 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">kenny_leung
+        </td>
+        <td rowspan="2" valign="top">2001-06-29 11:11:34 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>REOPENED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-07-01 14:21:58 UTC
+        </td>
+            <td>
+                Status
+            </td><td>REOPENED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">mbiama
+        </td>
+        <td rowspan="1" valign="top">2012-03-03 13:04:33 UTC
+        </td>
+            <td>
+                Blocks
+            </td><td>
+  </td><td>52815
+  </td>
+      </tr>
+  

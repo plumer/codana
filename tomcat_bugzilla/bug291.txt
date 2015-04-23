@@ -1,0 +1,136 @@
+Bug #291: Using an html file as the \x3clocation\x3e in an \x3cerror-page\x3e in web.xml causes a StackOverflowError. BugRat Report#538
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2000-12-06 11:31 UTC by Catherine Jung
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">marc.saegesser
+        </td>
+        <td rowspan="7" valign="top">2001-03-11 12:15:24 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Jasper
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>538
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2 also 3.2b7
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">nacho
+        </td>
+        <td rowspan="3" valign="top">2001-03-11 13:49:01 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>FIXED
+  </td><td>---
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1 Final
+  </td><td>Nightly Build
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="4" valign="top">nacho
+        </td>
+        <td rowspan="4" valign="top">2001-03-11 13:55:10 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>Larry.Isaacs
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Jasper
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">marc.saegesser
+        </td>
+        <td rowspan="1" valign="top">2001-03-11 19:07:22 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>ASSIGNED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-12 13:58:33 UTC
+        </td>
+            <td>
+                Status
+            </td><td>ASSIGNED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

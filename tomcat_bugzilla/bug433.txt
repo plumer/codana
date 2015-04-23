@@ -1,0 +1,62 @@
+Bug #433: Additional logging in jk_uri_worker_map.c, function map_uri_to_worker BugRat Report#746
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2001-01-11 14:09 UTC by James Courtney
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">danmil
+        </td>
+        <td rowspan="7" valign="top">2001-02-13 12:38:51 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>746
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1
+  </td><td>Nightly Build
+  </td>
+      </tr>
+  

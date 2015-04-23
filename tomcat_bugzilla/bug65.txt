@@ -1,0 +1,42 @@
+Bug #65: XCategory example not tracing
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Other
+Hardware: PC All 
+Importance: P5 minor 
+Version: 1.0 
+Reported: 2001-01-24 14:58 UTC by Rex Madden
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">ceki
+        </td>
+        <td rowspan="3" valign="top">2001-02-14 14:36:22 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

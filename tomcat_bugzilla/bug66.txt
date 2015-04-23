@@ -1,0 +1,42 @@
+Bug #66: Documentation error
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Other
+Hardware: PC All 
+Importance: P5 normal 
+Version: unspecified 
+Reported: 2001-01-25 04:15 UTC by Mathias Bogaert
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">ceki
+        </td>
+        <td rowspan="3" valign="top">2001-02-14 14:33:45 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

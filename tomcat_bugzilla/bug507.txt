@@ -1,0 +1,64 @@
+Bug #507: bad ASCII85 stream
+
+Status: CLOSED FIXED 
+Product: Fop - Now in Jira
+Component: general
+Hardware: PC All 
+Importance: P1 normal 
+Version: all 
+Reported: 2001-02-01 01:45 UTC by Fotis Jannidis
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">fotis.jannidis
+        </td>
+        <td rowspan="3" valign="top">2001-02-01 01:58:35 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">pier
+        </td>
+        <td rowspan="1" valign="top">2001-02-02 18:47:42 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Fop
+  </td><td>general
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">gadams
+        </td>
+        <td rowspan="1" valign="top">2012-04-01 06:31:49 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

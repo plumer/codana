@@ -1,0 +1,58 @@
+Bug #69: Test Bug
+
+Status: CLOSED INVALID 
+Product: Tomcat 3
+Component: Unknown
+Hardware: PC All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2001-01-26 11:02 UTC by Craig McClanahan
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="4" valign="top">2001-01-26 11:26:26 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="1" valign="top">2001-01-26 11:27:22 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

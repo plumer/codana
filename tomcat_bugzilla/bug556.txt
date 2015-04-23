@@ -1,0 +1,63 @@
+Bug #556: can\'t create Initial Context
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Catalina
+Hardware: PC All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2001-02-09 00:29 UTC by dcernahoschi 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">pier
+        </td>
+        <td rowspan="4" valign="top">2001-02-09 00:44:23 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>pier
+  </td><td>craig.mcclanahan
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">remm
+        </td>
+        <td rowspan="2" valign="top">2001-02-12 13:28:43 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

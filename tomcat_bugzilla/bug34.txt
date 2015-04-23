@@ -1,0 +1,64 @@
+Bug #34: StreamCorruptedException when using SocketAppender
+
+Status: RESOLVED REMIND 
+Product: Log4j
+Component: Appender
+Hardware: PC All 
+Importance: P1 major 
+Version: 1.0 
+Reported: 2001-01-12 14:36 UTC by Aston C. Chan
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">achan
+        </td>
+        <td rowspan="2" valign="top">2001-01-12 14:42:15 UTC
+        </td>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">ceki
+        </td>
+        <td rowspan="1" valign="top">2001-01-12 15:19:49 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>ASSIGNED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-04-22 06:38:08 UTC
+        </td>
+            <td>
+                Status
+            </td><td>ASSIGNED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>REMIND
+  </td>
+      </tr>
+  

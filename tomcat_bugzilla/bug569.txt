@@ -1,0 +1,64 @@
+Bug #569: fully qualified class name used as category name causes jvm to not load class
+
+Status: CLOSED INVALID 
+Product: Log4j
+Component: Configurator
+Hardware: PC All 
+Importance: P1 critical 
+Version: 1.0 
+Reported: 2001-02-09 18:09 UTC by vincent 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">ceki
+        </td>
+        <td rowspan="3" valign="top">2001-02-10 10:29:55 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">ceki
+        </td>
+        <td rowspan="1" valign="top">2001-02-10 16:37:44 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>VERIFIED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">carnold
+        </td>
+        <td rowspan="1" valign="top">2007-08-21 14:16:44 UTC
+        </td>
+            <td>
+                Status
+            </td><td>VERIFIED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

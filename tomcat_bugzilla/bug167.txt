@@ -1,0 +1,100 @@
+Bug #167: Change to input:checkbox taglib for usage on multi-page forms BugRat Report#220
+
+Status: CLOSED WONTFIX 
+Product: Taglibs
+Component: Input Taglib
+Hardware: Other All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-10-05 18:38 UTC by August Detlefsen
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">pier
+        </td>
+        <td rowspan="4" valign="top">2001-05-20 19:37:29 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>taglibs
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>.9
+  </td><td>Unknown
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">nacho
+        </td>
+        <td rowspan="3" valign="top">2001-05-21 07:37:12 UTC
+        </td>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Taglibs
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bayern
+        </td>
+        <td rowspan="2" valign="top">2001-07-08 00:09:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">glenn
+        </td>
+        <td rowspan="2" valign="top">2002-04-04 19:48:39 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Unknown Taglib
+  </td><td>Input Taglib
+  </td>
+      </tr>
+  

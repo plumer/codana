@@ -1,0 +1,57 @@
+Bug #470: FAIL positiveForward.jsp and positiveInclude.jsp BugRat Report#796
+
+Status: UNCONFIRMED 
+Product: Watchdog
+Component: Servlet
+Hardware: HP All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2001-01-17 19:16 UTC by Jim Fitzwater
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-05-20 19:42:43 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>craig.mcclanahan
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Watchdog
+  </td><td>Wachtdog
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>20010110
+  </td><td>unspecified
+  </td>
+      </tr>
+  

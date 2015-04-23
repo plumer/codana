@@ -1,0 +1,70 @@
+Bug #3: file sharing
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Appender
+Hardware: PC All 
+Importance: P3 normal 
+Version: unspecified 
+Reported: 2001-01-08 11:35 UTC by matthew_scully 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="1" valign="top">ceki
+        </td>
+        <td rowspan="1" valign="top">2001-01-11 14:29:29 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>ASSIGNED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-04-22 06:44:50 UTC
+        </td>
+            <td>
+                Status
+            </td><td>ASSIGNED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">ceki
+        </td>
+        <td rowspan="1" valign="top">2002-04-25 13:27:27 UTC
+        </td>
+            <td>
+                Version
+            </td><td>0.9.1
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">nhung.nnguyen
+        </td>
+        <td rowspan="1" valign="top">2006-05-13 21:20:21 UTC
+        </td>
+            <td>
+                Depends on
+            </td><td>
+  </td><td>39575
+  </td>
+      </tr>
+  

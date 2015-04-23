@@ -1,0 +1,48 @@
+Bug #503: Java code has UNIX file seperator hardcoded
+
+Status: CLOSED LATER 
+Product: Tomcat 3
+Component: Unknown
+Hardware: PC All 
+Importance: P1 blocker
+Version: 3.2.1 Final 
+Reported: 2001-01-31 08:40 UTC by marc.chamberlain 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-20 14:19:42 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">cmanolache
+        </td>
+        <td rowspan="1" valign="top">2001-08-25 16:57:04 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

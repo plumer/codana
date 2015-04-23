@@ -1,0 +1,173 @@
+Bug #383: fork javac BugRat Report#676
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P3 enhancement
+Version: 1.2 
+Reported: 2000-12-29 18:51 UTC by David Walend
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">pier
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 01:50:35 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>676
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>ant 1.2
+  </td><td>1.2
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 04:05:05 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Core tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-03-19 23:55:11 UTC
+        </td>
+            <td>
+                Blocks
+            </td><td>
+  </td><td><a class="bz_bug_link 
+          bz_status_CLOSED  bz_closed"
+   title="CLOSED LATER - javac throws exception when using JDK1.3"
+   href="show_bug.cgi?id=1035">1035</a>
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-06-21 07:28:29 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>harras
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-06-21 08:10:42 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-07-04 03:11:06 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>dfw1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">dfw1
+        </td>
+        <td rowspan="2" valign="top">2001-07-04 07:41:11 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">bodewig
+        </td>
+        <td rowspan="3" valign="top">2001-07-04 07:48:38 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>High
+  </td><td>Medium
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>WORKSFORME
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-08-03 07:36:08 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

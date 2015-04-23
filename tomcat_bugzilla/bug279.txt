@@ -1,0 +1,62 @@
+Bug #279: Logical Error in GetParameterValuesTestServlet BugRat Report#522
+
+Status: UNCONFIRMED 
+Product: Watchdog
+Component: Servlet
+Hardware: All All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-12-04 19:44 UTC by Srinivasa Villuri
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">pier
+        </td>
+        <td rowspan="7" valign="top">2001-05-20 19:41:44 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>craig.mcclanahan
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Servlet
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Watchdog
+  </td><td>Wachtdog
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Watchdog 3.x
+  </td><td>unspecified
+  </td>
+      </tr>
+  

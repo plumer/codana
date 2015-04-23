@@ -1,0 +1,99 @@
+Bug #95: The \"java\" task doesn\'t work. BugRat Report#85
+
+Status: CLOSED WORKSFORME 
+Product: Ant
+Component: Core tasks
+Hardware: All All 
+Importance: P1 normal
+Version: 1.2 
+Reported: 2000-09-07 20:20 UTC by Anand K Sankaran
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="8" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="8" valign="top">2001-02-03 17:48:45 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>85
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Ant
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.1
+  </td><td>1.2
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">conor
+        </td>
+        <td rowspan="3" valign="top">2001-02-04 06:20:32 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Other
+  </td><td>Core tasks
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:00:52 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

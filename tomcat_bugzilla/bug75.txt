@@ -1,0 +1,48 @@
+Bug #75: Translation time attribute evaluation not provided to TagExtraInfo class
+
+Status: RESOLVED LATER 
+Product: Tomcat 3
+Component: Jasper
+Hardware: PC All 
+Importance: P3 normal
+Version: 3.2.1 Final 
+Reported: 2001-01-27 22:51 UTC by Mike Slinn
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="1" valign="top">mslinn
+        </td>
+        <td rowspan="1" valign="top">2001-01-27 23:21:55 UTC
+        </td>
+            <td>
+                Summary
+            </td><td>Runtime argument evaluation ignored for custom tag
+  </td><td>Translation time attribute evaluation not provided to TagExtraInfo class
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-19 14:37:10 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+  

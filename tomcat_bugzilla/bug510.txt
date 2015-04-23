@@ -1,0 +1,48 @@
+Bug #510: jk_sockbuf.c does not handle premature closes from tomcat connector
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P3 normal
+Version: 3.2 Final 
+Reported: 2001-02-01 14:17 UTC by Brian Vetter
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="1" valign="top">danmil
+        </td>
+        <td rowspan="1" valign="top">2001-02-01 16:18:44 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>craig.mcclanahan
+  </td><td>danmil
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">danmil
+        </td>
+        <td rowspan="2" valign="top">2001-02-02 09:02:15 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

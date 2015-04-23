@@ -1,0 +1,127 @@
+Bug #352: xsl.apply & xsl.import Absolute (external) URLs BugRat Report#632
+
+Status: CLOSED WONTFIX 
+Product: Taglibs
+Component: Unknown Taglib
+Hardware: Other All 
+Importance: P1 normal
+Version: unspecified 
+Reported: 2000-12-20 03:12 UTC by Luca Orlandi
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">pier
+        </td>
+        <td rowspan="4" valign="top">2001-05-20 19:37:27 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>taglibs
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>any
+  </td><td>Unknown
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="4" valign="top">nacho
+        </td>
+        <td rowspan="4" valign="top">2001-05-21 07:21:44 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>XSL
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Taglibs
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">glenn
+        </td>
+        <td rowspan="2" valign="top">2002-04-06 00:32:37 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tomcat-dev
+  </td><td>glenn
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">glenn
+        </td>
+        <td rowspan="2" valign="top">2002-04-06 00:32:58 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">glenn
+        </td>
+        <td rowspan="1" valign="top">2002-04-06 00:33:10 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">glenn
+        </td>
+        <td rowspan="1" valign="top">2002-12-01 23:47:11 UTC
+        </td>
+            <td>
+                Component
+            </td><td>XSL Taglib
+  </td><td>Unknown Taglib
+  </td>
+      </tr>
+  

@@ -1,0 +1,47 @@
+Bug #554: Infinite loop if % on viewport width and height in SVG element
+
+Status: RESOLVED FIXED 
+Product: Batik - Now in Jira
+Component: Bridge
+Hardware: PC All 
+Importance: P1 normal 
+Version: 1.0 Beta 1 
+Reported: 2001-02-08 16:14 UTC by Vincent Hardy
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">vincent.hardy
+        </td>
+        <td rowspan="4" valign="top">2001-02-12 11:32:19 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

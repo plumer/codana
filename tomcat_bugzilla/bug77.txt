@@ -1,0 +1,69 @@
+Bug #77: Endless loop if the port is in use.
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Appender
+Hardware: PC Linux 
+Importance: P3 blocker 
+Version: 1.0 
+Reported: 2001-01-28 12:59 UTC by Alistair Forbes
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-04-22 06:44:23 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>REMIND
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">carnold
+        </td>
+        <td rowspan="2" valign="top">2005-05-11 22:02:16 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>REOPENED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>REMIND
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">carnold
+        </td>
+        <td rowspan="2" valign="top">2005-05-11 22:02:57 UTC
+        </td>
+            <td>
+                Status
+            </td><td>REOPENED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

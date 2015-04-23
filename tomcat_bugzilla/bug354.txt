@@ -1,0 +1,67 @@
+Bug #354: Compilation of mod_jk failed BugRat Report#635
+
+Status: RESOLVED DUPLICATE of 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2.x Nightly 
+Reported: 2000-12-20 09:02 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="8" valign="top">hgomez
+        </td>
+        <td rowspan="8" valign="top">2001-05-07 08:03:58 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>635
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>tomcat
+  </td><td>Tomcat 3
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>CVS version
+  </td><td>3.2.x Nightly Bu
+  </td>
+      </tr>
+  

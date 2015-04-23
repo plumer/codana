@@ -1,0 +1,42 @@
+Bug #549: NullPointerException when resolving external entities
+
+Status: RESOLVED DUPLICATE of 
+Product: Xerces-J
+Component: Core
+Hardware: All All 
+Importance: P1 normal 
+Version: unspecified 
+Reported: 2001-02-08 06:46 UTC by John Blais
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">elena
+        </td>
+        <td rowspan="3" valign="top">2001-10-31 14:54:18 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td>
+      </tr>
+  

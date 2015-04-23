@@ -1,0 +1,42 @@
+Bug #557: java.lang.IllegalArgumentException Width (0) and height (0) must be \x3e 0
+
+Status: RESOLVED FIXED 
+Product: Batik - Now in Jira
+Component: GVT Filters
+Hardware: All All 
+Importance: P3 major 
+Version: 1.0 Beta 1 
+Reported: 2001-02-09 00:43 UTC by Thierry Kormann
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">deweese
+        </td>
+        <td rowspan="3" valign="top">2001-02-26 12:43:42 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td></tr><tr>
+            <td>
+                Summary
+            </td><td>java.lang.IllegalArgumentException Width (0) and height (0) must be &gt; 0 
+  </td><td>java.lang.IllegalArgumentException Width (0) and height (0) must be &gt; 0
+  </td>
+      </tr>
+  

@@ -1,0 +1,48 @@
+Bug #29: Calling Category.error(Object, Throwable) throws NullPointerException in Version 1.0.2
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Other
+Hardware: PC All 
+Importance: P3 normal 
+Version: 1.0 
+Reported: 2001-01-11 08:37 UTC by Wolfram Gewohn
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="1" valign="top">ceki
+        </td>
+        <td rowspan="1" valign="top">2001-01-11 14:24:08 UTC
+        </td>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-01-11 14:54:19 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

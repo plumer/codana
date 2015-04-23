@@ -1,0 +1,37 @@
+Bug #44: Documentation errors
+
+Status: RESOLVED FIXED 
+Product: Log4j
+Component: Other
+Hardware: All All 
+Importance: P5 minor 
+Version: 1.0 
+Reported: 2001-01-21 18:19 UTC by Allan Crooks
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">ceki
+        </td>
+        <td rowspan="2" valign="top">2001-01-22 04:16:01 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

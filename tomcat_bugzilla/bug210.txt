@@ -1,0 +1,132 @@
+Bug #210: Problem with white spaces in URL BugRat Report#322
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Encoding
+Hardware: All All 
+Importance: P1 normal
+Version: 3.3.x Nightly 
+Reported: 2000-10-30 18:19 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">etucker
+        </td>
+        <td rowspan="6" valign="top">2001-02-25 22:47:39 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>etucker
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>322
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.1
+  </td><td>3.2.1 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">marc.saegesser
+        </td>
+        <td rowspan="2" valign="top">2001-03-09 09:56:40 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>LATER
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-04-10 11:14:28 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>Encoding
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>3.2.1 Final
+  </td><td>3.3.x Nightly Bu
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-05-20 14:45:27 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>LATER
+  </td><td>---
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">cmanolache
+        </td>
+        <td rowspan="2" valign="top">2001-05-20 14:47:02 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">suresha4
+        </td>
+        <td rowspan="1" valign="top">2007-05-07 07:09:11 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>suresha4
+  </td>
+      </tr>
+  

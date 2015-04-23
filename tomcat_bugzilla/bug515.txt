@@ -1,0 +1,53 @@
+Bug #515: just a test
+
+Status: CLOSED INVALID 
+Product: Fop - Now in Jira
+Component: page-master/layout
+Hardware: All All 
+Importance: P1 normal 
+Version: 0.17 
+Reported: 2001-02-02 04:14 UTC by Fotis Jannidis
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">fotis.jannidis
+        </td>
+        <td rowspan="3" valign="top">2001-02-02 04:30:57 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">j3322ptm
+        </td>
+        <td rowspan="1" valign="top">2002-05-03 11:25:33 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

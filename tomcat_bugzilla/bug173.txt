@@ -1,0 +1,68 @@
+Bug #173: ANT javadoc tag requires \"destdir\" but javadoc does not BugRat Report#235
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Other
+Hardware: All All 
+Importance: P1 normal
+Version: 1.1 
+Reported: 2000-10-09 16:00 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">nacho
+        </td>
+        <td rowspan="5" valign="top">2001-05-21 07:38:35 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Unknown
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Tomcat 3
+  </td><td>Ant
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Unknown
+  </td><td>1.1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2001-05-22 03:11:22 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

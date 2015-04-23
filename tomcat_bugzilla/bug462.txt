@@ -1,0 +1,78 @@
+Bug #462: Thread in jk_ajp12_worker.c spins in infinite loop BugRat Report#786
+
+Status: RESOLVED DUPLICATE of 
+Product: Tomcat 3
+Component: Unknown
+Hardware: HP HP-UX 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2001-01-16 15:22 UTC by Brian Vetter
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">bjv
+        </td>
+        <td rowspan="7" valign="top">2001-02-01 13:51:32 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Unknown
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>786
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>DUPLICATE
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2
+  </td><td>3.2 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">ko-chou
+        </td>
+        <td rowspan="2" valign="top">2003-12-01 07:14:41 UTC
+        </td>
+            <td>
+                OS
+            </td><td>All
+  </td><td>HP-UX
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>All
+  </td><td>HP
+  </td>
+      </tr>
+  

@@ -1,0 +1,68 @@
+Bug #264: mod_jk gets in an infinite loop when client does not send \"content-length\" # of bytes to server BugRat Report#468
+
+Status: RESOLVED FIXED 
+Product: Tomcat 3
+Component: Connectors
+Hardware: All All 
+Importance: P1 normal
+Version: 3.2 Final 
+Reported: 2000-11-28 13:04 UTC by Brian Vetter
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="5" valign="top">bjv
+        </td>
+        <td rowspan="5" valign="top">2001-02-01 13:53:32 UTC
+        </td>
+            <td>
+                Component
+            </td><td>
+  </td><td>Connectors
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>468
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>Tomcat 3.2b6
+  </td><td>3.2 Final
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">danmil
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 14:58:43 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

@@ -1,0 +1,73 @@
+Bug #472: A nonfatal internal JIT \x3c3.10.107\x3cx\x3e\x3e error: NULL relocation target\' has occurred in: \'org\/apache\/crimson\/parser\/Paser2.maybeComment \x3cZ\x3eZ\': Interpreting method. BugRat Report#798
+
+Status: RESOLVED INVALID 
+Product: Tomcat 4
+Component: Catalina
+Hardware: All All 
+Importance: P1 normal
+Version: 4.0 Beta 1 
+Reported: 2001-01-17 20:01 UTC by Anonymous BugRat User
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="7" valign="top">craig.mcclanahan
+        </td>
+        <td rowspan="7" valign="top">2001-02-06 18:27:50 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Catalina
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>798
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>INVALID
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>4.0-b1
+  </td><td>4.0 Beta 1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">remm
+        </td>
+        <td rowspan="1" valign="top">2001-09-25 13:25:50 UTC
+        </td>
+            <td>
+                CC
+            </td><td>
+  </td><td>shaun
+  </td>
+      </tr>
+  

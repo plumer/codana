@@ -1,0 +1,64 @@
+Bug #543: NullPointerException in junit task
+
+Status: CLOSED FIXED 
+Product: Ant
+Component: Optional Tasks
+Hardware: PC All 
+Importance: P1 normal
+Version: 1.3 
+Reported: 2001-02-07 10:34 UTC by Timur Zambalayev
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">nico
+        </td>
+        <td rowspan="3" valign="top">2001-02-07 16:59:12 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 04:55:53 UTC
+        </td>
+            <td>
+                Version
+            </td><td>1.3 Beta 1
+  </td><td>1.3
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 05:06:43 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

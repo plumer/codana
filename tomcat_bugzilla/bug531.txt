@@ -1,0 +1,42 @@
+Bug #531: Jasper classloader can\'t load compiled servlet
+
+Status: RESOLVED FIXED 
+Product: Tomcat 4
+Component: Jasper
+Hardware: PC All 
+Importance: P1 blocker
+Version: Nightly Build 
+Reported: 2001-02-05 16:18 UTC by Remy Maucherat
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">remm
+        </td>
+        <td rowspan="3" valign="top">2001-02-06 17:40:36 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

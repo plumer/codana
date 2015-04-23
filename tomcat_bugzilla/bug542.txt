@@ -1,0 +1,79 @@
+Bug #542: Properties.load(InputStream) fails for EJB client run by Ant 1.2
+
+Status: RESOLVED WORKSFORME 
+Product: Ant
+Component: Core tasks
+Hardware: PC All 
+Importance: P1 major
+Version: 1.2 
+Reported: 2001-02-07 08:30 UTC by bobby.woolf 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">conor
+        </td>
+        <td rowspan="3" valign="top">2001-07-06 04:26:07 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">josedarius
+        </td>
+        <td rowspan="3" valign="top">2012-03-01 08:30:03 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>WORKSFORME
+  </td><td>---
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>1
+  </td><td>0
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">bodewig
+        </td>
+        <td rowspan="2" valign="top">2012-03-01 09:07:30 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

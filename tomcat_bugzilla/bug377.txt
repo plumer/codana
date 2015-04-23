@@ -1,0 +1,159 @@
+Bug #377: Convert regexp test suite to JUnit BugRat Report#667
+
+Status: CLOSED WONTFIX 
+Product: Regexp
+Component: Other
+Hardware: All All 
+Importance: P1 enhancement
+Version: unspecified 
+Reported: 2000-12-26 11:05 UTC by Paul Holser
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="6" valign="top">pier
+        </td>
+        <td rowspan="6" valign="top">2001-02-01 01:46:10 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>bugzilla
+  </td><td>ant-dev
+  </td></tr><tr>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>UNCONFIRMED
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>
+  </td><td>Main
+  </td></tr><tr>
+            <td>
+                Keywords
+            </td><td>667
+  </td><td>
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 04:03:01 UTC
+        </td>
+            <td>
+                Severity
+            </td><td>Normal
+  </td><td>Enhancement
+  </td></tr><tr>
+            <td>
+                Component
+            </td><td>Main
+  </td><td>Optional Tasks
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">pholser
+        </td>
+        <td rowspan="2" valign="top">2001-02-01 07:34:48 UTC
+        </td>
+            <td>
+                Status
+            </td><td>UNCONFIRMED
+  </td><td>NEW
+  </td></tr><tr>
+            <td>
+                Ever confirmed
+            </td><td>
+  </td><td>1
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="3" valign="top">bodewig
+        </td>
+        <td rowspan="3" valign="top">2001-02-21 23:30:14 UTC
+        </td>
+            <td>
+                Component
+            </td><td>Optional Tasks
+  </td><td>Other
+  </td></tr><tr>
+            <td>
+                Product
+            </td><td>Ant
+  </td><td>Regexp
+  </td></tr><tr>
+            <td>
+                Version
+            </td><td>1.2
+  </td><td>unspecified
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">bodewig
+        </td>
+        <td rowspan="1" valign="top">2001-02-21 23:31:42 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>ant-dev
+  </td><td>regexp-dev
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">gholam
+        </td>
+        <td rowspan="1" valign="top">2001-09-08 15:41:41 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>ASSIGNED
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">jon
+        </td>
+        <td rowspan="2" valign="top">2002-12-13 17:54:19 UTC
+        </td>
+            <td>
+                Status
+            </td><td>ASSIGNED
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WONTFIX
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">jon
+        </td>
+        <td rowspan="1" valign="top">2002-12-13 17:55:10 UTC
+        </td>
+            <td>
+                Status
+            </td><td>RESOLVED
+  </td><td>CLOSED
+  </td>
+      </tr>
+  

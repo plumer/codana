@@ -1,0 +1,47 @@
+Bug #193: Write a servlet and add it to a web app. Map wild card with an extension to that servlet then address a file with that extension from the browser. Going directly to tomcat will cause the servlet to invoke. Going through Apache won\'t work. BugRat Rep...
+
+Status: RESOLVED WORKSFORME 
+Product: Tomcat 3
+Component: Unknown
+Hardware: All All 
+Importance: P1 normal
+Version: Unknown 
+Reported: 2000-10-19 12:00 UTC by Tomcat Developers Mailing List
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">nacho
+        </td>
+        <td rowspan="4" valign="top">2001-05-21 07:41:12 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Hardware
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>WORKSFORME
+  </td>
+      </tr>
+  

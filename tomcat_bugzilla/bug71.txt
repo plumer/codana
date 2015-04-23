@@ -1,0 +1,58 @@
+Bug #71: Add CSS support for underline-like properties
+
+Status: RESOLVED FIXED 
+Product: Batik - Now in Jira
+Component: Bridge
+Hardware: PC All 
+Importance: P1 normal 
+Version: 1.0 Beta 1 
+Reported: 2001-01-26 15:59 UTC by Vincent Hardy
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="3" valign="top">tkormann
+        </td>
+        <td rowspan="3" valign="top">2001-05-15 15:56:31 UTC
+        </td>
+            <td>
+                Assignee
+            </td><td>tkormann
+  </td><td>hillion
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">hillion
+        </td>
+        <td rowspan="2" valign="top">2001-06-20 00:49:51 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

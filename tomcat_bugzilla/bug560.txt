@@ -1,0 +1,47 @@
+Bug #560: Batik CSS2 Conformance bug: element[attribute] does not work
+
+Status: RESOLVED FIXED 
+Product: Batik - Now in Jira
+Component: SVG DOM
+Hardware: PC All 
+Importance: P1 normal 
+Version: 1.0 Beta 1 
+Reported: 2001-02-09 05:22 UTC by mhartle 
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="4" valign="top">hillion
+        </td>
+        <td rowspan="4" valign="top">2001-02-09 06:07:56 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  

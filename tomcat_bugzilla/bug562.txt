@@ -1,0 +1,75 @@
+Bug #562: Ant fails to start win JVM is in a directory with spaces
+
+Status: RESOLVED FIXED 
+Product: Ant
+Component: Core
+Hardware: PC All 
+Importance: P1 normal
+Version: 1.3 
+Reported: 2001-02-09 07:10 UTC by Emmanuel Sciara
+
+
+
+    <tr>
+      <th>Who</th>
+      <th>When</th>
+      <th>What</th>
+      <th>Removed</th>
+      <th>Added</th>
+    </tr>
+
+      <tr>
+        <td rowspan="2" valign="top">nico
+        </td>
+        <td rowspan="2" valign="top">2001-02-18 06:47:50 UTC
+        </td>
+            <td>
+                OS
+            </td><td>
+  </td><td>All
+  </td></tr><tr>
+            <td>
+                Priority
+            </td><td>
+  </td><td>High
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">ehsforward
+        </td>
+        <td rowspan="1" valign="top">2001-02-21 03:17:52 UTC
+        </td>
+            <td>
+                OS
+            </td><td>All
+  </td><td>Windows NT/2K
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="1" valign="top">conor
+        </td>
+        <td rowspan="1" valign="top">2001-03-02 04:50:18 UTC
+        </td>
+            <td>
+                Version
+            </td><td>1.3 Beta 1
+  </td><td>1.3
+  </td>
+      </tr>
+      <tr>
+        <td rowspan="2" valign="top">conor
+        </td>
+        <td rowspan="2" valign="top">2001-07-07 05:41:56 UTC
+        </td>
+            <td>
+                Status
+            </td><td>NEW
+  </td><td>RESOLVED
+  </td></tr><tr>
+            <td>
+                Resolution
+            </td><td>---
+  </td><td>FIXED
+  </td>
+      </tr>
+  
