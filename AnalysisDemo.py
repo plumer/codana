@@ -1,4 +1,5 @@
 import wx
+import animate
 #import matplotlib
 
 class AnalysisDemo(wx.Frame):
@@ -11,7 +12,7 @@ class AnalysisDemo(wx.Frame):
 
         self.showPackage = wx.RadioButton(pn, label='Organize in package')
         self.showClass = wx.RadioButton(pn, label='Organize in class')
-#       self.canvas = matplotlib.figure.Figure()
+        self.canvas = animate.animationFigure()
         self.canvas = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.create = wx.Button(pn, label='Create Figure')
 
