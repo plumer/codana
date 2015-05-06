@@ -32,9 +32,10 @@ for bugnum in xrange(135, 1000):
         print 'Permission Denied.'
         logfile.write('Bug #%d: Permission Denied\n' % bugnum)
         continue
-    bugfile = open('result/bug%d.txt' % bugnum, 'w')
+    bugfile = open('result/bug%d.html' % bugnum, 'w')
     result, count = re.subn(r'&nbsp', r' ', results[0])
     result, count = re.subn(r'[\s\n]+', r' ', results[0])
+    bugfile.write('<!DOCTYPE html>\n<head><title>%d</title></head>\n<body><table>' % bugnum)
     bugfile.write('Bug #' + str(bugnum) + ': ' + result + '\n\n')
     results = statuspa.findall(bugweb)
     result, count = re.subn(r'&nbsp', r' ', results[0])
@@ -77,6 +78,7 @@ for bugnum in xrange(135, 1000):
     
     results = fixedpa.findall(fixedweb)
     bugfile.write('\n\n' + results[0] + '\n')
+    bugfile.write('</table></body></html>')
     print '> Done!'
     bugfile.close()
 

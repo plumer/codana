@@ -3,52 +3,45 @@ import numpy as np
 import matplotlib.animation as animation
 import networkx as nx
 import math
+import creategraph
 
-filename = "tomcat_depends.txt"
-f = open(filename, "r")
-edges = []
-nodes = []
-g = nx.Graph()
+fig = plt.figure()
 
-lcount = 0
-
-while True:
-	line = f.readline()
-	if not line: break
-	u = line.split('\t')
-	g.add_edge(u[0],u[1])
-	lcount = lcount + 1
-
-f.close()
-#print g.number_of_nodes()
-#print g.number_of_edges()
-
-small_nodes = []
-
-for n in nx.nodes_iter(g):
-	if nx.degree(g, n) <= 50:
-		small_nodes.append(n)
-
-for n in small_nodes:
-	g.remove_node(n)
-
-print "after:", g.number_of_nodes()
+projectname = "tomcat_history/tomcat6.0.0/tomcat"
+[g, nodes] = creategraph.readfile(projectname)
+#print g
+sg = creategraph.refine(g, 40)
 
 
-numframes = 30
-numpoints = g.number_of_nodes()
-numsteps = 1
-color_data = np.random.random((numframes))
-area = np.random.random((numsteps+1, numpoints))*1000
-area[0] = 0
+[pos,x,y] = creategraph.coordinate(sg)
+size = creategraph.point_sizes(sg, nodes)
 
-pos = nx.random_layout(g)
+color = np.random.random(len(size))
 
-x = []
-y = []
+nx.draw(sg, pos, alpha=.5, node_size=0, node_color=color,
+        with_labels = False, width=1, edge_color='#aaaaaa')
 
-posv = pos.values()
+plt.scatter(x, y, s=size, alpha = 0.5, c=color)
 
+def show_file_info(event):
+    nearest_dist = 1
+    nearest_point = None
+    for p in pos:
+        dx = pos[p][0] - event.xdata
+        dy = pos[p][1] - event.ydata
+        distance = math.sqrt(dx**2 + dy**2)
+        if (distance < 0.1 and distance < nearest_dist):
+            nearest_dist = distance
+            nearest_point = p
+
+    if nearest_point != None:
+        print nearest_point, '\t', nodes[nearest_point], ' lines of code'
+
+fig.canvas.mpl_connect('button_press_event', show_file_info)
+# this should be the last command
+plt.show()
+
+"""
 for i in range(numpoints):
 	x.append(posv[i][0])
 	y.append(posv[i][1])
@@ -78,7 +71,7 @@ def main():
 
 	scat = plt.scatter(x, y, c=c, s=x*y*1000, alpha = 0.5)
 #	plt.plot(x,y)
-	fig.canvas.mpl_connect('button_press_event', onClick)
+	fig.canvas.mpl_connect('button_press_event', showInfo)
 	ani = animation.FuncAnimation(fig, update_plot, frames=xrange(numframes*numsteps),
 		interval = 20, fargs=(area, numframes, scat), repeat=True)
 	plt.show()
@@ -102,3 +95,4 @@ def update_plot(i, area, nframes, scat):
 	return scat,
 
 main()
+"""
