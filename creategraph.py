@@ -37,8 +37,8 @@ def readfile(project_name):
             continue
         g.add_edge(u[0], u[1])
 
-    print g.number_of_nodes()
-    print g.number_of_edges()
+    #print g.number_of_nodes()
+    #print g.number_of_edges()
 
     f.close()
 
