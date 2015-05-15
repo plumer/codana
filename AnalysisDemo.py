@@ -21,7 +21,7 @@ class AnalysisDemo(wx.Frame):
         #self.figure = animate.animationFigure()
         #animate.init()
         #animate.show()
-        self.figure = Figure()
+        self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
 
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
@@ -67,15 +67,19 @@ class AnalysisDemo(wx.Frame):
         self.Show(True)
 
     def createFigure(self, event):
-        pass
-
+        if self.showPackage.GetValue() == True:
+            self.prepare(True)
+        elif self.showClass.GetValue() == True:
+            self.prepare(False)
+        self.draw()
+       
     def movePrevVersion(self, event):
         pass
 
     def moveNextVersion(self, event):
         self.next_version(event)
     
-    def prepare(self):
+    def prepare(self, is_package):
 		projectname = "tomcat"
 		version_array = ["6.0.0", "6.0.43", "7.0.0", "7.0.61", "8.0.0", "8.0.21"]
 		self.pos = None
@@ -87,9 +91,17 @@ class AnalysisDemo(wx.Frame):
 		self.lines = []
 		for i in range(6):
 			data_directory = projectname + "_history/" + projectname + version_array[i] + "/" + projectname
-			[g, self.lines] = creategraph.readfile(data_directory)
+                        if is_package == False:
+                            [g, self.lines] = creategraph.readfile(data_directory)
+                            filter_threshold = 45
+                        else :
+                            [g, self.lines] = creategraph.readpkg(data_directory)
+                            filter_threshold = 20
+                        #print "|g.V| = ", nx.number_of_nodes(g)
+
 			if i == 0:
-				self.sg = creategraph.refine(g, 45)
+				self.sg = creategraph.refine(g, filter_threshold)
+                                print nx.number_of_nodes(self.sg)
 				[self.pos, self.x, self.y] = creategraph.coordinate(self.sg)
 				size = creategraph.point_sizes(self.sg, self.lines)
 				zeros = np.array([0] * len(size))
@@ -98,12 +110,11 @@ class AnalysisDemo(wx.Frame):
 			else:
 				# create the graph induced by nodes from sg
 				subg = nx.subgraph(g, nx.nodes(self.sg))
-				# print subg, sg
 				if nx.number_of_nodes(subg) != nx.number_of_nodes(self.sg):
-					print 'panic at 34' 
-				else: #                            v  this seems to be a error, but not
-					size = creategraph.point_sizes(self.sg, self.lines)
-					self.size_array.append(size)
+					print 'panic at 34', nx.number_of_nodes(subg), nx.number_of_nodes(self.sg)
+				#else: #                            v  this seems to be a error, but not
+				size = creategraph.point_sizes(self.sg, self.lines)
+				self.size_array.append(size)
 		self.x = np.array(self.x)
 		self.y = np.array(self.y)
 		self.size_array = np.array(self.size_array)
@@ -113,21 +124,30 @@ class AnalysisDemo(wx.Frame):
 		self.numsteps = len(self.size_array)
     
     def draw(self):
+                print "what am I doing"
 		xcenter = (self.x.max() + self.x.min()) / 2
 		ycenter = (self.y.max() + self.y.min()) / 2
 		xlength = (self.x.max() - xcenter) * 1.2
 		ylength = (self.y.max() - ycenter) * 1.2
-		
+                self.figure.clf()
 		self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
 				  ylim=(ycenter - ylength, ycenter + ylength))
 
 	#	nx.draw_networkx_edges(g,pos)
-		nx.draw(self.sg, self.pos, alpha=.5, node_size=0,
+		nx.draw(self.sg, self.pos, alpha=.3, node_size=0,
 				with_labels = False, width=1, edge_color='#666666')
+                for e in nx.edges_iter(self.sg):
+                    p1 = self.pos[e[0]]
+                    p2 = self.pos[e[1]]
+                    self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=.5, aa=True, color='#666666')
 		# self.axe.draw()
 
 		color = np.random.random( len(self.x) )
 		self.scat = self.axe.scatter(self.x, self.y, c=color, s=self.size_array[0], alpha = 0.5)
+
+                self.axe.set_frame_on(False)
+                self.axe.axes.get_yaxis().set_visible(False)
+                self.axe.axes.get_xaxis().set_visible(False)
 
     def update_plot(self, i, area, nframes, scat):
 		if not self.pause:
@@ -163,12 +183,12 @@ class AnalysisDemo(wx.Frame):
 
 def main():
     app = wx.App()
-    analysis = AnalysisDemo(None)
-    analysis.prepare()
+    analysis = AnalysisDemo(None) 
+    analysis.prepare(False)
     analysis.draw()
     ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
-                 interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
-    
+        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
+
     # analysis.figure.canvas.mpl_connect('key_press_event', analysis.next_version)
     analysis.figure.canvas.mpl_connect('button_press_event', analysis.show_file_info)
     app.MainLoop()
