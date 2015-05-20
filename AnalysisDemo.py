@@ -1,11 +1,12 @@
 import wx
-import creategraph
 from matplotlib.figure import Figure
 import matplotlib.animation as animation
 import networkx as nx
 import numpy as np
 import math
 from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
+import creategraph
+from projectdata import DataManager
 
 class AnalysisDemo(wx.Frame):
     APP_EXIT = 0
@@ -15,6 +16,7 @@ class AnalysisDemo(wx.Frame):
     APP_CLASS = 4
     def __init__(self, *args, **kw):
         super(AnalysisDemo, self).__init__(*args, **kw)
+        self.dataManage = DataManager()
         self.initMain()
 
     def initMenuBar(self):
@@ -58,7 +60,7 @@ class AnalysisDemo(wx.Frame):
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
 
-        self.nameList = wx.ListBox(pn, choices=['package...','class...'])
+        self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.create = wx.Button(pn, label='Create Figure')
         self.prevVersion = wx.Button(pn, label='Previous Version')
@@ -107,7 +109,23 @@ class AnalysisDemo(wx.Frame):
 
     def onNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection())
-        print namestr
+        if self.showClass.GetValue() == True:
+            # TODO Select package here, update figure
+            if namestr == 'All files...':
+                # TODO Back to all file figure
+                pass
+            else:
+                pass
+        else:
+            # TODO Select file here, update figure
+            if namestr == 'Packages...':
+                # TODO Back to package figure
+                pass
+            elif namestr == 'Files...':
+                # TODO Back to file figure
+                pass
+            else:
+                pass
 
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
