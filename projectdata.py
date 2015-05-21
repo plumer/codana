@@ -8,8 +8,27 @@ class DataManager:
         fileattr (dict): Map of filename(key) and the attributes of the file(value)
         packageattr (dict): Map of package(key) and the attributes of the package(value)
     """
-    def __init__(self, filename='tomcat.dat'):
-        pass
+    def __init__(self, version='6.0.0'):
+        self.packagedict = {}
+        self.fileattr = {}
+        self.files = []
+        self.packageattr = {}
+        datafile = open(r'tomecat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
+        for packs in datafile:
+            packslice = packs.strip(' \t\n').split(' ')
+            self.packagedict[packslice[0]] = []
+            self.packageattr[packslice[0]] = [packslice[-1]]
+            filenum = 0
+            for files in datafile:
+                fileattr = files.strip(' \t\n').split('\t')
+                if not fileattr[0] in self.packagedict[packslice[0]]:
+                    files.append(fileattr[0])
+                    self.packagedict[packslice[0]].append(fileattr[0])
+                    self.fileattr[fileattr[0]] = fileattr[1:]
+                filenum = filenum + 1
+                if filenum >= int(packslice[-1]):
+                    break
+        self.packages = self.packagedict.keys()
 
     def getPackages(self):
         return self.packages
@@ -25,3 +44,7 @@ class DataManager:
 
     def getPackageAttr(self, package):
         return self.packageattr[package]
+
+if __name__ == '__main__':
+    DataManager()
+
