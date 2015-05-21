@@ -1,1754 +1,1754 @@
-ASCIIReader.java	212
-AbsoluteOrder.java	111
-AbstractCatalinaTask.java	293
-AbstractEndpoint.java	587
-AbstractGroup.java	170
-AbstractHttp11Processor.java	723
-AbstractHttp11Protocol.java	431
-AbstractInputBuffer.java	327
-AbstractObjectCreationFactory.java	79
-AbstractOutputBuffer.java	567
-AbstractReplicatedMap.java	1494
-AbstractRole.java	123
-AbstractRulesImpl.java	151
-AbstractRxTask.java	89
-AbstractSender.java	356
-AbstractUser.java	225
-AcceptLanguage.java	150
-AccessFlags.java	136
-AccessLog.java	46
-AccessLogValve.java	1427
-ActionCode.java	201
-ActionHook.java	48
-Adapter.java	57
-AddDefaultCharsetFilter.java	94
-Address.java	114
-AjpAprProcessor.java	1430
-AjpAprProtocol.java	554
-AjpMessage.java	465
-AjpProcessor.java	1367
-AjpProtocol.java	508
-AnnotationDefault.java	97
-AnnotationElementValue.java	60
-AnnotationEntry.java	111
-Annotations.java	106
-AntCompiler.java	527
-ApplicationContext.java	1594
-ApplicationContextFacade.java	837
-ApplicationDispatcher.java	1015
-ApplicationFilterChain.java	583
-ApplicationFilterConfig.java	441
-ApplicationFilterFactory.java	368
-ApplicationFilterRegistration.java	214
-ApplicationHttpRequest.java	976
-ApplicationHttpResponse.java	413
-ApplicationJspConfigDescriptor.java	45
-ApplicationJspPropertyGroupDescriptor.java	171
-ApplicationParameter.java	124
-ApplicationPart.java	160
-ApplicationRequest.java	216
-ApplicationResponse.java	208
-ApplicationServletRegistration.java	256
-ApplicationSessionCookieConfig.java	220
-ApplicationTaglibDescriptor.java	81
-AprEndpoint.java	1610
-AprLifecycleListener.java	252
-Arg.java	47
-ArithmeticNode.java	43
-ArrayELResolver.java	172
-ArrayElementValue.java	81
-ArrayStack.java	169
-Arrays.java	233
-Ascii.java	247
-AstAnd.java	47
-AstBracketSuffix.java	40
-AstChoice.java	49
-AstCompositeExpression.java	57
-AstDeferredExpression.java	58
-AstDiv.java	43
-AstDotSuffix.java	40
-AstDynamicExpression.java	58
-AstEmpty.java	61
-AstEqual.java	42
-AstFalse.java	40
-AstFloatingPoint.java	61
-AstFunction.java	137
-AstGreaterThan.java	48
-AstGreaterThanEqual.java	48
-AstIdentifier.java	164
-AstInteger.java	61
-AstLessThan.java	48
-AstLessThanEqual.java	48
-AstLiteralExpression.java	67
-AstMethodParameters.java	48
-AstMinus.java	43
-AstMod.java	43
-AstMult.java	43
-AstNegative.java	85
-AstNot.java	48
-AstNotEqual.java	42
-AstNull.java	46
-AstOr.java	47
-AstPlus.java	43
-AstString.java	77
-AstTrue.java	40
-AstValue.java	293
-Async0.java	67
-Async1.java	61
-Async2.java	63
-Async3.java	39
-AsyncContext.java	78
-AsyncContextImpl.java	403
-AsyncEvent.java	68
-AsyncFileHandler.java	159
-AsyncListener.java	32
-AsyncListenerWrapper.java	60
-AsyncStockServlet.java	130
-Attribute.java	251
-AttributeInfo.java	160
-AttributeParser.java	351
-AttributeReader.java	59
-Authenticator.java	21
-Authenticator.java	73
-AuthenticatorBase.java	883
-B2CConverter.java	195
-BCELComparator.java	46
-BIOCallback.java	56
-BackupManager.java	322
-Base64.java	293
-BaseAttributeFilter.java	160
-BaseDirContext.java	1545
-BaseModelMBean.html	None
-BaseModelMBean.java	1178
-BaseNotificationBroadcaster.java	240
-BaseRedirectorHelperTask.java	375
-BaseSessionComparator.java	47
-BasicAuthenticator.java	180
-BeanELResolver.java	451
-BeanFactory.java	246
-BeanRepository.java	75
-Benchmarks.java	497
-BioReceiver.java	159
-BioReplicationTask.java	169
-BioSender.java	299
-BodyContent.java	140
-BodyContentImpl.java	637
-BodyTag.java	186
-BodyTagSupport.java	165
-BookBean.java	44
-BookBean.java.html	None
-BooleanNode.java	40
-Bootstrap.java	500
-BufferPool.java	92
-BufferPool15Impl.java	63
-BufferedInputFilter.java	127
-ByteArrayOutputStream.java	312
-ByteArrayServletOutputStream.java	64
-ByteChunk.java	872
-ByteMessage.java	102
-ByteSequence.java	60
-C2BConverter.java	275
-CGIServlet.java	1943
-CacheEntry.java	69
-CallMethodRule.html	None
-CallMethodRule.java	586
-CallParamRule.html	None
-CallParamRule.java	243
-CaptureLog.java	50
-Catalina.java	836
-CatalinaCluster.java	130
-CatalinaFactory.java	52
-CatalinaProperties.java	174
-Catch.java	72
-Channel.java	362
-ChannelCoordinator.java	337
-ChannelCreator.java	255
-ChannelData.java	365
-ChannelException.java	182
-ChannelInterceptor.java	180
-ChannelInterceptorBase.java	173
-ChannelListener.java	68
-ChannelMessage.java	109
-ChannelReceiver.java	83
-ChannelSender.java	69
-CharChunk.java	718
-CharsetMapper.java	132
-ChatServlet.java	290
-CheckTest.html	56
-CheckTest.java	31
-Choose.java	34
-ChunkedInputFilter.java	361
-ChunkedOutputFilter.java	187
-ClassElementValue.java	53
-ClassFormatException.java	42
-ClassLoaderFactory.java	234
-ClassLoaderLogManager.java	685
-ClassNameMBean.java	78
-ClassParser.java	283
-ClientAbortException.java	149
-Clock2.java	213
-Clock2.java	212
-Closeable.java	38
-Cluster.java	128
-ClusterDeployer.java	121
-ClusterJmxHelper.java	133
-ClusterListener.java	114
-ClusterManager.java	112
-ClusterManagerBase.java	73
-ClusterMessage.java	34
-ClusterMessageBase.java	79
-ClusterRuleSet.java	196
-ClusterRuleSetFactory.java	206
-ClusterSession.java	40
-ClusterSessionListener.java	114
-ClusterSingleSignOn.java	433
-ClusterSingleSignOnListener.java	184
-ClusterValve.java	40
-Code.java	287
-CodeException.java	159
-CollectedInfo.java	105
-Collector.java	217
-ColorGameBean.html	116
-ColorGameBean.java	113
-CombinedRealm.java	298
-CometConnectionManagerValve.java	335
-CometEvent.java	147
-CometEventImpl.java	139
-CometFilter.java	82
-CometFilterChain.java	46
-CometProcessor.java	45
-Compiler.java	580
-CompositeELResolver.java	212
-CompressionFilter.java	219
-CompressionFilterTestServlet.java	60
-CompressionResponseStream.java	329
-CompressionServletResponseWrapper.java	252
-ConcurrentCache.java	55
-Connector.java	959
-ConnectorCreateRule.java	93
-ConnectorMBean.java	142
-Constant.java	160
-ConstantCP.java	111
-ConstantClass.java	99
-ConstantDouble.java	95
-ConstantFieldref.java	47
-ConstantFloat.java	95
-ConstantInteger.java	95
-ConstantInterfaceMethodref.java	47
-ConstantLong.java	95
-ConstantMethodref.java	47
-ConstantNameAndType.java	115
-ConstantObject.java	31
-ConstantPool.java	286
-ConstantString.java	98
-ConstantUtf8.java	87
-ConstantValue.java	129
-Constants.java	43
-Constants.java	141
-Constants.java	32
-Constants.java	35
-Constants.java	32
-Constants.java	33
-Constants.java	45
-Constants.java	26
-Constants.java	394
-Constants.java	32
-Constants.java	71
-Constants.java	27
-Constants.java	27
-Constants.java	40
-Constants.java	212
-Constants.java	215
-Constants.java	31
-Constants.java	181
-Constants.java	38
-Constants.java	41
-Constants.java	35
-Constants.java	39
-Constants.java	205
-Constants.java	202
-Constants.java	43
-Constants.java	36
-Constants.java	35
-Constants.java	563
-Constants.java	61
-Constants.java	26
-ConstructorInfo.java	53
-Contained.java	54
-Container.java	476
-ContainerBase.java	1363
-ContainerEvent.java	113
-ContainerListener.java	44
-ContainerServlet.java	53
-ContentType.java	96
-Context.java	1224
-ContextAccessController.java	131
-ContextBindings.java	367
-ContextConfig.java	2305
-ContextEjb.java	119
-ContextEnvironment.java	97
-ContextEnvironmentMBean.java	107
-ContextHandler.java	155
-ContextListener.java	136
-ContextLocalEjb.java	116
-ContextResource.java	101
-ContextResourceEnvRef.java	76
-ContextResourceLink.java	87
-ContextResourceLinkMBean.java	182
-ContextResourceMBean.java	187
-ContextRuleSet.java	217
-ContextService.java	268
-ContextTransaction.java	108
-Cookie.java	615
-CookieExample	None
-CookieExample.java	125
-CookieSupport.java	222
-Cookies.java	490
-CookiesBaseTest.java	95
-CoordinationDemo.java	370
-CopyParentClassLoaderRule.java	78
-CoyoteAdapter.java	1119
-CoyoteInputStream.java	241
-CoyoteOutputStream.java	115
-CoyotePrincipal.java	77
-CoyoteReader.java	219
-CoyoteWriter.java	319
-CsrfPreventionFilter.java	190
-CustomObjectInputStream.java	110
-DOMWriter.java	335
-DataSender.java	44
-DataSourceRealm.java	645
-DateTool.java	116
-DebugValidator.java	85
-DeclareRoles.java	31
-DefaultErrorHandler.java	109
-DefaultInstanceManager.java	501
-DefaultServerSocketFactory.java	75
-DefaultServlet.html	None
-DefaultServlet.java	2212
-DeferredFileOutputStream.java	270
-DeltaManager.java	1521
-DeltaRequest.java	391
-DeltaSession.java	855
-DenyAll.java	30
-DeployTask.java	216
-Deprecated.java	113
-DigestAuthenticator.java	426
-Digester.html	None
-Digester.java	2787
-DigesterFactory.java	215
-DirContextURLConnection.java	458
-DirContextURLStreamHandler.java	266
-DirContextURLStreamHandlerFactory.java	66
-DirectByteArrayOutputStream.java	63
-DirectJDKLog.java	182
-Directory.java	97
-DiskFileItem.java	728
-DiskFileItemFactory.java	223
-DispatcherType.java	28
-DomUtil.java	270
-DomainFilterInterceptor.java	116
-DummyCart.html	56
-DummyCart.java	65
-DummyRequest.java	305
-DummyResponse.java	134
-Dumper.java	220
-DuplicateMappingParamFilter.java	54
-DuplicateMappingParamServlet.java	49
-DynamicAttributes.java	52
-EJB.java	36
-EJBs.java	31
-ELArithmetic.java	409
-ELContext.java	85
-ELContextEvent.java	40
-ELContextImpl.java	117
-ELContextListener.java	28
-ELContextWrapper.java	89
-ELException.java	68
-ELException.java	79
-ELFunctionMapper.java	291
-ELNode.java	265
-ELParseException.java	51
-ELParser.html	223
-ELParser.java	401
-ELParser.java	2262
-ELParserConstants.java	184
-ELParserTokenManager.java	1294
-ELParserTreeConstants.java	79
-ELResolver.java	80
-ELResolverImpl.java	166
-ELSupport.java	572
-EchoAttributesTag.java	55
-EchoAttributesTag.java.html	None
-EchoRpcTest.java	217
-EjbFactory.java	176
-EjbRef.java	139
-ElementValue.java	135
-ElementValuePair.java	67
-Embedded.java	985
-EmbeddedServletOptions.java	703
-EnclosingMethod.java	67
-EncodingMap.java	1022
-Engine.java	96
-EngineConfig.java	113
-EngineRuleSet.java	137
-Entries.java	72
-Entries.java.html	None
-Entry.java	54
-Entry.java	60
-Entry.java.html	None
-EnumElementValue.java	63
-Enumerator.java	176
-Enumerator.java	176
-Error.java	96
-ErrorData.java	89
-ErrorDispatcher.java	616
-ErrorHandler.java	73
-ErrorHandler.java	45
-ErrorPage.java	180
-ErrorReportValve.java	300
-EvaluationContext.java	93
-ExampleFilter.java	140
-ExampleTagBase.java	78
-ExceptionTable.java	143
-ExceptionUtils.java	38
-ExceptionUtils.java	38
-Executor.java	40
-ExecutorFactory.java	84
-ExpandWar.java	440
-Expression.java	39
-Expression.java	54
-ExpressionBuilder.java	211
-ExpressionEvaluator.java	111
-ExpressionEvaluatorImpl.java	64
-ExpressionFactory.java	284
-ExpressionFactoryImpl.java	83
-ExpressionImpl.java	40
-ExpressionParseTree.java	409
-ExpressionTokenizer.java	172
-ExtendedAccessLogValve.java	855
-ExtendedBaseRules.html	None
-Extension.java	305
-ExtensionValidator.java	446
-FactoryCreateRule.html	None
-FactoryCreateRule.java	403
-FarmWarDeployer.java	767
-FastHttpDateFormat.java	230
-FastQueue.java	373
-FeatureInfo.java	86
-Field.java	145
-FieldOrMethod.java	106
-File.java	722
-FileChangeListener.java	24
-FileCleaningTracker.java	259
-FileDeleteStrategy.java	158
-FileDirContext.java	1110
-FileHandler.java	347
-FileInfo.java	67
-FileItem.java	223
-FileItemFactory.java	50
-FileItemHeaders.java	77
-FileItemHeadersImpl.java	90
-FileItemHeadersSupport.java	47
-FileItemIterator.java	48
-FileItemStream.java	97
-FileMessage.java	111
-FileMessageFactory.java	378
-FileStore.java	444
-FileUpload.java	108
-FileUploadBase.java	1127
-FileUploadException.java	102
-FileUtils.java	229
-Filter.java	92
-FilterBase.java	61
-FilterChain.java	46
-FilterConfig.java	92
-FilterDef.java	205
-FilterMap.java	217
-FilterRegistration.java	67
-FindBookSimpleTag.java	45
-FindBookSimpleTag.java.html	None
-FixedNotificationFilter.java	95
-FooBean.java	36
-FooBean.java.html	None
-FooTag.java	85
-FooTagExtraInfo.java	34
-ForEach.java	344
-ForTokens.java	119
-FormAuthenticator.java	560
-FragmentationInterceptor.java	246
-FunctionInfo.java	81
-FunctionMapper.java	41
-FunctionMapper.java	29
-FunctionMapperFactory.java	60
-FunctionMapperImpl.java	195
-FunctionMapperImpl.java	37
-Functions.java	45
-Functions.java.html	None
-Generated.java	35
-Generator.java	4234
-GenericParser.java	86
-GenericPrincipal.java	225
-GenericServlet.java	326
-Global.java	96
-GlobalResourcesLifecycleListener.java	237
-Globals.java	326
-Group.java	123
-GroupChannel.java	684
-GroupMBean.java	192
-GzipInterceptor.java	107
-GzipOutputFilter.java	175
-HTMLFilter.java	69
-HTMLHostManagerServlet.java	608
-HTMLManagerServlet.java	1357
-Handler.java	39
-HandlerRef.java	179
-HandlesTypes.java	40
-Heartbeat.java	33
-HeartbeatListener.java	130
-Hello.java	83
-HelloWorldExample	None
-HelloWorldExample.java	77
-HelloWorldSimpleTag.java	33
-HelloWorldSimpleTag.java.html	None
-HexUtils.java	82
-HexUtils.java	179
-HomesUserDatabase.java	144
-Host.java	215
-HostConfig.java	1585
-HostManagerServlet.java	665
-HostRuleSet.java	141
-Http11AprProcessor.java	1228
-Http11AprProtocol.java	745
-Http11NioProcessor.java	1333
-Http11NioProtocol.java	478
-Http11Processor.java	1137
-Http11Protocol.java	373
-HttpConstraint.java	69
-HttpConstraintElement.java	91
-HttpJspBase.java	91
-HttpJspPage.java	58
-HttpMessages.java	138
-HttpMethodConstraint.java	74
-HttpMethodConstraintElement.java	56
-HttpServlet.java	822
-HttpServletRequest.java	726
-HttpServletRequestWrapper.java	314
-HttpServletResponse.java	676
-HttpServletResponseWrapper.java	237
-HttpSession.java	417
-HttpSessionActivationListener.java	37
-HttpSessionAttributeListener.java	36
-HttpSessionBindingEvent.java	153
-HttpSessionBindingListener.java	78
-HttpSessionContext.java	70
-HttpSessionEvent.java	34
-HttpSessionListener.java	45
-HttpUtils.java	281
-IDynamicProperty.java	58
-IOTools.java	87
-IOUtils.java	162
-IdentityInputFilter.java	210
-IdentityOutputFilter.java	190
-If.java	50
-ImmutableNameNotFoundException.java	47
-ImplicitObjectELResolver.java	625
-ImplicitTagLibraryInfo.java	220
-Import.java	382
-Injectable.java	29
-InjectionTarget.java	56
-InnerClass.java	161
-InnerClasses.java	128
-InputBuffer.java	540
-InputBuffer.java	46
-InputFilter.java	88
-InstanceEvent.java	449
-InstanceListener.java	42
-InstanceManager.java	45
-InstanceManagerFactory.java	44
-InstanceSupport.java	340
-InterceptorPayload.java	34
-InternalAprInputBuffer.java	843
-InternalAprOutputBuffer.java	735
-InternalInputBuffer.java	512
-InternalNioInputBuffer.java	738
-InternalNioOutputBuffer.java	328
-InternalOutputBuffer.java	286
-InternetAddress.java	22
-IntrospectionUtils.java	905
-IntrospectionUtils.java	909
-IterationTag.java	120
-JAASCallbackHandler.java	226
-JAASMemoryLoginModule.java	364
-JAASRealm.java	605
-JDBCAccessLogValve.java	649
-JDBCRealm.java	810
-JDBCStore.java	1002
-JDTCompiler.java	464
-JIoEndpoint.java	559
-JJTELParserState.java	123
-JKStatusUpdateTask.java	416
-JMXAccessorCondition.java	400
-JMXAccessorCreateTask.java	209
-JMXAccessorEqualsCondition.java	250
-JMXAccessorGetTask.java	147
-JMXAccessorInvokeTask.java	209
-JMXAccessorQueryTask.java	217
-JMXAccessorSetTask.java	223
-JMXAccessorTask.java	731
-JMXAccessorUnregisterTask.java	112
-JMXGetTask.java	97
-JMXProxyServlet.java	271
-JMXQueryTask.java	80
-JMXSetTask.java	120
-JNDIRealm.java	2263
-JSSEFactory.java	56
-JSSEImplementation.java	73
-JSSEKeyManager.java	144
-JSSESocketFactory.java	820
-JSSESupport.java	264
-JarResource.java	45
-JarScanner.java	48
-JarScannerCallback.java	35
-JarScannerFactory.java	52
-JarURLResource.java	57
-JasperException.java	46
-JasperListener.java	77
-JasperLoader.java	172
-JasperTagInfo.java	59
-JavaClass.java	307
-JavacErrorDetail.java	230
-JdbcLeakPrevention.java	58
-JdkLoggerFormatter.java	110
-JmxRemoteLifecycleListener.java	305
-JndiPermission.java	62
-JreMemoryLeakPreventionListener.java	238
-JspApplicationContext.java	77
-JspApplicationContextImpl.java	152
-JspC.java	1594
-JspCServletContext.java	605
-JspCalendar.java	152
-JspCalendar.java	154
-JspCompilationContext.java	753
-JspConfig.java	598
-JspConfigDescriptor.java	28
-JspContext.java	284
-JspContextWrapper.java	496
-JspDocumentParser.java	1473
-JspELException.java	28
-JspEngineInfo.java	49
-JspException.java	98
-JspFactory.java	158
-JspFactoryImpl.java	219
-JspFragment.java	83
-JspFragmentHelper.java	66
-JspHelper.java	210
-JspIdConsumer.java	21
-JspMethodExpression.java	114
-JspMethodNotFoundException.java	28
-JspPage.java	90
-JspPropertyGroup.java	106
-JspPropertyGroupDescriptor.java	38
-JspPropertyNotFoundException.java	30
-JspPropertyNotWritableException.java	29
-JspQueue.java	103
-JspReader.java	624
-JspRuntimeContext.java	545
-JspRuntimeLibrary.java	1009
-JspServlet.java	356
-JspServletWrapper.java	539
-JspSourceDependent.java	39
-JspTag.java	27
-JspTagException.java	93
-JspUtil.java	973
-JspValueExpression.java	146
-JspWriter.java	445
-JspWriterImpl.java	620
-JvmRouteBinderValve.java	490
-JvmRouteSessionIDBinderListener.java	180
-LazyReplicatedMap.java	189
-Library.java	219
-Lifecycle.java	282
-LifecycleBase.java	322
-LifecycleEvent.java	126
-LifecycleException.java	147
-LifecycleListener.java	44
-LifecycleListenerRule.java	104
-LifecycleMBeanBase.java	243
-LifecycleState.java	59
-LifecycleSupport.java	154
-LimitedInputStream.java	158
-LineNumber.java	108
-LineNumberTable.java	144
-LinkObject.java	109
-ListELResolver.java	179
-ListTask.java	56
-ListenCallback.java	41
-LoadTest.java	418
-Loader.java	169
-Local.java	75
-LocalVariable.java	179
-LocalVariableTable.java	154
-LocalVariableTypeTable.java	114
-Localizer.java	160
-Lock.java	123
-LockOutRealm.java	393
-Log.java	234
-LogConfigurationException.java	93
-LogFactory.java	366
-LogTag.java	63
-LoginConfig.java	226
-Logs.java	29
-MBeanFactory.java	1013
-MBeanUtils.java	1720
-MD5Encoder.java	73
-MIME2Java.java	603
-MailSessionFactory.java	157
-ManagedBean.java	631
-ManagedChannel.java	78
-Manager.java	376
-ManagerBase.java	1300
-ManagerServlet.java	1664
-ManifestResource.java	243
-MapDemo.java	541
-MapELResolver.java	149
-Mapper.java	1596
-MapperListener.java	442
-MappingData.java	53
-Mark.java	262
-MbeansDescriptorsDOMSource.java	304
-MbeansDescriptorsDigesterSource.java	250
-MbeansDescriptorsIntrospectionSource.java	421
-MbeansDescriptorsSerSource.java	105
-MbeansSource.java	368
-MbeansSourceMBean.java	60
-McastService.java	651
-McastServiceImpl.java	653
-Member.java	125
-MemberImpl.java	636
-MembersWithProperties.java	120
-Membership.java	323
-MembershipListener.java	44
-MembershipService.java	142
-MemoryGroup.java	223
-MemoryProtocolHandler.java	167
-MemoryRealm.java	316
-MemoryRole.java	105
-MemoryRuleSet.java	138
-MemoryUser.java	308
-MemoryUserDatabase.java	815
-MemoryUserDatabaseFactory.java	112
-MemoryUserDatabaseMBean.java	396
-MessageBytes.java	650
-MessageDestination.java	115
-MessageDestinationRef.java	100
-MessageDispatch15Interceptor.java	118
-MessageDispatchInterceptor.java	216
-MessageFactory.java	70
-MessageListener.java	43
-Method.java	195
-MethodExpression.java	42
-MethodExpressionImpl.java	332
-MethodExpressionLiteral.java	103
-MethodInfo.java	52
-MethodNotFoundException.java	55
-MimeHeaders.java	477
-MimeMessage.java	28
-MimePart.java	20
-MimePartDataSource.java	22
-Mmap.java	73
-ModelerSource.java	84
-MultiCastSender.java	86
-MultiPointSender.java	38
-Multicast.java	78
-MultipartConfig.java	68
-MultipartConfigElement.java	71
-MultipartDef.java	134
-MultipartStream.java	1031
-MultipointBioSender.java	149
-MutableInteger.java	29
-NameParserImpl.java	57
-NamingContext.java	912
-NamingContextBindingsEnumeration.java	130
-NamingContextEnumeration.java	96
-NamingContextListener.java	1213
-NamingEntry.java	83
-NamingResources.java	838
-NamingResourcesMBean.java	324
-NamingRuleSet.java	144
-NamingService.java	230
-NamingServiceMBean.java	98
-NioBlockingSelector.java	394
-NioChannel.java	221
-NioEndpoint.java	1619
-NioReceiver.java	440
-NioReplicationTask.java	339
-NioSelectorPool.java	303
-NioSender.java	383
-NioSenderTest.java	119
-NioX509KeyManager.java	86
-NoMappingParamServlet.java	48
-Node.java	2584
-Node.java	84
-NodeCreateRule.html	None
-NodeCreateRule.java	441
-NodeVisitor.java	25
-NonBlockingCoordinator.java	854
-NonLoginAuthenticator.java	106
-NotificationInfo.java	142
-NumberGuessBean.java	79
-OS.java	130
-ObjectCreateRule.html	None
-ObjectCreateRule.java	185
-ObjectCreationFactory.java	60
-ObjectParamRule.java	127
-ObjectReader.java	170
-OneLineFormatter.java	127
-OpenEjbFactory.java	90
-OperationInfo.java	161
-Options.java	230
-OrderInterceptor.java	333
-Otherwise.java	32
-Out.java	90
-OutputBuffer.java	47
-OutputBuffer.java	609
-OutputFilter.java	83
-PMGClass.java	130
-PageContext.java	532
-PageContextImpl.java	988
-PageData.java	50
-PageDataImpl.java	745
-PageInfo.java	737
-ParallelNioSender.java	316
-Param.java	77
-ParamFilter.java	57
-ParamServlet.java	48
-ParameterAnnotationEntry.java	59
-ParameterAnnotations.java	88
-ParameterInfo.java	58
-ParameterMap.java	218
-ParameterParser.java	330
-Parameters.java	377
-ParseException.java	187
-Parser.java	1769
-ParserController.java	607
-ParserFeatureSetterFactory.java	73
-ParserUtils.java	235
-Part.java	44
-PasswdUserDatabase.java	194
-PasswordAuthentication.java	22
-PasswordCallback.java	34
-PathCallParamRule.java	96
-PerThreadTagHandlerPool.java	139
-PeriodicEventListener.java	25
-PermitAll.java	30
-PersistenceContext.java	34
-PersistenceContextType.java	23
-PersistenceContexts.java	31
-PersistenceProperty.java	30
-PersistenceUnit.java	32
-PersistenceUnits.java	32
-PersistentManager.java	79
-PersistentManagerBase.java	1126
-PersistentValve.java	218
-Pipeline.java	148
-Poll.java	157
-Pool.java	164
-PoolCallback.java	33
-PooledMultiSender.java	74
-PooledParallelSender.java	87
-PooledSender.java	217
-PostConstruct.java	30
-PreDestroy.java	30
-Proc.java	210
-ProcErrorCallback.java	38
-Procattr.java	172
-Processor.java	45
-ProgressListener.java	34
-PropertyNotFoundException.java	56
-PropertyNotWritableException.java	55
-ProtectedFunctionMapper.java	196
-ProtocolHandler.java	85
-Proxy.java	34
-ProxyDirContext.java	1630
-RELEASE-NOTES	None
-RELEASE-NOTES	None
-RELEASE-NOTES.txt	None
-Realm.java	191
-RealmBase.java	1320
-RealmRuleSet.java	110
-ReceiverBase.java	587
-RecyclableNamingEnumeration.java	113
-Redirect.java	83
-ReflectionUtil.java	183
-RegexMatcher.html	None
-RegexRules.html	None
-Registration.java	65
-Registry.html	None
-Registry.java	235
-Registry.java	904
-RegistryMBean.java	142
-ReloadTask.java	83
-RemoteAddrFilter.java	101
-RemoteAddrValve.java	88
-RemoteHostFilter.java	102
-RemoteHostValve.java	88
-RemoteIpFilter.java	991
-RemoteIpValve.java	761
-RemoteProcessException.java	46
-Remove.java	45
-RepeatSimpleTag.java	43
-RepeatSimpleTag.java.html	None
-ReplicatedContext.java	206
-ReplicatedMap.java	118
-ReplicatedMapEntry.java	123
-ReplicatedSession.java	299
-ReplicationStream.java	166
-ReplicationTransmitter.java	134
-ReplicationValve.java	649
-Request.java	536
-Request.java	3016
-RequestContext.java	64
-RequestDispatcher.java	170
-RequestDumperFilter.java	284
-RequestFacade.java	1013
-RequestFilter.java	313
-RequestFilterValve.java	292
-RequestGroupInfo.java	164
-RequestHeaderExample	None
-RequestHeaderExample.java	94
-RequestInfo.java	246
-RequestInfoExample	None
-RequestInfoExample.java	117
-RequestParamExample	None
-RequestParamExample.java	109
-RequestUtil.java	460
-ResizableExecutor.java	40
-Resource.java	112
-Resource.java	41
-ResourceAttributes.java	993
-ResourceBase.java	146
-ResourceBundleELResolver.java	136
-ResourceCache.java	423
-ResourceEntry.java	78
-ResourceEnvFactory.java	125
-ResourceEnvRef.java	100
-ResourceFactory.java	154
-ResourceLinkFactory.java	104
-ResourceLinkRef.java	112
-ResourceRef.java	170
-ResourceSet.java	190
-Resources.java	31
-ResourcesTask.java	75
-Response.java	1673
-Response.java	592
-Response.java	53
-ResponseFacade.java	573
-ResponseIncludeWrapper.java	267
-ReverseComparator.java	46
-Role.java	76
-RoleMBean.java	89
-RolesAllowed.java	31
-RolesTask.java	56
-RpcCallback.java	45
-RpcChannel.java	269
-RpcMessage.java	118
-Rule.html	None
-Rule.java	227
-RuleSet.html	None
-RuleSet.java	67
-RuleSetBase.html	None
-RuleSetBase.java	71
-Rules.html	None
-Rules.java	114
-RulesBase.html	None
-RulesBase.java	277
-RunAs.java	31
-RuntimeInvisibleAnnotations.java	67
-RuntimeInvisibleParameterAnnotations.java	54
-RuntimeVisibleAnnotations.java	67
-RuntimeVisibleParameterAnnotations.java	54
-RxTaskPool.java	153
-SAXException.html	None
-SAXParseException.html	None
-SSICommand.java	50
-SSIConditional.java	138
-SSIConditionalState.java	43
-SSIConfig.java	58
-SSIEcho.java	74
-SSIExec.java	81
-SSIExternalResolver.java	76
-SSIFilter.java	182
-SSIFlastmod.java	75
-SSIFsize.java	121
-SSIInclude.java	65
-SSIMediator.java	352
-SSIPrintenv.java	62
-SSIProcessor.java	325
-SSIServlet.java	219
-SSIServletExternalResolver.java	574
-SSIServletRequestUtil.java	52
-SSISet.java	63
-SSIStopProcessingException.java	30
-SSL.java	344
-SSLAuthenticator.java	164
-SSLContext.java	284
-SSLImplementation.java	87
-SSLSessionManager.java	31
-SSLSocket.java	112
-SSLSupport.java	138
-SSLValve.java	108
-SavedRequest.java	196
-SavedRequestInputFilter.java	110
-SchemaResolver.java	135
-ScopedAttributeELResolver.java	198
-ScriptingVariabler.java	151
-SecureNioChannel.java	500
-SecurityClassLoad.java	114
-SecurityClassLoad.java	238
-SecurityCollection.java	427
-SecurityConfig.java	134
-SecurityConstraint.java	549
-SecurityRoleRef.java	89
-SecurityUtil.java	81
-SecurityUtil.java	431
-SelectorContext.java	750
-SemaphoreValve.java	210
-SendMailFactory.java	127
-SendMessageData.java	82
-Sender.java	36
-SenderState.java	110
-SerializablePrincipal.java	250
-Server.java	158
-ServerCookie.java	337
-ServerInfo.java	125
-ServerLifecycleListener.java	1204
-ServerSocketFactory.java	174
-ServerinfoTask.java	49
-Service.java	137
-ServiceProxy.java	147
-ServiceRef.java	206
-ServiceRefFactory.java	371
-Servlet.java	193
-ServletConfig.java	95
-ServletContainerInitializer.java	36
-ServletContext.java	941
-ServletContextAttributeEvent.java	60
-ServletContextAttributeListener.java	37
-ServletContextEvent.java	47
-ServletContextListener.java	51
-ServletDef.java	267
-ServletException.java	98
-ServletFileUpload.java	147
-ServletInputStream.java	107
-ServletOutputStream.java	365
-ServletRegistration.java	50
-ServletRequest.java	658
-ServletRequestAttributeEvent.java	67
-ServletRequestAttributeListener.java	50
-ServletRequestContext.java	108
-ServletRequestEvent.java	56
-ServletRequestListener.java	40
-ServletRequestWrapper.java	516
-ServletResponse.java	453
-ServletResponseWrapper.java	251
-ServletResponseWrapperInclude.java	79
-ServletSecurity.java	90
-ServletSecurityElement.java	131
-ServletWriter.java	155
-Session.java	319
-Session.java	28
-SessionConfig.java	105
-SessionCookieConfig.java	91
-SessionEvent.java	113
-SessionExample	None
-SessionExample.java	144
-SessionIDMessage.java	131
-SessionListener.java	42
-SessionListener.java	163
-SessionMessage.java	104
-SessionMessageImpl.java	164
-SessionTrackingMode.java	27
-SessionUtils.java	261
-SessionsTask.java	77
-Set.java	167
-SetAllPropertiesRule.java	80
-SetCharacterEncodingFilter.java	172
-SetContextPropertiesRule.java	76
-SetNextNamingRule.java	128
-SetNextRule.html	None
-SetNextRule.java	225
-SetPropertiesRule.html	None
-SetPropertiesRule.java	277
-SetPropertyRule.html	None
-SetPropertyRule.java	164
-SetRootRule.java	226
-SetTopRule.html	None
-SetTopRule.java	226
-Shm.java	124
-ShowSource.java	74
-ShuffleSimpleTag.java	82
-ShuffleSimpleTag.java.html	None
-Signature.java	110
-SimpleCharStream.java	471
-SimpleCoordinator.java	118
-SimpleElementValue.java	140
-SimpleHttpClient.java	172
-SimpleNode.java	221
-SimpleRegexMatcher.html	None
-SimpleTag.java	140
-SimpleTagSupport.java	211
-SimpleTcpCluster.java	935
-SimpleTcpReplicationManager.java	689
-SingleRemoveSynchronizedAddLock.java	254
-SingleSignOn.java	596
-SingleSignOnEntry.java	190
-SingleSignOnMessage.java	189
-SingleThreadModel.java	50
-SkipPageException.java	76
-SmapGenerator.java	172
-SmapStratum.java	338
-SmapUtil.java	700
-Smart.java	32
-Sockaddr.java	42
-Socket.java	586
-SocketNioReceive.java	92
-SocketNioSend.java	105
-SocketNioValidateSend.java	101
-SocketProperties.java	425
-SocketReceive.java	80
-SocketSend.java	69
-SocketStatus.java	27
-SocketTribesReceive.java	87
-SocketValidateReceive.java	107
-SocketWrapper.java	64
-SourceFile.java	119
-StackMap.java	132
-StackMapEntry.java	172
-StackMapTable.java	132
-StackMapTableEntry.java	245
-StackMapType.java	147
-StandardClassLoader.java	46
-StandardClassLoaderMBean.java	29
-StandardContext.java	5862
-StandardContextValve.java	334
-StandardEngine.java	340
-StandardEngineValve.java	142
-StandardHost.java	812
-StandardHostValve.java	497
-StandardJarScanner.java	259
-StandardManager.java	690
-StandardPipeline.java	470
-StandardServer.java	754
-StandardService.java	571
-StandardSession.java	1858
-StandardSessionFacade.java	179
-StandardThreadExecutor.java	307
-StandardWrapper.java	1880
-StandardWrapperFacade.java	96
-StandardWrapperValve.java	577
-StartTask.java	82
-StaticMember.java	76
-StaticMembershipInterceptor.java	122
-Status.java	265
-StatusManagerServlet.java	347
-StatusTransformer.java	927
-Stdlib.java	90
-Stockticker.java	187
-StopTask.java	82
-Store.java	145
-StoreBase.java	240
-Streamable.java	60
-Streams.java	166
-Strftime.java	263
-StringCache.java	692
-StringManager.java	171
-StringManager.java	174
-StringManager.java	171
-StringParser.java	324
-SymbolTable.java	302
-Synthetic.java	123
-SystemLogHandler.java	272
-TableBean.java	100
-TableBean.java.html	None
-Tag.java	263
-TagAdapter.java	159
-TagAttributeInfo.java	236
-TagConstants.java	116
-TagData.java	153
-TagExtraInfo.java	145
-TagFileInfo.java	86
-TagFileProcessor.java	674
-TagHandlerPool.java	179
-TagInfo.java	447
-TagLibraryInfo.java	303
-TagLibraryInfoImpl.java	757
-TagLibraryValidator.java	144
-TagPlugin.java	37
-TagPluginContext.java	124
-TagPluginManager.java	240
-TagSupport.java	282
-TagVariableInfo.java	121
-TaglibDescriptor.java	26
-TaskQueue.java	74
-TaskThreadFactory.java	47
-TcpFailureDetector.java	373
-TcpPingInterceptor.java	185
-TcpSender.java	205
-TestAttributeParser.java	201
-TestBug49158.java	82
-TestByteChunk.java	142
-TestChannelOptionFlag.java	93
-TestChannelStartStop.java	138
-TestContextConfigAnnotation.java	257
-TestCookies.java	280
-TestCookiesAllowEquals.java	104
-TestCookiesAllowHttpSeps.java	99
-TestCookiesDefaultSysProps.java	67
-TestCookiesDisallowEquals.java	96
-TestCookiesNoFwdStrictSysProps.java	60
-TestCookiesNoStrictNamingSysProps.java	59
-TestCookiesStrictSysProps.java	70
-TestCoyoteAdapter.java	139
-TestDataIntegrity.java	196
-TestDomainFilter.java	125
-TestELEvaluation.java	219
-TestELInJsp.java	397
-TestELParser.java	68
-TestELSupport.java	119
-TestGenerator.java	219
-TestInternalInputBuffer.java	148
-TestJspConfig.java	102
-TestJspDocumentParser.java	69
-TestKeepAliveCount.java	133
-TestMemberArrival.java	122
-TestMemberSerialization.java	117
-TestMethodExpressionImpl.java	105
-TestMulticastPackages.java	245
-TestNamingContextListener.java	85
-TestNonBlockingCoordinator.java	114
-TestOrderInterceptor.java	195
-TestPageContext.java	43
-TestParser.java	114
-TestRegistration.java	87
-TestRemoteIpFilter.java	529
-TestRemoteIpValve.java	660
-TestRemoteProcessException.java	141
-TestRequest.java	304
-TestRequestUtil.java	43
-TestScriptingVariabler.java	116
-TestSecurityConstraint.java	209
-TestSenderConnections.java	132
-TestSerializablePrincipal.java	109
-TestSerialization.java	42
-TestServerInfo.java	30
-TestStandardContext.java	112
-TestStandardContextAliases.java	106
-TestStandardContextResources.java	206
-TestStringManager.java	44
-TestTcpFailureDetector.java	167
-TestTomcat.java	315
-TestTomcatSSL.java	268
-TestUdpPackages.java	288
-TestValidator.java	177
-TestValueExpressionImpl.java	84
-TestWebXml.java	128
-TestWebXmlOrdering.java	255
-TestWebappClassLoaderMemoryLeak.java	121
-TesterBeanA.java	30
-TesterBeanB.java	34
-TesterBeanC.java	31
-TesterFunctions.java	24
-TesterPrincipal.java	36
-TextOptimizer.java	123
-ThreadPoolExecutor.java	120
-ThresholdingOutputStream.java	262
-ThroughputInterceptor.java	164
-TileSimpleTag.java	47
-TileSimpleTag.java.html	None
-Time.java	74
-TldConfig.java	604
-TldLocation.java	60
-TldLocationsCache.java	449
-TldRuleSet.java	187
-Token.java	131
-TokenMgrError.java	147
-Tomcat.java	936
-TomcatBaseTest.java	198
-TomcatCSS.java	37
-Tool.java	244
-TransactionFactory.java	125
-TransactionRef.java	96
-TreeNode.java	366
-TribesTestSuite.java	67
-TryCatchFinally.java	99
-TwoPhaseCommitInterceptor.java	150
-Txt2Html.java	165
-UCSReader.java	309
-UDecoder.java	276
-UEncoder.java	174
-URL.java	735
-URLEncoder.java	100
-UTF8Reader.java	643
-UUIDGenerator.java	76
-UnavailableException.java	203
-UndeployMessage.java	114
-UndeployTask.java	73
-UniqueId.java	74
-Unknown.java	150
-Url.java	101
-User.java	174
-User.java	127
-UserConfig.java	337
-UserDatabase.java	174
-UserDatabase.java	70
-UserDatabaseRealm.java	284
-UserMBean.java	234
-Util.java	335
-Utility.java	856
-VMSpecTOC.doc.html	None
-ValidationMessage.java	86
-Validator.java	1836
-ValidatorTask.java	117
-ValueExpression.java	44
-ValueExpressionImpl.java	285
-ValueExpressionLiteral.java	122
-ValueReference.java	44
-ValuesBean.java	52
-ValuesBean.java.html	None
-ValuesTag.java	77
-ValuesTag.java.html	None
-Valve.java	152
-ValveBase.java	320
-VariableInfo.java	284
-VariableMapper.java	28
-VariableMapperFactory.java	55
-VariableMapperImpl.java	58
-VariableResolver.java	52
-VariableResolverImpl.java	36
-VerbatimFormatter.java	45
-VirtualDirContext.java	225
-VirtualWebappLoader.java	122
-VoidInputFilter.java	126
-VoidOutputFilter.java	128
-WARDirContext.java	971
-WarWatcher.java	244
-WebAnnotationSet.java	367
-WebFilter.java	122
-WebInitParam.java	57
-WebListener.java	53
-WebRuleSet.java	1171
-WebServiceRef.java	37
-WebServiceRefs.java	31
-WebServlet.java	113
-WebXml.java	120
-WebXml.java	2190
-WebappClassLoader.java	3288
-WebappLoader.java	1191
-WebdavFixFilter.java	147
-WebdavServlet.java	3143
-When.java	50
-WithDefaultsRulesWrapper.html	None
-WithDefaultsRulesWrapper.java	160
-Wrapper.java	388
-XByteBuffer.java	605
-XMLChar.java	1031
-XMLEncodingDetector.java	1645
-XMLString.java	198
-XMLStringBuffer.java	177
-XMLWriter.java	245
-XercesParser.java	190
-XmlErrorHandler.java	77
-aio.xml	0
-ajp.xml	0
-antlib.xml	58
-antlib.xml	46
-apr.xml	0
-asf-logo-wide.gif	None
-balancer-howto.xml	0
-basic-arithmetic.html	30
-basic-arithmetic.jsp	None
-basic-arithmetic.jsp	None
-basic-arithmetic.jsp.html	None
-basic-comparisons.html	30
-basic-comparisons.jsp	None
-basic-comparisons.jsp	None
-basic-comparisons.jsp.html	None
-basic.html	31
-basic.jspx	None
-basic.jspx	None
-basic.jspx.html	None
-bcel	None
-book.html	37
-book.jsp	None
-book.jsp	None
-book.jsp.html	None
-buglist.cgi	None
-bugreport.html	None
-build.xml	2101
-build.xml	1
-build.xml	0
-building.html	None
-building.xml	0
-cal1.jsp	None
-cal1.jsp.html	None
-cal2.jsp.html	None
-calendar.html	43
-carts.html	53
-carts.jsp	None
-carts.jsp.html	None
-catalina-tasks.xml	59
-cgi-howto.xml	0
-changelog.html	None
-changelog.html	None
-changelog.xml	0
-check.html	38
-checkresult.jsp	None
-checkresult.jsp.html	None
-choose.html	36
-choose.jsp	None
-choose.jsp	None
-choose.jsp.html	None
-class-loader-howto.xml	0
-clr.html	34
-clr.html.html	None
-cluster-channel.xml	0
-cluster-deployer.xml	0
-cluster-howto.xml	0
-cluster-interceptor.xml	0
-cluster-listener.xml	0
-cluster-manager.xml	0
-cluster-membership.xml	0
-cluster-receiver.xml	0
-cluster-sender.xml	0
-cluster-valve.xml	0
-cluster.xml	0
-coda.jspf.html	None
-code.gif	None
-colors.html	47
-colrs.jsp	None
-colrs.jsp.html	None
-composite.html	31
-composite.jsp	None
-composite.jsp	None
-composite.jsp.html	None
-config.html	35
-config.jsp	None
-config.jsp	None
-config.jsp.html	None
-connectors.xml	0
-context.xml	35
-context.xml	0
-context.xml	0
-context.xml	0
-context.xml	0
-cookies.html	61
-cresult.html	34
-crt.html	34
-date.html	31
-date.jsp	None
-date.jsp	None
-date.jsp.html	None
-default-servlet.xml	0
-deployer-howto.xml	0
-deployment.xml	1
-developers.xml	0
-displayProducts.tag.html	None
-docs	None
-download.html	None
-dynamicattrs.html	33
-dynamicattrs.jsp	None
-dynamicattrs.jsp	None
-dynamicattrs.jsp.html	None
-engine.xml	0
-er.html	31
-err.jsp	None
-err.jsp.html	None
-error.html	37
-execute.gif	None
-execute.gif	None
-execute.gif	None
-executor.xml	0
-extras.html	None
-extras.xml	0
-faq	None
-faq.xml	0
-filter.xml	0
-foo.html	17
-foo.html	30
-foo.jsp	None
-foo.jsp	None
-foo.jsp.html	None
-foreach.html	36
-foreach.jsp	None
-foreach.jsp	None
-foreach.jsp.html	None
-forward.jsp	None
-forward.jsp	None
-forward.jsp.html	None
-fs-admin-apps.xml	0
-fs-admin-objects.xml	0
-fs-admin-opers.xml	0
-fs-default.xml	0
-fs-jdbc-realm.xml	0
-fs-jndi-realm.xml	0
-fs-memory-realm.xml	0
-functions.html	32
-functions.jsp	None
-functions.jsp	None
-functions.jsp.html	None
-fwd.html	30
-globalresources.xml	0
-hello	None
-hello.html	33
-hello.html	33
-hello.jsp	None
-hello.jsp	None
-hello.jsp	None
-hello.jsp.html	None
-helloWorld.tag.html	None
-helloworld.html	50
-host.xml	0
-howto.html	45
-html	None
-html-manager-howto.xml	0
-http.xml	0
-if.html	36
-if.jsp	None
-if.jsp	None
-if.jsp.html	None
-implicit-objects.html	31
-implicit-objects.jsp	None
-implicit-objects.jsp	None
-implicit-objects.jsp.html	None
-inc.html	30
-include.jsp	None
-include.jsp	None
-include.jsp.html	None
-index.html	None
-index.html	None
-index.html	1008
-index.html	512
-index.html	945
-index.html	44
-index.html	22087
-index.html	378
-index.html	121
-index.html	None
-index.html	None
-index.html	None
-index.xml	0
-index.xml	0
-index.xml	0
-index.xml	0
-index.xml	0
-installation.xml	0
-introduction.xml	0
-introduction.xml	0
-introduction.xml	0
-jar-scanner.xml	0
-jasper-howto.xml	0
-javaURLContextFactory.java	118
-jndi-datasource-examples-howto.xml	0
-jndi-resources-howto.xml	0
-jsp	None
-jsp	None
-jsp	None
-jspattribute.html	37
-jspattribute.jsp	None
-jspattribute.jsp	None
-jspattribute.jsp.html	None
-jsptoservlet.jsp	None
-jsptoservlet.jsp	None
-jsptoservlet.jsp.html	None
-jts.html	34
-listeners.xml	0
-loader.xml	0
-logging.xml	0
-login.html	47
-mail-lists.html	None
-manager-howto.html	None
-manager-howto.xml	0
-manager.xml	0
-manager.xml	0
-maven-jars.xml	0
-mbean-names.xml	0
-mbeans-descriptor-howto.xml	0
-mbeans-descriptors.dtd	None
-mbeans-descriptors.xml	164
-mbeans-descriptors.xml	192
-mbeans-descriptors.xml	1060
-mbeans-descriptors.xml	210
-mbeans-descriptors.xml	37
-mbeans-descriptors.xml	40
-mbeans-descriptors.xml	149
-mbeans-descriptors.xml	600
-mbeans-descriptors.xml	1239
-mbeans-descriptors.xml	159
-mbeans-descriptors.xml	168
-mbeans-descriptors.xml	352
-mbeans-descriptors.xml	385
-mbeans-descriptors.xml	366
-mbeans-descriptors.xml	136
-mbeans-descriptors.xml	100
-mbeans-descriptors.xml	97
-mbeans-descriptors.xml	991
-mbeans-descriptors.xml	292
-mbeans-descriptors.xml	405
-mbeans-descriptors.xml	36
-monitoring.html	None
-monitoring.xml	0
-mvn-pub.xml	0
-mx4j.sourceforge.net	None
-notes.html	41
-numguess.html	34
-numguess.jsp	None
-numguess.jsp	None
-numguess.jsp.html	None
-overview.xml	0
-package-summary.html	None
-package.html	30
-package.html	37
-package.html	29
-package.html	47
-package.html	30
-package.html	77
-package.html	102
-package.html	54
-package.html	26
-package.html	23
-package.html	80
-package.html	33
-package.html	68
-package.html	32
-package.html	86
-package.html	28
-package.html	37
-package.html	23
-package.html	23
-package.html	23
-package.html	31
-package.html	30
-package.html	33
-package.html	41
-package.html	38
-package.html	33
-package.html	1244
-package.html	94
-package.html	30
-package.html	59
-package.html	248
-package.html	30
-panel.html	33
-panel.jsp	None
-panel.jsp	None
-panel.jsp.html	None
-panel.tag.html	None
-plugin.html	30
-plugin.jsp	None
-plugin.jsp	None
-plugin.jsp.html	None
-prelude.jspf.html	None
-processes.xml	0
-products.html	33
-products.jsp	None
-products.jsp	None
-products.jsp.html	None
-project.xml	0
-project.xml	0
-project.xml	0
-project.xml	0
-project.xml	0
-project.xml	0
-proxy-howto.xml	0
-realm-howto.xml	0
-realm.xml	0
-regexp	None
-repeat.html	33
-repeat.jsp	None
-repeat.jsp	None
-repeat.jsp.html	None
-reqheaders.html	49
-reqinfo.html	68
-reqparams.html	78
-requestProcess.xml	0
-resources.xml	0
-return.gif	None
-return.gif	None
-return.gif	None
-rfc1867.txt	None
-sample	None
-sample.war	None
-security-howto.xml	0
-security-manager-howto.xml	0
-server.xml	138
-server.xml	0
-server_1.xml	1
-server_2.xml	3
-service.xml	0
-servlet	None
-servletToJsp.java	35
-servletToJsp.java.html	None
-servlets	None
-servlets	None
-sessions.html	70
-setup.xml	0
-setup.xml	0
-shuffle.html	37
-shuffle.jsp	None
-shuffle.jsp	None
-shuffle.jsp.html	None
-snoop.html	31
-snoop.jsp	None
-snoop.jsp	None
-snoop.jsp.html	None
-source.xml	0
-ssi-howto.xml	0
-ssl-howto.xml	0
-startup.xml	0
-status	None
-struts.apache.org	None
-svgexample.html	52
-systemprops.xml	0
-tagPlugins.xml	63
-textRotate.html	32
-textRotate.jpg	None
-textRotate.jspx	None
-textRotate.jspx	None
-textRotate.jspx.html	None
-tomcat-7.0-doc	None
-tomcat-dev	None
-tomcat-power.gif	None
-tomcat-users	None
-tomcat-users.xml	36
-tomcat-users_1.xml	0
-tomcat-users_2.xml	169
-tomcat.apache.org	None
-tomcat.gif	None
-tomcat.gif	None
-two.html	23
-using.html	None
-valve.xml	0
-virtual-hosting-howto.xml	0
-web.xml	1209
-web.xml	1
-web.xml	0
-web.xml	0
-web.xml	0
-web.xml	0
-web.xml	1
-web.xml	0
-web.xml	1
-web.xml	1
-web.xml	0
-web.xml	0
-welcome.bin.html	508
-welcome.main.html	87
-windows-service-howto.xml	0
-www.apache.org	None
-www.jboss.org	None
-www.saxproject.org	None
-xml.html	31
-xml.jsp	None
-xml.jsp	None
-xml.jsp.html	None
+ASCIIReader.java	64	1	9	0
+AbsoluteOrder.java	57	2	9	1
+AbstractCatalinaTask.java	158	1	11	0
+AbstractEndpoint.java	372	3	93	0
+AbstractGroup.java	32	1	12	0
+AbstractHttp11Processor.java	297	1	37	0
+AbstractHttp11Protocol.java	260	1	116	0
+AbstractInputBuffer.java	111	1	14	0
+AbstractObjectCreationFactory.java	12	1	3	0
+AbstractOutputBuffer.java	233	2	24	0
+AbstractReplicatedMap.java	1086	4	111	0
+AbstractRole.java	23	1	6	0
+AbstractRulesImpl.java	31	1	9	0
+AbstractRxTask.java	49	1	12	0
+AbstractSender.java	231	1	59	1
+AbstractUser.java	41	1	17	0
+AcceptLanguage.java	99	1	4	4
+AccessFlags.java	6	1	1	0
+AccessLog.java	6	1	1	0
+AccessLogValve.java	779	28	75	0
+ActionCode.java	40	1	2	0
+ActionHook.java	4	1	1	0
+Adapter.java	11	1	4	0
+AddDefaultCharsetFilter.java	40	2	5	0
+Address.java	15	1	8	8
+AjpAprProcessor.java	841	3	23	0
+AjpAprProtocol.java	363	3	61	0
+AjpMessage.java	251	1	26	2
+AjpProcessor.java	785	3	24	0
+AjpProtocol.java	337	3	54	0
+AnnotationDefault.java	36	1	5	0
+AnnotationElementValue.java	35	1	5	0
+AnnotationEntry.java	47	1	5	1
+Annotations.java	35	1	5	0
+AntCompiler.java	346	3	37	2
+ApplicationContext.java	871	2	67	2
+ApplicationContextFacade.java	606	2	59	0
+ApplicationDispatcher.java	630	4	20	0
+ApplicationFilterChain.java	315	3	14	2
+ApplicationFilterConfig.java	225	1	16	0
+ApplicationFilterFactory.java	211	1	7	1
+ApplicationFilterRegistration.java	149	1	12	0
+ApplicationHttpRequest.java	453	2	41	0
+ApplicationHttpResponse.java	120	1	23	0
+ApplicationJspConfigDescriptor.java	20	1	2	0
+ApplicationJspPropertyGroupDescriptor.java	102	1	13	0
+ApplicationParameter.java	49	1	9	0
+ApplicationPart.java	114	1	12	0
+ApplicationRequest.java	72	1	7	0
+ApplicationResponse.java	52	1	10	0
+ApplicationServletRegistration.java	182	1	15	0
+ApplicationSessionCookieConfig.java	130	1	18	4
+ApplicationTaglibDescriptor.java	55	1	5	0
+AprEndpoint.java	975	10	88	0
+AprLifecycleListener.java	173	1	10	4
+Arg.java	20	1	5	0
+ArithmeticNode.java	13	1	2	0
+ArrayELResolver.java	132	1	10	2
+ArrayElementValue.java	54	1	5	0
+ArrayStack.java	57	1	8	0
+Arrays.java	173	1	24	24
+Ascii.java	131	1	11	11
+AstAnd.java	20	1	2	0
+AstBracketSuffix.java	13	1	2	0
+AstChoice.java	21	1	3	0
+AstCompositeExpression.java	28	1	3	0
+AstDeferredExpression.java	28	1	5	0
+AstDiv.java	16	1	2	0
+AstDotSuffix.java	13	1	2	0
+AstDynamicExpression.java	28	1	5	0
+AstEmpty.java	32	1	3	0
+AstEqual.java	15	1	2	0
+AstFalse.java	13	1	2	0
+AstFloatingPoint.java	30	1	4	0
+AstFunction.java	91	1	9	0
+AstGreaterThan.java	21	1	2	0
+AstGreaterThanEqual.java	21	1	2	0
+AstIdentifier.java	122	1	8	0
+AstInteger.java	30	1	4	0
+AstLessThan.java	21	1	2	0
+AstLessThanEqual.java	21	1	2	0
+AstLiteralExpression.java	38	1	4	0
+AstMethodParameters.java	22	1	3	0
+AstMinus.java	16	1	2	0
+AstMod.java	16	1	2	0
+AstMult.java	16	1	2	0
+AstNegative.java	55	1	3	0
+AstNot.java	20	1	3	0
+AstNotEqual.java	15	1	2	0
+AstNull.java	18	1	3	0
+AstOr.java	20	1	2	0
+AstPlus.java	16	1	2	0
+AstString.java	46	1	5	0
+AstTrue.java	13	1	2	0
+AstValue.java	217	3	12	0
+Async0.java	44	2	2	0
+Async1.java	36	2	2	0
+Async2.java	38	2	2	0
+Async3.java	16	1	1	0
+AsyncContext.java	28	1	13	0
+AsyncContextImpl.java	325	5	33	0
+AsyncEvent.java	39	1	8	0
+AsyncFileHandler.java	110	3	10	0
+AsyncListener.java	9	1	4	0
+AsyncListenerWrapper.java	22	1	5	0
+AsyncStockServlet.java	92	1	8	0
+Attribute.java	141	1	8	1
+AttributeInfo.java	71	1	14	0
+AttributeParser.java	199	1	8	2
+AttributeReader.java	5	1	1	0
+Authenticator.java	3	1	0	0
+Authenticator.java	13	1	2	0
+AuthenticatorBase.java	393	1	28	0
+B2CConverter.java	103	3	14	0
+BCELComparator.java	5	1	2	0
+BIOCallback.java	7	1	4	0
+BackupManager.java	181	1	32	0
+Base64.java	193	1	5	5
+BaseAttributeFilter.java	49	1	6	0
+BaseDirContext.java	476	2	80	0
+BaseModelMBean.html	None	None	None	None
+BaseModelMBean.java	486	2	35	1
+BaseNotificationBroadcaster.java	99	2	7	0
+BaseRedirectorHelperTask.java	152	1	20	0
+BaseSessionComparator.java	14	1	3	0
+BasicAuthenticator.java	85	1	2	0
+BeanELResolver.java	365	4	25	1
+BeanFactory.java	129	1	1	0
+BeanRepository.java	34	1	4	0
+Benchmarks.java	408	26	45	0
+BioReceiver.java	104	1	8	0
+BioReplicationTask.java	92	1	7	0
+BioSender.java	168	1	10	0
+BodyContent.java	29	1	7	0
+BodyContentImpl.java	285	1	37	0
+BodyTag.java	9	1	2	0
+BodyTagSupport.java	37	1	9	0
+BookBean.java	20	1	4	0
+BookBean.java.html	None	None	None	None
+BooleanNode.java	13	1	2	0
+Bootstrap.java	293	1	19	3
+BufferPool.java	51	2	9	1
+BufferPool15Impl.java	33	1	5	0
+BufferedInputFilter.java	64	1	8	0
+ByteArrayOutputStream.java	152	1	14	0
+ByteArrayServletOutputStream.java	16	1	3	0
+ByteChunk.java	480	3	58	7
+ByteMessage.java	29	1	6	0
+ByteSequence.java	21	2	4	0
+C2BConverter.java	134	3	25	0
+CGIServlet.java	938	5	32	0
+CacheEntry.java	30	1	2	0
+CallMethodRule.html	None	None	None	None
+CallMethodRule.java	240	1	17	0
+CallParamRule.html	None	None	None	None
+CallParamRule.java	76	1	8	0
+CaptureLog.java	20	1	4	0
+Catalina.java	497	3	30	0
+CatalinaCluster.java	32	1	20	0
+CatalinaFactory.java	18	1	4	1
+CatalinaProperties.java	83	1	6	6
+Catch.java	30	1	1	0
+Channel.java	32	1	15	0
+ChannelCoordinator.java	195	1	23	0
+ChannelCreator.java	208	1	2	2
+ChannelData.java	195	1	27	5
+ChannelException.java	79	2	15	0
+ChannelInterceptor.java	25	2	19	0
+ChannelInterceptorBase.java	80	1	21	0
+ChannelListener.java	8	1	4	0
+ChannelMessage.java	16	1	11	0
+ChannelReceiver.java	12	1	8	0
+ChannelSender.java	10	1	6	0
+CharChunk.java	443	3	54	1
+CharsetMapper.java	36	1	4	0
+ChatServlet.java	202	2	13	1
+CheckTest.html	0	0	None	None
+CheckTest.java	10	1	2	0
+Choose.java	8	1	1	0
+ChunkedInputFilter.java	155	1	11	0
+ChunkedOutputFilter.java	61	1	7	0
+ClassElementValue.java	24	1	3	0
+ClassFormatException.java	12	1	3	0
+ClassLoaderFactory.java	134	1	2	2
+ClassLoaderLogManager.java	433	8	28	1
+ClassNameMBean.java	14	1	2	0
+ClassParser.java	131	1	10	0
+ClientAbortException.java	43	1	7	0
+Clock2.java	162	1	10	0
+Clock2.java	162	1	10	0
+Closeable.java	6	1	2	0
+Cluster.java	16	1	11	0
+ClusterDeployer.java	15	1	7	0
+ClusterJmxHelper.java	97	1	8	8
+ClusterListener.java	42	1	9	0
+ClusterManager.java	21	1	15	0
+ClusterManagerBase.java	32	1	4	1
+ClusterMessage.java	11	1	6	0
+ClusterMessageBase.java	28	1	7	0
+ClusterRuleSet.java	104	1	3	0
+ClusterRuleSetFactory.java	105	2	5	2
+ClusterSession.java	7	1	2	0
+ClusterSessionListener.java	48	1	4	0
+ClusterSingleSignOn.java	202	1	17	0
+ClusterSingleSignOnListener.java	103	1	7	0
+ClusterValve.java	6	1	2	0
+Code.java	133	1	12	0
+CodeException.java	49	1	6	0
+CollectedInfo.java	56	1	3	0
+Collector.java	149	2	16	1
+ColorGameBean.html	0	0	None	None
+ColorGameBean.java	73	1	13	0
+CombinedRealm.java	166	1	11	0
+CometConnectionManagerValve.java	187	1	9	0
+CometEvent.java	16	3	10	0
+CometEventImpl.java	70	1	11	0
+CometFilter.java	8	1	1	0
+CometFilterChain.java	6	1	1	0
+CometProcessor.java	8	1	1	0
+Compiler.java	352	1	15	0
+CompositeELResolver.java	162	2	14	0
+CompressionFilter.java	116	1	5	0
+CompressionFilterTestServlet.java	27	1	1	0
+CompressionResponseStream.java	153	1	11	0
+CompressionServletResponseWrapper.java	103	1	10	0
+ConcurrentCache.java	31	1	3	0
+Connector.java	372	1	55	0
+ConnectorCreateRule.java	37	1	3	0
+ConnectorMBean.java	54	1	3	0
+Constant.java	70	2	10	1
+ConstantCP.java	30	1	6	0
+ConstantClass.java	25	1	5	0
+ConstantDouble.java	25	1	5	0
+ConstantFieldref.java	9	1	1	0
+ConstantFloat.java	25	1	5	0
+ConstantInteger.java	25	1	5	0
+ConstantInterfaceMethodref.java	9	1	1	0
+ConstantLong.java	25	1	5	0
+ConstantMethodref.java	9	1	1	0
+ConstantNameAndType.java	32	1	6	0
+ConstantObject.java	3	1	0	0
+ConstantPool.java	146	1	9	1
+ConstantString.java	25	1	5	0
+ConstantUtf8.java	22	1	4	0
+ConstantValue.java	53	1	5	0
+Constants.java	10	1	0	0
+Constants.java	32	1	0	0
+Constants.java	4	1	0	0
+Constants.java	12	1	0	0
+Constants.java	4	1	0	0
+Constants.java	4	1	0	0
+Constants.java	9	1	0	0
+Constants.java	4	1	0	0
+Constants.java	193	1	1	1
+Constants.java	4	1	0	0
+Constants.java	22	1	0	0
+Constants.java	4	1	0	0
+Constants.java	4	1	0	0
+Constants.java	9	1	1	1
+Constants.java	81	1	0	0
+Constants.java	56	1	0	0
+Constants.java	4	1	0	0
+Constants.java	114	1	0	0
+Constants.java	10	1	0	0
+Constants.java	10	2	0	0
+Constants.java	6	1	0	0
+Constants.java	8	1	0	0
+Constants.java	173	1	0	0
+Constants.java	172	1	0	0
+Constants.java	9	1	0	0
+Constants.java	7	1	0	0
+Constants.java	4	1	0	0
+Constants.java	317	1	0	0
+Constants.java	24	1	0	0
+Constants.java	4	1	0	0
+ConstructorInfo.java	14	1	2	0
+Contained.java	5	1	2	0
+Container.java	56	1	37	0
+ContainerBase.java	629	4	53	0
+ContainerEvent.java	28	1	5	0
+ContainerListener.java	4	1	1	0
+ContainerServlet.java	5	1	2	0
+ContentType.java	44	1	2	2
+Context.java	165	1	141	0
+ContextAccessController.java	37	1	6	6
+ContextBindings.java	153	1	21	21
+ContextConfig.java	1612	2	49	1
+ContextEjb.java	53	1	7	0
+ContextEnvironment.java	40	1	5	0
+ContextEnvironmentMBean.java	34	1	2	0
+ContextHandler.java	75	1	13	0
+ContextListener.java	36	1	6	0
+ContextLocalEjb.java	53	1	7	0
+ContextResource.java	42	1	5	0
+ContextResourceEnvRef.java	25	1	3	0
+ContextResourceLink.java	34	1	5	0
+ContextResourceLinkMBean.java	88	1	3	0
+ContextResourceMBean.java	92	1	3	0
+ContextRuleSet.java	110	1	4	0
+ContextService.java	147	1	27	0
+ContextTransaction.java	33	1	7	0
+Cookie.java	149	1	20	0
+CookieExample	None	None	None	None
+CookieExample.java	75	1	2	0
+CookieSupport.java	110	1	6	5
+Cookies.java	287	1	13	5
+CookiesBaseTest.java	52	2	4	1
+CoordinationDemo.java	300	5	27	7
+CopyParentClassLoaderRule.java	22	1	2	0
+CoyoteAdapter.java	739	1	14	3
+CoyoteInputStream.java	153	6	14	0
+CoyoteOutputStream.java	43	1	8	0
+CoyotePrincipal.java	20	1	3	0
+CoyoteReader.java	129	1	13	0
+CoyoteWriter.java	178	1	31	0
+CsrfPreventionFilter.java	118	2	9	0
+CustomObjectInputStream.java	41	1	3	0
+DOMWriter.java	246	1	11	3
+DataSender.java	14	1	11	0
+DataSourceRealm.java	291	1	28	0
+DateTool.java	50	5	4	0
+DebugValidator.java	28	1	1	0
+DeclareRoles.java	10	1	1	0
+DefaultErrorHandler.java	49	1	4	0
+DefaultInstanceManager.java	375	6	20	2
+DefaultServerSocketFactory.java	32	1	6	0
+DefaultServlet.html	None	None	None	None
+DefaultServlet.java	1270	2	39	0
+DeferredFileOutputStream.java	92	1	9	0
+DeltaManager.java	887	1	88	0
+DeltaRequest.java	278	2	31	0
+DeltaSession.java	463	2	52	0
+DenyAll.java	9	1	0	0
+DeployTask.java	117	1	13	0
+Deprecated.java	39	1	5	0
+DigestAuthenticator.java	188	1	9	3
+Digester.html	None	None	None	None
+Digester.java	1044	2	125	0
+DigesterFactory.java	120	1	5	5
+DirContextURLConnection.java	251	1	14	0
+DirContextURLStreamHandler.java	119	1	15	11
+DirContextURLStreamHandlerFactory.java	15	1	2	0
+DirectByteArrayOutputStream.java	21	1	5	0
+DirectJDKLog.java	111	1	22	2
+Directory.java	12	1	8	8
+DiskFileItem.java	272	1	26	1
+DiskFileItemFactory.java	43	1	9	0
+DispatcherType.java	8	1	2	0
+DomUtil.java	181	2	15	14
+DomainFilterInterceptor.java	72	1	11	0
+DummyCart.html	0	0	None	None
+DummyCart.java	35	1	7	0
+DummyRequest.java	245	2	132	0
+DummyResponse.java	96	1	67	0
+Dumper.java	167	2	29	2
+DuplicateMappingParamFilter.java	21	1	3	0
+DuplicateMappingParamServlet.java	22	1	1	0
+DynamicAttributes.java	7	1	1	0
+EJB.java	15	1	5	0
+EJBs.java	10	1	1	0
+ELArithmetic.java	300	5	49	7
+ELContext.java	43	1	10	0
+ELContextEvent.java	11	1	2	0
+ELContextImpl.java	75	4	11	0
+ELContextListener.java	4	1	1	0
+ELContextWrapper.java	53	1	10	0
+ELException.java	16	1	4	0
+ELException.java	19	1	5	0
+ELFunctionMapper.java	192	3	16	1
+ELNode.java	150	7	35	0
+ELParseException.java	12	1	2	0
+ELParser.html	0	0	None	None
+ELParser.java	265	5	25	1
+ELParser.java	2004	3	116	3
+ELParserConstants.java	117	1	0	0
+ELParserTokenManager.java	1262	1	35	2
+ELParserTreeConstants.java	74	1	0	0
+ELResolver.java	44	1	8	1
+ELResolverImpl.java	127	1	8	1
+ELSupport.java	441	1	23	22
+EchoAttributesTag.java	30	1	2	0
+EchoAttributesTag.java.html	None	None	None	None
+EchoRpcTest.java	152	3	10	2
+EjbFactory.java	87	1	1	0
+EjbRef.java	46	1	3	0
+ElementValue.java	87	1	5	1
+ElementValuePair.java	31	1	4	0
+Embedded.java	455	1	38	0
+EmbeddedServletOptions.java	405	1	35	0
+EnclosingMethod.java	25	1	4	0
+EncodingMap.java	449	1	7	6
+Engine.java	9	1	6	0
+EngineConfig.java	35	1	3	0
+EngineRuleSet.java	50	1	3	0
+Entries.java	34	1	5	0
+Entries.java.html	None	None	None	None
+Entry.java	28	1	5	0
+Entry.java	28	1	7	0
+Entry.java.html	None	None	None	None
+EnumElementValue.java	31	1	3	0
+Enumerator.java	45	1	8	0
+Enumerator.java	45	1	8	0
+Error.java	22	1	6	3
+ErrorData.java	27	1	5	0
+ErrorDispatcher.java	222	2	26	4
+ErrorHandler.java	12	1	4	0
+ErrorHandler.java	4	1	2	0
+ErrorPage.java	56	1	9	0
+ErrorReportValve.java	163	1	5	0
+EvaluationContext.java	57	1	11	0
+ExampleFilter.java	41	1	4	0
+ExampleTagBase.java	46	1	9	0
+ExceptionTable.java	57	1	6	0
+ExceptionUtils.java	11	1	1	1
+ExceptionUtils.java	11	1	1	1
+Executor.java	6	1	2	0
+ExecutorFactory.java	49	2	8	2
+ExpandWar.java	269	1	9	9
+Expression.java	11	1	4	0
+Expression.java	6	1	1	0
+ExpressionBuilder.java	156	1	8	2
+ExpressionEvaluator.java	15	1	2	0
+ExpressionEvaluatorImpl.java	41	1	3	0
+ExpressionFactory.java	205	5	13	5
+ExpressionFactoryImpl.java	48	1	5	0
+ExpressionImpl.java	18	1	2	0
+ExpressionParseTree.java	244	11	32	0
+ExpressionTokenizer.java	110	1	6	0
+ExtendedAccessLogValve.java	635	29	54	0
+ExtendedBaseRules.html	None	None	None	None
+Extension.java	145	1	19	0
+ExtensionValidator.java	264	1	6	6
+FactoryCreateRule.html	None	None	None	None
+FactoryCreateRule.java	143	1	15	0
+FarmWarDeployer.java	449	1	40	0
+FastHttpDateFormat.java	117	1	6	6
+FastQueue.java	196	1	21	0
+FeatureInfo.java	28	1	6	0
+Field.java	57	2	7	0
+FieldOrMethod.java	46	1	6	0
+File.java	121	1	42	42
+FileChangeListener.java	6	1	2	0
+FileCleaningTracker.java	86	3	11	0
+FileDeleteStrategy.java	43	2	7	0
+FileDirContext.java	422	3	42	0
+FileHandler.java	196	1	10	0
+FileInfo.java	20	1	0	0
+FileItem.java	24	1	15	0
+FileItemFactory.java	9	1	1	0
+FileItemHeaders.java	7	1	3	0
+FileItemHeadersImpl.java	44	1	4	0
+FileItemHeadersSupport.java	5	1	2	0
+FileItemIterator.java	6	1	2	0
+FileItemStream.java	13	2	5	0
+FileMessage.java	68	1	15	0
+FileMessageFactory.java	184	1	8	2
+FileStore.java	223	1	13	0
+FileUpload.java	20	1	4	0
+FileUploadBase.java	521	11	49	1
+FileUploadException.java	37	1	6	0
+FileUtils.java	101	1	7	6
+Filter.java	7	1	3	0
+FilterBase.java	27	1	3	0
+FilterChain.java	5	1	1	0
+FilterConfig.java	8	1	4	0
+FilterDef.java	84	1	19	0
+FilterMap.java	112	1	12	0
+FilterRegistration.java	16	2	4	0
+FindBookSimpleTag.java	18	1	2	0
+FindBookSimpleTag.java.html	None	None	None	None
+FixedNotificationFilter.java	26	1	3	0
+FooBean.java	13	1	3	0
+FooBean.java.html	None	None	None	None
+FooTag.java	44	1	7	0
+FooTagExtraInfo.java	14	1	1	0
+ForEach.java	258	1	3	0
+ForTokens.java	73	1	1	0
+FormAuthenticator.java	329	1	10	0
+FragmentationInterceptor.java	168	3	20	0
+FunctionInfo.java	20	1	4	0
+FunctionMapper.java	6	1	1	0
+FunctionMapper.java	5	1	1	0
+FunctionMapperFactory.java	27	1	3	0
+FunctionMapperImpl.java	113	2	12	0
+FunctionMapperImpl.java	14	1	2	0
+Functions.java	20	1	3	3
+Functions.java.html	None	None	None	None
+Generated.java	14	1	3	0
+Generator.java	3012	12	111	6
+GenericParser.java	36	1	1	1
+GenericPrincipal.java	75	1	11	0
+GenericServlet.java	44	1	13	0
+Global.java	11	1	6	6
+GlobalResourcesLifecycleListener.java	128	1	5	0
+Globals.java	78	1	0	0
+Group.java	16	1	11	0
+GroupChannel.java	361	3	39	1
+GroupMBean.java	88	1	5	0
+GzipInterceptor.java	65	1	5	3
+GzipOutputFilter.java	69	2	10	0
+HTMLFilter.java	29	1	1	1
+HTMLHostManagerServlet.java	394	1	8	0
+HTMLManagerServlet.java	972	11	36	0
+Handler.java	7	1	1	0
+HandlerRef.java	70	1	4	0
+HandlesTypes.java	11	1	1	0
+Heartbeat.java	3	1	1	0
+HeartbeatListener.java	77	1	14	0
+Hello.java	35	1	1	0
+HelloWorldExample	None	None	None	None
+HelloWorldExample.java	32	1	1	0
+HelloWorldSimpleTag.java	10	1	1	0
+HelloWorldSimpleTag.java.html	None	None	None	None
+HexUtils.java	32	1	3	3
+HexUtils.java	91	1	4	4
+HomesUserDatabase.java	38	1	6	0
+Host.java	23	1	18	0
+HostConfig.java	979	2	47	1
+HostManagerServlet.java	366	1	13	0
+HostRuleSet.java	54	1	3	0
+Http11AprProcessor.java	815	1	13	0
+Http11AprProtocol.java	461	3	120	0
+Http11NioProcessor.java	881	1	17	0
+Http11NioProtocol.java	346	3	32	0
+Http11Processor.java	746	1	14	0
+Http11Protocol.java	263	3	18	0
+HttpConstraint.java	13	1	3	0
+HttpConstraintElement.java	41	1	7	0
+HttpJspBase.java	50	1	10	0
+HttpJspPage.java	9	1	1	0
+HttpMessages.java	67	1	3	3
+HttpMethodConstraint.java	14	1	4	0
+HttpMethodConstraintElement.java	28	1	3	0
+HttpServlet.java	286	3	22	1
+HttpServletRequest.java	47	1	30	0
+HttpServletRequestWrapper.java	108	1	32	0
+HttpServletResponse.java	71	1	21	0
+HttpServletResponseWrapper.java	78	1	23	0
+HttpSession.java	27	1	17	0
+HttpSessionActivationListener.java	6	1	2	0
+HttpSessionAttributeListener.java	7	1	3	0
+HttpSessionBindingEvent.java	24	1	5	0
+HttpSessionBindingListener.java	6	1	2	0
+HttpSessionContext.java	9	1	2	0
+HttpSessionEvent.java	9	1	2	0
+HttpSessionListener.java	6	1	2	0
+HttpUtils.java	118	1	5	4
+IDynamicProperty.java	8	1	4	0
+IOTools.java	35	1	5	4
+IOUtils.java	36	1	4	3
+IdentityInputFilter.java	74	1	9	0
+IdentityOutputFilter.java	67	1	8	0
+If.java	29	1	1	0
+ImmutableNameNotFoundException.java	17	1	5	0
+ImplicitObjectELResolver.java	510	14	64	1
+ImplicitTagLibraryInfo.java	144	1	3	0
+Import.java	263	1	1	0
+Injectable.java	7	1	3	0
+InjectionTarget.java	23	1	6	0
+InnerClass.java	63	1	6	0
+InnerClasses.java	50	1	6	0
+InputBuffer.java	285	2	25	0
+InputBuffer.java	7	1	1	0
+InputFilter.java	16	1	7	0
+InstanceEvent.java	123	1	15	0
+InstanceListener.java	4	1	1	0
+InstanceManager.java	15	1	4	0
+InstanceManagerFactory.java	15	1	2	1
+InstanceSupport.java	133	1	12	0
+InterceptorPayload.java	10	1	2	0
+InternalAprInputBuffer.java	410	2	18	0
+InternalAprOutputBuffer.java	296	2	29	0
+InternalInputBuffer.java	271	2	8	0
+InternalNioInputBuffer.java	442	5	24	0
+InternalNioOutputBuffer.java	153	2	16	0
+InternalOutputBuffer.java	109	2	13	0
+InternetAddress.java	5	1	1	0
+IntrospectionUtils.java	679	4	33	30
+IntrospectionUtils.java	683	4	34	31
+IterationTag.java	6	1	1	0
+JAASCallbackHandler.java	88	1	3	0
+JAASMemoryLoginModule.java	157	1	7	0
+JAASRealm.java	247	1	20	0
+JDBCAccessLogValve.java	267	1	29	0
+JDBCRealm.java	327	1	32	0
+JDBCStore.java	573	1	38	0
+JDTCompiler.java	391	4	13	0
+JIoEndpoint.java	356	6	25	0
+JJTELParserState.java	81	1	12	0
+JKStatusUpdateTask.java	223	1	30	0
+JMXAccessorCondition.java	185	1	32	0
+JMXAccessorCreateTask.java	90	1	10	0
+JMXAccessorEqualsCondition.java	107	1	22	0
+JMXAccessorGetTask.java	44	1	5	0
+JMXAccessorInvokeTask.java	69	1	8	0
+JMXAccessorQueryTask.java	101	1	6	0
+JMXAccessorSetTask.java	87	1	12	0
+JMXAccessorTask.java	420	1	42	2
+JMXAccessorUnregisterTask.java	28	1	3	0
+JMXGetTask.java	30	1	5	0
+JMXProxyServlet.java	191	1	8	0
+JMXQueryTask.java	18	1	3	0
+JMXSetTask.java	39	1	7	0
+JNDIRealm.java	958	2	79	0
+JSSEFactory.java	17	1	3	0
+JSSEImplementation.java	36	1	5	0
+JSSEKeyManager.java	34	1	7	0
+JSSESocketFactory.java	571	1	21	0
+JSSESupport.java	187	2	12	0
+JarResource.java	9	1	3	0
+JarScanner.java	7	1	1	0
+JarScannerCallback.java	8	1	2	0
+JarScannerFactory.java	17	1	2	1
+JarURLResource.java	32	1	5	0
+JasperException.java	12	1	3	0
+JasperListener.java	24	1	1	0
+JasperLoader.java	75	1	5	0
+JasperTagInfo.java	29	1	3	0
+JavaClass.java	171	2	12	1
+JavacErrorDetail.java	111	1	9	0
+JdbcLeakPrevention.java	23	1	1	0
+JdkLoggerFormatter.java	46	1	1	0
+JmxRemoteLifecycleListener.java	188	2	12	0
+JndiPermission.java	10	1	2	0
+JreMemoryLeakPreventionListener.java	106	1	11	0
+JspApplicationContext.java	9	1	3	0
+JspApplicationContextImpl.java	107	2	8	1
+JspC.java	999	1	82	1
+JspCServletContext.java	257	1	52	0
+JspCalendar.java	100	1	22	2
+JspCalendar.java	95	1	23	0
+JspCompilationContext.java	486	1	54	2
+JspConfig.java	462	3	23	0
+JspConfigDescriptor.java	6	1	2	0
+JspContext.java	30	1	16	0
+JspContextWrapper.java	337	1	39	0
+JspDocumentParser.java	1102	2	31	3
+JspELException.java	8	1	1	0
+JspEngineInfo.java	6	1	2	0
+JspException.java	18	1	5	0
+JspFactory.java	25	1	7	2
+JspFactoryImpl.java	167	6	15	0
+JspFragment.java	9	1	2	0
+JspFragmentHelper.java	31	1	3	0
+JspHelper.java	129	1	13	12
+JspIdConsumer.java	4	1	1	0
+JspMethodExpression.java	82	1	10	0
+JspMethodNotFoundException.java	8	1	1	0
+JspPage.java	6	1	2	0
+JspPropertyGroup.java	69	1	24	0
+JspPropertyGroupDescriptor.java	16	1	12	0
+JspPropertyNotFoundException.java	9	1	1	0
+JspPropertyNotWritableException.java	9	1	1	0
+JspQueue.java	45	1	4	0
+JspReader.java	356	1	27	0
+JspRuntimeContext.java	312	2	22	0
+JspRuntimeLibrary.java	790	2	46	44
+JspServlet.java	206	1	10	0
+JspServletWrapper.java	370	1	20	0
+JspSourceDependent.java	5	1	1	0
+JspTag.java	3	1	0	0
+JspTagException.java	15	1	4	0
+JspUtil.java	665	2	40	37
+JspValueExpression.java	107	1	13	0
+JspWriter.java	42	1	28	0
+JspWriterImpl.java	306	2	42	1
+JvmRouteBinderValve.java	224	1	19	0
+JvmRouteSessionIDBinderListener.java	91	1	7	0
+LazyReplicatedMap.java	69	1	5	0
+Library.java	142	1	11	9
+Lifecycle.java	22	1	8	0
+LifecycleBase.java	156	1	16	0
+LifecycleEvent.java	26	1	5	0
+LifecycleException.java	40	1	7	0
+LifecycleListener.java	4	1	1	0
+LifecycleListenerRule.java	28	1	2	0
+LifecycleMBeanBase.java	101	1	13	0
+LifecycleState.java	27	1	5	0
+LifecycleSupport.java	53	1	5	0
+LimitedInputStream.java	47	1	7	0
+LineNumber.java	30	1	5	0
+LineNumberTable.java	61	1	6	0
+LinkObject.java	43	1	9	0
+ListELResolver.java	140	1	9	1
+ListTask.java	9	1	1	0
+ListenCallback.java	5	1	1	0
+LoadTest.java	321	4	21	8
+Loader.java	18	1	14	0
+Local.java	10	1	5	5
+LocalVariable.java	59	1	8	0
+LocalVariableTable.java	63	1	7	0
+LocalVariableTypeTable.java	50	1	6	0
+Localizer.java	49	1	6	6
+Lock.java	20	1	9	9
+LockOutRealm.java	172	3	21	0
+Log.java	21	1	18	0
+LogConfigurationException.java	21	1	5	0
+LogFactory.java	70	1	15	6
+LogTag.java	31	1	3	0
+LoginConfig.java	110	1	13	0
+Logs.java	6	1	0	0
+MBeanFactory.java	500	1	35	0
+MBeanUtils.java	967	1	55	55
+MD5Encoder.java	18	1	1	0
+MIME2Java.java	91	1	3	2
+MailSessionFactory.java	61	3	3	0
+ManagedBean.java	321	1	26	0
+ManagedChannel.java	11	1	7	0
+Manager.java	41	1	35	0
+ManagerBase.java	624	2	72	0
+ManagerServlet.java	1049	1	35	2
+ManifestResource.java	123	1	12	0
+MapDemo.java	376	8	26	4
+MapELResolver.java	110	1	8	0
+Mapper.java	1009	6	44	12
+MapperListener.java	265	1	15	0
+MappingData.java	24	1	1	0
+Mark.java	139	2	14	0
+MbeansDescriptorsDOMSource.java	133	1	6	0
+MbeansDescriptorsDigesterSource.java	147	1	7	1
+MbeansDescriptorsIntrospectionSource.java	275	1	11	1
+MbeansDescriptorsSerSource.java	71	1	6	0
+MbeansSource.java	258	1	18	0
+MbeansSourceMBean.java	12	1	6	0
+McastService.java	401	1	63	1
+McastServiceImpl.java	464	8	32	1
+Member.java	17	1	13	0
+MemberImpl.java	356	1	46	6
+MembersWithProperties.java	93	2	9	2
+Membership.java	186	3	20	0
+MembershipListener.java	4	1	2	0
+MembershipService.java	22	1	17	0
+MemoryGroup.java	93	1	9	0
+MemoryProtocolHandler.java	73	3	15	0
+MemoryRealm.java	130	1	11	0
+MemoryRole.java	29	1	3	0
+MemoryRuleSet.java	37	2	5	0
+MemoryUser.java	132	1	13	0
+MemoryUserDatabase.java	436	4	37	0
+MemoryUserDatabaseFactory.java	34	1	1	0
+MemoryUserDatabaseMBean.java	200	1	13	0
+MessageBytes.java	417	2	38	2
+MessageDestination.java	49	1	7	0
+MessageDestinationRef.java	42	1	5	0
+MessageDispatch15Interceptor.java	75	2	14	0
+MessageDispatchInterceptor.java	158	1	20	0
+MessageFactory.java	36	1	8	7
+MessageListener.java	7	1	4	0
+Method.java	81	2	10	0
+MethodExpression.java	9	1	3	0
+MethodExpressionImpl.java	107	1	12	0
+MethodExpressionLiteral.java	67	1	10	0
+MethodInfo.java	20	1	4	0
+MethodNotFoundException.java	16	1	4	0
+MimeHeaders.java	230	4	32	0
+MimeMessage.java	10	1	3	0
+MimePart.java	3	1	0	0
+MimePartDataSource.java	5	1	1	0
+Mmap.java	12	1	4	4
+ModelerSource.java	38	1	4	0
+MultiCastSender.java	53	1	2	0
+MultiPointSender.java	14	1	7	0
+Multicast.java	10	1	5	5
+MultipartConfig.java	13	1	4	0
+MultipartConfigElement.java	39	1	7	0
+MultipartDef.java	89	1	10	0
+MultipartStream.java	391	5	34	1
+MultipointBioSender.java	103	1	10	0
+MutableInteger.java	10	1	4	0
+NameParserImpl.java	12	1	1	0
+NamingContext.java	366	1	35	0
+NamingContextBindingsEnumeration.java	55	1	7	0
+NamingContextEnumeration.java	30	1	6	0
+NamingContextListener.java	806	1	26	0
+NamingEntry.java	27	1	3	0
+NamingResources.java	369	1	41	0
+NamingResourcesMBean.java	178	1	10	0
+NamingRuleSet.java	59	1	3	0
+NamingService.java	108	1	10	0
+NamingServiceMBean.java	18	1	6	0
+NioBlockingSelector.java	318	6	18	0
+NioChannel.java	101	1	23	0
+NioEndpoint.java	1154	13	124	0
+NioReceiver.java	279	1	16	1
+NioReplicationTask.java	223	3	12	0
+NioSelectorPool.java	203	1	20	0
+NioSender.java	255	1	18	0
+NioSenderTest.java	76	1	6	1
+NioX509KeyManager.java	46	1	8	0
+NoMappingParamServlet.java	22	1	1	0
+Node.java	1580	40	300	0
+Node.java	26	1	17	0
+NodeCreateRule.html	None	None	None	None
+NodeCreateRule.java	154	2	11	0
+NodeVisitor.java	4	1	1	0
+NonBlockingCoordinator.java	563	3	56	0
+NonLoginAuthenticator.java	23	1	2	0
+NotificationInfo.java	48	1	6	0
+NumberGuessBean.java	47	1	6	0
+OS.java	33	1	8	8
+ObjectCreateRule.html	None	None	None	None
+ObjectCreateRule.java	57	1	7	0
+ObjectCreationFactory.java	7	1	3	0
+ObjectParamRule.java	41	1	4	0
+ObjectReader.java	85	1	17	0
+OneLineFormatter.java	71	1	3	0
+OpenEjbFactory.java	35	1	1	0
+OperationInfo.java	72	1	11	0
+Options.java	39	1	30	0
+OrderInterceptor.java	235	3	27	1
+Otherwise.java	8	1	1	0
+Out.java	52	1	1	0
+OutputBuffer.java	7	1	1	0
+OutputBuffer.java	280	2	34	0
+OutputFilter.java	15	1	6	0
+PMGClass.java	39	1	7	0
+PageContext.java	67	1	17	0
+PageContextImpl.java	735	14	61	2
+PageData.java	7	1	2	0
+PageDataImpl.java	466	3	50	0
+PageInfo.java	442	1	84	0
+ParallelNioSender.java	246	1	13	0
+Param.java	40	1	1	0
+ParamFilter.java	28	1	3	0
+ParamServlet.java	22	1	1	0
+ParameterAnnotationEntry.java	15	1	1	0
+ParameterAnnotations.java	29	1	3	0
+ParameterInfo.java	15	1	2	0
+ParameterMap.java	55	1	10	0
+ParameterParser.java	155	1	12	0
+Parameters.java	274	1	18	0
+ParseException.java	110	1	5	2
+Parser.java	1207	1	56	2
+ParserController.java	329	1	14	0
+ParserFeatureSetterFactory.java	28	1	1	1
+ParserUtils.java	132	3	7	0
+Part.java	15	1	9	0
+PasswdUserDatabase.java	74	1	6	0
+PasswordAuthentication.java	5	1	1	0
+PasswordCallback.java	4	1	1	0
+PathCallParamRule.java	24	1	3	0
+PerThreadTagHandlerPool.java	77	3	6	0
+PeriodicEventListener.java	4	1	1	0
+PermitAll.java	9	1	0	0
+PersistenceContext.java	13	1	4	0
+PersistenceContextType.java	4	1	2	0
+PersistenceContexts.java	10	1	1	0
+PersistenceProperty.java	10	1	2	0
+PersistenceUnit.java	11	1	2	0
+PersistenceUnits.java	11	1	1	0
+PersistentManager.java	13	1	2	0
+PersistentManagerBase.java	563	6	46	0
+PersistentValve.java	113	1	4	0
+Pipeline.java	12	1	9	0
+Poll.java	27	1	9	9
+Pool.java	17	1	13	13
+PoolCallback.java	4	1	1	0
+PooledMultiSender.java	34	1	3	0
+PooledParallelSender.java	53	1	5	0
+PooledSender.java	136	2	23	0
+PostConstruct.java	9	1	0	0
+PreDestroy.java	9	1	0	0
+Proc.java	47	1	7	7
+ProcErrorCallback.java	4	1	1	0
+Procattr.java	17	1	13	13
+Processor.java	10	1	3	0
+ProgressListener.java	4	1	1	0
+PropertyNotFoundException.java	16	1	4	0
+PropertyNotWritableException.java	16	1	4	0
+ProtectedFunctionMapper.java	102	5	9	2
+ProtocolHandler.java	19	1	10	0
+Proxy.java	8	2	2	0
+ProxyDirContext.java	583	1	69	0
+RELEASE-NOTES	None	None	None	None
+RELEASE-NOTES	None	None	None	None
+RELEASE-NOTES.txt	None	None	None	None
+Realm.java	34	1	13	0
+RealmBase.java	760	2	46	3
+RealmRuleSet.java	31	1	3	0
+ReceiverBase.java	383	2	85	0
+RecyclableNamingEnumeration.java	34	1	7	0
+Redirect.java	42	1	1	0
+ReflectionUtil.java	114	1	8	7
+RegexMatcher.html	None	None	None	None
+RegexRules.html	None	None	None	None
+Registration.java	14	2	7	0
+Registry.html	None	None	None	None
+Registry.java	56	1	20	20
+Registry.java	486	1	35	2
+RegistryMBean.java	15	1	7	0
+ReloadTask.java	27	1	3	0
+RemoteAddrFilter.java	29	1	3	0
+RemoteAddrValve.java	19	1	2	0
+RemoteHostFilter.java	29	1	3	0
+RemoteHostValve.java	19	1	2	0
+RemoteIpFilter.java	387	3	43	4
+RemoteIpValve.java	214	1	22	4
+RemoteProcessException.java	14	1	4	0
+Remove.java	16	1	1	0
+RepeatSimpleTag.java	17	1	2	0
+RepeatSimpleTag.java.html	None	None	None	None
+ReplicatedContext.java	139	3	19	0
+ReplicatedMap.java	29	1	5	0
+ReplicatedMapEntry.java	14	1	10	0
+ReplicatedSession.java	154	1	27	0
+ReplicationStream.java	94	1	7	0
+ReplicationTransmitter.java	42	1	10	0
+ReplicationValve.java	358	1	35	0
+Request.java	275	1	59	0
+Request.java	1498	1	152	2
+RequestContext.java	9	1	4	0
+RequestDispatcher.java	40	1	2	0
+RequestDumperFilter.java	194	3	7	0
+RequestFacade.java	642	14	88	0
+RequestFilter.java	110	1	10	0
+RequestFilterValve.java	92	1	9	0
+RequestGroupInfo.java	124	1	15	0
+RequestHeaderExample	None	None	None	None
+RequestHeaderExample.java	50	1	2	0
+RequestInfo.java	151	1	37	0
+RequestInfoExample	None	None	None	None
+RequestInfoExample.java	69	1	2	0
+RequestParamExample	None	None	None	None
+RequestParamExample.java	63	1	2	0
+RequestUtil.java	222	1	13	13
+ResizableExecutor.java	9	1	5	0
+Resource.java	32	1	7	0
+Resource.java	20	2	8	0
+ResourceAttributes.java	560	1	35	0
+ResourceBase.java	58	1	14	0
+ResourceBundleELResolver.java	101	1	7	0
+ResourceCache.java	222	1	19	1
+ResourceEntry.java	13	1	0	0
+ResourceEnvFactory.java	67	1	1	0
+ResourceEnvRef.java	29	1	3	0
+ResourceFactory.java	97	1	1	0
+ResourceLinkFactory.java	32	1	2	1
+ResourceLinkRef.java	36	1	3	0
+ResourceRef.java	71	1	4	0
+ResourceSet.java	48	1	9	0
+Resources.java	10	1	1	0
+ResourcesTask.java	20	1	3	0
+Response.java	769	4	80	0
+Response.java	292	1	45	0
+Response.java	24	1	6	0
+ResponseFacade.java	321	4	46	0
+ResponseIncludeWrapper.java	154	1	12	0
+ReverseComparator.java	14	1	2	0
+Role.java	9	1	5	0
+RoleMBean.java	17	1	1	0
+RolesAllowed.java	10	1	1	0
+RolesTask.java	9	1	1	0
+RpcCallback.java	6	1	2	0
+RpcChannel.java	185	3	22	1
+RpcMessage.java	75	2	9	0
+Rule.html	None	None	None	None
+Rule.java	42	1	12	0
+RuleSet.html	None	None	None	None
+RuleSet.java	5	1	2	0
+RuleSetBase.html	None	None	None	None
+RuleSetBase.java	8	1	2	0
+Rules.html	None	None	None	None
+Rules.java	12	1	8	0
+RulesBase.html	None	None	None	None
+RulesBase.java	97	1	9	0
+RunAs.java	10	1	1	0
+RuntimeInvisibleAnnotations.java	25	1	3	0
+RuntimeInvisibleParameterAnnotations.java	15	1	2	0
+RuntimeVisibleAnnotations.java	25	1	3	0
+RuntimeVisibleParameterAnnotations.java	15	1	2	0
+RxTaskPool.java	94	2	12	0
+SAXException.html	None	None	None	None
+SAXParseException.html	None	None	None	None
+SSICommand.java	6	1	1	0
+SSIConditional.java	68	1	3	0
+SSIConditionalState.java	5	1	0	0
+SSIConfig.java	24	1	1	0
+SSIEcho.java	40	1	2	0
+SSIExec.java	46	1	1	0
+SSIExternalResolver.java	14	1	8	0
+SSIFilter.java	103	1	3	0
+SSIFlastmod.java	43	1	2	0
+SSIFsize.java	81	1	4	0
+SSIInclude.java	35	1	1	0
+SSIMediator.java	236	1	23	0
+SSIPrintenv.java	31	1	1	0
+SSIProcessor.java	222	1	10	0
+SSIServlet.java	122	1	5	0
+SSIServletExternalResolver.java	455	2	24	0
+SSIServletRequestUtil.java	23	1	1	1
+SSISet.java	34	1	1	0
+SSIStopProcessingException.java	2	1	0	0
+SSL.java	140	1	15	15
+SSLAuthenticator.java	61	1	2	0
+SSLContext.java	27	1	14	14
+SSLImplementation.java	49	1	6	2
+SSLSessionManager.java	4	1	1	0
+SSLSocket.java	14	1	7	7
+SSLSupport.java	39	2	6	0
+SSLValve.java	60	1	3	0
+SavedRequest.java	89	1	20	0
+SavedRequestInputFilter.java	43	1	8	0
+SchemaResolver.java	46	1	3	0
+ScopedAttributeELResolver.java	159	1	7	0
+ScriptingVariabler.java	99	3	5	1
+SecureNioChannel.java	281	2	26	0
+SecurityClassLoad.java	74	1	1	1
+SecurityClassLoad.java	191	1	8	8
+SecurityCollection.java	175	1	21	0
+SecurityConfig.java	60	1	5	1
+SecurityConstraint.java	248	1	21	2
+SecurityRoleRef.java	29	1	5	0
+SecurityUtil.java	38	1	2	2
+SecurityUtil.java	236	2	12	11
+SelectorContext.java	226	1	34	0
+SemaphoreValve.java	84	1	15	0
+SendMailFactory.java	55	2	2	0
+SendMessageData.java	32	1	7	0
+Sender.java	5	1	2	0
+SenderState.java	55	1	11	3
+SerializablePrincipal.java	120	1	14	3
+Server.java	19	1	14	0
+ServerCookie.java	202	2	18	3
+ServerInfo.java	51	1	4	4
+ServerLifecycleListener.java	657	1	32	0
+ServerSocketFactory.java	40	1	9	1
+ServerinfoTask.java	9	1	1	0
+Service.java	18	1	14	0
+ServiceProxy.java	68	1	5	0
+ServiceRef.java	95	1	7	0
+ServiceRefFactory.java	270	1	3	0
+Servlet.java	10	1	5	0
+ServletConfig.java	8	1	4	0
+ServletContainerInitializer.java	6	1	1	0
+ServletContext.java	80	1	51	0
+ServletContextAttributeEvent.java	16	1	3	0
+ServletContextAttributeListener.java	7	1	3	0
+ServletContextEvent.java	9	1	2	0
+ServletContextListener.java	6	1	2	0
+ServletDef.java	117	1	29	0
+ServletException.java	18	1	5	0
+ServletFileUpload.java	35	1	5	1
+ServletInputStream.java	21	1	2	0
+ServletOutputStream.java	83	1	16	0
+ServletRegistration.java	15	2	7	0
+ServletRequest.java	46	1	36	0
+ServletRequestAttributeEvent.java	16	1	3	0
+ServletRequestAttributeListener.java	7	1	3	0
+ServletRequestContext.java	29	1	6	0
+ServletRequestEvent.java	14	1	3	0
+ServletRequestListener.java	6	1	2	0
+ServletRequestWrapper.java	154	1	41	0
+ServletResponse.java	21	1	15	0
+ServletResponseWrapper.java	86	1	20	0
+ServletResponseWrapperInclude.java	33	1	4	0
+ServletSecurity.java	23	3	6	0
+ServletSecurityElement.java	70	1	8	0
+ServletWriter.java	66	1	14	0
+Session.java	42	1	32	0
+Session.java	10	1	2	2
+SessionConfig.java	70	1	18	0
+SessionCookieConfig.java	17	1	14	0
+SessionEvent.java	28	1	5	0
+SessionExample	None	None	None	None
+SessionExample.java	92	1	2	0
+SessionIDMessage.java	56	1	12	0
+SessionListener.java	4	1	1	0
+SessionListener.java	45	1	8	0
+SessionMessage.java	17	1	5	0
+SessionMessageImpl.java	76	1	13	0
+SessionTrackingMode.java	6	1	2	0
+SessionUtils.java	172	1	7	6
+SessionsTask.java	27	1	3	0
+Set.java	102	1	1	0
+SetAllPropertiesRule.java	32	1	3	0
+SetCharacterEncodingFilter.java	44	1	4	0
+SetContextPropertiesRule.java	27	1	1	0
+SetNextNamingRule.java	37	1	3	0
+SetNextRule.html	None	None	None	None
+SetNextRule.java	58	1	8	0
+SetPropertiesRule.html	None	None	None	None
+SetPropertiesRule.java	109	1	7	0
+SetPropertyRule.html	None	None	None	None
+SetPropertyRule.java	56	1	4	0
+SetRootRule.java	58	1	8	0
+SetTopRule.html	None	None	None	None
+SetTopRule.java	58	1	8	0
+Shm.java	14	1	8	8
+ShowSource.java	38	1	2	0
+ShuffleSimpleTag.java	54	1	4	0
+ShuffleSimpleTag.java.html	None	None	None	None
+Signature.java	32	1	6	0
+SimpleCharStream.java	352	1	36	0
+SimpleCoordinator.java	73	1	10	0
+SimpleElementValue.java	92	1	5	0
+SimpleHttpClient.java	116	1	17	0
+SimpleNode.java	146	1	24	0
+SimpleRegexMatcher.html	None	None	None	None
+SimpleTag.java	10	1	5	0
+SimpleTagSupport.java	61	1	9	1
+SimpleTcpCluster.java	471	1	63	0
+SimpleTcpReplicationManager.java	447	1	34	0
+SingleRemoveSynchronizedAddLock.java	93	1	15	0
+SingleSignOn.java	229	1	16	0
+SingleSignOnEntry.java	68	1	11	0
+SingleSignOnMessage.java	102	1	22	0
+SingleThreadModel.java	4	1	0	0
+SkipPageException.java	17	1	4	0
+SmapGenerator.java	72	1	7	1
+SmapStratum.java	174	2	15	0
+SmapUtil.java	526	4	49	6
+Smart.java	10	1	2	0
+Sockaddr.java	9	1	0	0
+Socket.java	96	1	37	37
+SocketNioReceive.java	67	2	3	1
+SocketNioSend.java	83	1	1	1
+SocketNioValidateSend.java	78	1	1	1
+SocketProperties.java	215	1	50	0
+SocketReceive.java	55	2	3	2
+SocketSend.java	47	1	1	1
+SocketStatus.java	4	1	2	0
+SocketTribesReceive.java	63	2	3	2
+SocketValidateReceive.java	80	3	5	2
+SocketWrapper.java	39	1	20	0
+SourceFile.java	31	1	6	0
+StackMap.java	53	1	6	0
+StackMapEntry.java	76	1	5	0
+StackMapTable.java	53	1	6	0
+StackMapTableEntry.java	145	1	5	0
+StackMapType.java	61	1	10	0
+StandardClassLoader.java	13	1	2	0
+StandardClassLoaderMBean.java	3	1	0	0
+StandardContext.java	2866	2	282	0
+StandardContextValve.java	139	1	6	0
+StandardEngine.java	139	1	17	0
+StandardEngineValve.java	45	1	4	0
+StandardHost.java	332	2	42	0
+StandardHostValve.java	260	2	10	1
+StandardJarScanner.java	158	1	9	0
+StandardManager.java	379	3	22	0
+StandardPipeline.java	231	1	18	0
+StandardServer.java	350	1	32	0
+StandardService.java	288	1	24	0
+StandardSession.java	818	4	67	0
+StandardSessionFacade.java	73	1	19	0
+StandardThreadExecutor.java	171	1	35	0
+StandardWrapper.java	950	1	88	1
+StandardWrapperFacade.java	30	1	5	0
+StandardWrapperValve.java	406	1	15	0
+StartTask.java	27	1	3	0
+StaticMember.java	28	1	6	0
+StaticMembershipInterceptor.java	72	2	10	0
+Status.java	116	1	54	54
+StatusManagerServlet.java	201	1	4	0
+StatusTransformer.java	684	1	20	20
+Stdlib.java	12	1	9	9
+Stockticker.java	140	3	20	0
+StopTask.java	27	1	3	0
+Store.java	17	1	11	0
+StoreBase.java	107	1	12	0
+Streamable.java	6	1	3	0
+Streams.java	73	1	5	4
+Strftime.java	134	1	8	0
+StringCache.java	426	3	25	8
+StringManager.java	60	1	4	1
+StringManager.java	62	1	4	1
+StringManager.java	60	1	4	1
+StringParser.java	89	1	17	0
+SymbolTable.java	107	2	10	0
+Synthetic.java	43	1	5	0
+SystemLogHandler.java	164	1	30	2
+TableBean.java	59	1	9	0
+TableBean.java.html	None	None	None	None
+Tag.java	14	1	6	0
+TagAdapter.java	52	1	8	0
+TagAttributeInfo.java	89	1	15	1
+TagConstants.java	60	1	0	0
+TagData.java	41	1	7	0
+TagExtraInfo.java	27	1	6	0
+TagFileInfo.java	20	1	4	0
+TagFileProcessor.java	461	4	19	1
+TagHandlerPool.java	107	1	7	2
+TagInfo.java	152	1	20	0
+TagLibraryInfo.java	83	1	14	0
+TagLibraryInfoImpl.java	564	1	16	0
+TagLibraryValidator.java	20	1	5	0
+TagPlugin.java	4	1	1	0
+TagPluginContext.java	17	1	14	0
+TagPluginManager.java	171	3	21	0
+TagSupport.java	91	1	15	1
+TagVariableInfo.java	35	1	6	0
+TaglibDescriptor.java	5	1	2	0
+TaskQueue.java	37	1	7	0
+TaskThreadFactory.java	23	1	2	0
+TcpFailureDetector.java	270	1	25	1
+TcpPingInterceptor.java	125	2	13	0
+TcpSender.java	154	1	3	0
+TestAttributeParser.java	121	2	10	0
+TestBug49158.java	46	2	3	1
+TestByteChunk.java	81	1	6	0
+TestChannelOptionFlag.java	57	2	4	0
+TestChannelStartStop.java	105	1	7	0
+TestContextConfigAnnotation.java	190	1	9	0
+TestCookies.java	198	1	9	8
+TestCookiesAllowEquals.java	65	3	4	0
+TestCookiesAllowHttpSeps.java	60	3	4	0
+TestCookiesDefaultSysProps.java	32	1	1	0
+TestCookiesDisallowEquals.java	58	3	4	0
+TestCookiesNoFwdStrictSysProps.java	27	1	1	0
+TestCookiesNoStrictNamingSysProps.java	27	1	1	0
+TestCookiesStrictSysProps.java	34	1	1	0
+TestCoyoteAdapter.java	89	2	12	0
+TestDataIntegrity.java	152	5	13	2
+TestDomainFilter.java	93	3	8	0
+TestELEvaluation.java	137	2	11	0
+TestELInJsp.java	287	1	13	1
+TestELParser.java	39	1	2	0
+TestELSupport.java	83	4	20	1
+TestGenerator.java	141	4	16	1
+TestInternalInputBuffer.java	84	3	5	0
+TestJspConfig.java	53	1	4	0
+TestJspDocumentParser.java	35	1	2	0
+TestKeepAliveCount.java	85	3	7	0
+TestMemberArrival.java	89	3	8	0
+TestMemberSerialization.java	77	1	6	0
+TestMethodExpressionImpl.java	70	1	3	0
+TestMulticastPackages.java	202	4	17	5
+TestNamingContextListener.java	47	2	3	0
+TestNonBlockingCoordinator.java	85	2	6	1
+TestOrderInterceptor.java	157	5	11	1
+TestPageContext.java	17	1	1	0
+TestParser.java	74	1	4	1
+TestRegistration.java	41	1	1	0
+TestRemoteIpFilter.java	348	4	24	0
+TestRemoteIpValve.java	438	2	23	0
+TestRemoteProcessException.java	102	3	8	2
+TestRequest.java	206	4	10	0
+TestRequestUtil.java	20	1	1	0
+TestScriptingVariabler.java	68	4	4	0
+TestSecurityConstraint.java	142	1	1	0
+TestSenderConnections.java	93	3	11	0
+TestSerializablePrincipal.java	73	1	1	0
+TestSerialization.java	18	1	4	1
+TestServerInfo.java	7	1	1	0
+TestStandardContext.java	67	3	5	0
+TestStandardContextAliases.java	59	2	2	0
+TestStandardContextResources.java	141	4	8	0
+TestStringManager.java	20	1	2	0
+TestTcpFailureDetector.java	124	2	9	0
+TestTomcat.java	186	5	14	0
+TestTomcatSSL.java	185	4	14	0
+TestUdpPackages.java	242	5	19	5
+TestValidator.java	111	2	8	0
+TestValueExpressionImpl.java	45	1	2	0
+TestWebXml.java	73	1	6	0
+TestWebXmlOrdering.java	187	1	11	0
+TestWebappClassLoaderMemoryLeak.java	68	3	4	0
+TesterBeanA.java	10	1	2	0
+TesterBeanB.java	13	1	3	0
+TesterBeanC.java	10	1	2	0
+TesterFunctions.java	6	1	1	1
+TesterPrincipal.java	12	1	2	0
+TextOptimizer.java	68	2	11	1
+ThreadPoolExecutor.java	63	2	10	0
+ThresholdingOutputStream.java	79	1	13	0
+ThroughputInterceptor.java	118	1	15	0
+TileSimpleTag.java	21	1	3	0
+TileSimpleTag.java.html	None	None	None	None
+Time.java	17	1	6	6
+TldConfig.java	355	2	25	2
+TldLocation.java	27	1	6	1
+TldLocationsCache.java	254	2	12	2
+TldRuleSet.java	79	4	11	0
+Token.java	40	1	7	2
+TokenMgrError.java	73	1	6	2
+Tomcat.java	551	5	42	3
+TomcatBaseTest.java	118	2	10	2
+TomcatCSS.java	13	1	0	0
+Tool.java	115	1	2	2
+TransactionFactory.java	67	1	1	0
+TransactionRef.java	28	1	3	0
+TreeNode.java	137	1	16	0
+TribesTestSuite.java	42	1	2	1
+TryCatchFinally.java	5	1	2	0
+TwoPhaseCommitInterceptor.java	101	2	9	0
+Txt2Html.java	92	1	4	0
+UCSReader.java	133	1	10	0
+UDecoder.java	181	1	12	3
+UEncoder.java	103	1	7	0
+URL.java	361	1	21	1
+URLEncoder.java	62	1	3	0
+UTF8Reader.java	405	1	12	0
+UUIDGenerator.java	41	1	3	3
+UnavailableException.java	45	1	7	0
+UndeployMessage.java	68	1	16	0
+UndeployTask.java	20	1	3	0
+UniqueId.java	40	1	7	0
+Unknown.java	59	1	6	0
+Url.java	56	1	1	0
+User.java	22	1	17	0
+User.java	21	1	10	10
+UserConfig.java	116	1	15	0
+UserDatabase.java	21	1	16	0
+UserDatabase.java	8	1	4	0
+UserDatabaseRealm.java	122	1	9	0
+UserMBean.java	112	1	7	0
+Util.java	208	3	17	6
+Utility.java	477	2	20	19
+VMSpecTOC.doc.html	None	None	None	None
+ValidationMessage.java	15	1	3	0
+Validator.java	1356	8	59	3
+ValidatorTask.java	52	1	3	0
+ValueExpression.java	12	1	6	0
+ValueExpressionImpl.java	132	1	16	0
+ValueExpressionLiteral.java	82	1	14	0
+ValueReference.java	17	1	3	0
+ValuesBean.java	24	1	6	0
+ValuesBean.java.html	None	None	None	None
+ValuesTag.java	43	1	5	0
+ValuesTag.java.html	None	None	None	None
+Valve.java	17	1	7	0
+ValveBase.java	121	1	18	0
+VariableInfo.java	31	1	5	0
+VariableMapper.java	5	1	2	0
+VariableMapperFactory.java	31	1	4	0
+VariableMapperImpl.java	31	1	5	0
+VariableResolver.java	7	1	1	0
+VariableResolverImpl.java	14	1	2	0
+VerbatimFormatter.java	12	1	1	0
+VirtualDirContext.java	107	1	8	0
+VirtualWebappLoader.java	35	1	6	0
+VoidInputFilter.java	33	1	7	0
+VoidOutputFilter.java	32	1	6	0
+WARDirContext.java	371	3	41	0
+WarWatcher.java	122	3	18	0
+WebAnnotationSet.java	160	1	6	6
+WebFilter.java	23	1	11	0
+WebInitParam.java	14	1	3	0
+WebListener.java	12	1	1	0
+WebRuleSet.java	774	17	40	0
+WebServiceRef.java	16	1	5	0
+WebServiceRefs.java	10	1	1	0
+WebServlet.java	21	1	10	0
+WebXml.java	75	1	4	0
+WebXml.java	1796	1	87	9
+WebappClassLoader.java	1973	4	85	1
+WebappLoader.java	660	1	39	0
+WebdavFixFilter.java	66	1	5	0
+WebdavServlet.java	1900	4	38	2
+When.java	21	1	1	0
+WithDefaultsRulesWrapper.html	None	None	None	None
+WithDefaultsRulesWrapper.java	64	1	11	0
+Wrapper.java	49	1	39	0
+XByteBuffer.java	367	1	43	18
+XMLChar.java	760	1	21	21
+XMLEncodingDetector.java	1014	2	35	1
+XMLString.java	59	1	9	0
+XMLStringBuffer.java	69	1	11	0
+XMLWriter.java	94	1	12	0
+XercesParser.java	81	1	4	4
+XmlErrorHandler.java	44	1	6	0
+aio.xml	0	0	None	None
+ajp.xml	0	0	None	None
+antlib.xml	42	0	None	None
+antlib.xml	30	0	None	None
+apr.xml	0	0	None	None
+asf-logo-wide.gif	None	None	None	None
+balancer-howto.xml	0	0	None	None
+basic-arithmetic.html	0	0	None	None
+basic-arithmetic.jsp	None	None	None	None
+basic-arithmetic.jsp	None	None	None	None
+basic-arithmetic.jsp.html	None	None	None	None
+basic-comparisons.html	0	0	None	None
+basic-comparisons.jsp	None	None	None	None
+basic-comparisons.jsp	None	None	None	None
+basic-comparisons.jsp.html	None	None	None	None
+basic.html	0	0	None	None
+basic.jspx	None	None	None	None
+basic.jspx	None	None	None	None
+basic.jspx.html	None	None	None	None
+bcel	None	None	None	None
+book.html	0	0	None	None
+book.jsp	None	None	None	None
+book.jsp	None	None	None	None
+book.jsp.html	None	None	None	None
+buglist.cgi	None	None	None	None
+bugreport.html	None	None	None	None
+build.xml	1656	0	None	None
+build.xml	1	0	None	None
+build.xml	0	0	None	None
+building.html	None	None	None	None
+building.xml	0	0	None	None
+cal1.jsp	None	None	None	None
+cal1.jsp.html	None	None	None	None
+cal2.jsp.html	None	None	None	None
+calendar.html	0	0	None	None
+carts.html	0	0	None	None
+carts.jsp	None	None	None	None
+carts.jsp.html	None	None	None	None
+catalina-tasks.xml	37	0	None	None
+cgi-howto.xml	0	0	None	None
+changelog.html	None	None	None	None
+changelog.html	None	None	None	None
+changelog.xml	0	0	None	None
+check.html	0	0	None	None
+checkresult.jsp	None	None	None	None
+checkresult.jsp.html	None	None	None	None
+choose.html	0	0	None	None
+choose.jsp	None	None	None	None
+choose.jsp	None	None	None	None
+choose.jsp.html	None	None	None	None
+class-loader-howto.xml	0	0	None	None
+clr.html	0	0	None	None
+clr.html.html	None	None	None	None
+cluster-channel.xml	0	0	None	None
+cluster-deployer.xml	0	0	None	None
+cluster-howto.xml	0	0	None	None
+cluster-interceptor.xml	0	0	None	None
+cluster-listener.xml	0	0	None	None
+cluster-manager.xml	0	0	None	None
+cluster-membership.xml	0	0	None	None
+cluster-receiver.xml	0	0	None	None
+cluster-sender.xml	0	0	None	None
+cluster-valve.xml	0	0	None	None
+cluster.xml	0	0	None	None
+coda.jspf.html	None	None	None	None
+code.gif	None	None	None	None
+colors.html	0	0	None	None
+colrs.jsp	None	None	None	None
+colrs.jsp.html	None	None	None	None
+composite.html	0	0	None	None
+composite.jsp	None	None	None	None
+composite.jsp	None	None	None	None
+composite.jsp.html	None	None	None	None
+config.html	0	0	None	None
+config.jsp	None	None	None	None
+config.jsp	None	None	None	None
+config.jsp.html	None	None	None	None
+connectors.xml	0	0	None	None
+context.xml	4	0	None	None
+context.xml	0	0	None	None
+context.xml	0	0	None	None
+context.xml	0	0	None	None
+context.xml	0	0	None	None
+cookies.html	0	0	None	None
+cresult.html	0	0	None	None
+crt.html	0	0	None	None
+date.html	0	0	None	None
+date.jsp	None	None	None	None
+date.jsp	None	None	None	None
+date.jsp.html	None	None	None	None
+default-servlet.xml	0	0	None	None
+deployer-howto.xml	0	0	None	None
+deployment.xml	1	0	None	None
+developers.xml	0	0	None	None
+displayProducts.tag.html	None	None	None	None
+docs	None	None	None	None
+download.html	None	None	None	None
+dynamicattrs.html	0	0	None	None
+dynamicattrs.jsp	None	None	None	None
+dynamicattrs.jsp	None	None	None	None
+dynamicattrs.jsp.html	None	None	None	None
+engine.xml	0	0	None	None
+er.html	0	0	None	None
+err.jsp	None	None	None	None
+err.jsp.html	None	None	None	None
+error.html	0	0	None	None
+execute.gif	None	None	None	None
+execute.gif	None	None	None	None
+execute.gif	None	None	None	None
+executor.xml	0	0	None	None
+extras.html	None	None	None	None
+extras.xml	0	0	None	None
+faq	None	None	None	None
+faq.xml	0	0	None	None
+filter.xml	0	0	None	None
+foo.html	0	0	None	None
+foo.html	0	0	None	None
+foo.jsp	None	None	None	None
+foo.jsp	None	None	None	None
+foo.jsp.html	None	None	None	None
+foreach.html	0	0	None	None
+foreach.jsp	None	None	None	None
+foreach.jsp	None	None	None	None
+foreach.jsp.html	None	None	None	None
+forward.jsp	None	None	None	None
+forward.jsp	None	None	None	None
+forward.jsp.html	None	None	None	None
+fs-admin-apps.xml	0	0	None	None
+fs-admin-objects.xml	0	0	None	None
+fs-admin-opers.xml	0	0	None	None
+fs-default.xml	0	0	None	None
+fs-jdbc-realm.xml	0	0	None	None
+fs-jndi-realm.xml	0	0	None	None
+fs-memory-realm.xml	0	0	None	None
+functions.html	0	0	None	None
+functions.jsp	None	None	None	None
+functions.jsp	None	None	None	None
+functions.jsp.html	None	None	None	None
+fwd.html	0	0	None	None
+globalresources.xml	0	0	None	None
+hello	None	None	None	None
+hello.html	0	0	None	None
+hello.html	0	0	None	None
+hello.jsp	None	None	None	None
+hello.jsp	None	None	None	None
+hello.jsp	None	None	None	None
+hello.jsp.html	None	None	None	None
+helloWorld.tag.html	None	None	None	None
+helloworld.html	0	0	None	None
+host.xml	0	0	None	None
+howto.html	0	0	None	None
+html	None	None	None	None
+html-manager-howto.xml	0	0	None	None
+http.xml	0	0	None	None
+if.html	0	0	None	None
+if.jsp	None	None	None	None
+if.jsp	None	None	None	None
+if.jsp.html	None	None	None	None
+implicit-objects.html	0	0	None	None
+implicit-objects.jsp	None	None	None	None
+implicit-objects.jsp	None	None	None	None
+implicit-objects.jsp.html	None	None	None	None
+inc.html	0	0	None	None
+include.jsp	None	None	None	None
+include.jsp	None	None	None	None
+include.jsp.html	None	None	None	None
+index.html	None	None	None	None
+index.html	None	None	None	None
+index.html	0	0	None	None
+index.html	0	0	None	None
+index.html	0	0	None	None
+index.html	0	0	None	None
+index.html	0	0	None	None
+index.html	0	0	None	None
+index.html	0	0	None	None
+index.html	None	None	None	None
+index.html	None	None	None	None
+index.html	None	None	None	None
+index.xml	0	0	None	None
+index.xml	0	0	None	None
+index.xml	0	0	None	None
+index.xml	0	0	None	None
+index.xml	0	0	None	None
+installation.xml	0	0	None	None
+introduction.xml	0	0	None	None
+introduction.xml	0	0	None	None
+introduction.xml	0	0	None	None
+jar-scanner.xml	0	0	None	None
+jasper-howto.xml	0	0	None	None
+javaURLContextFactory.java	41	1	2	0
+jndi-datasource-examples-howto.xml	0	0	None	None
+jndi-resources-howto.xml	0	0	None	None
+jsp	None	None	None	None
+jsp	None	None	None	None
+jsp	None	None	None	None
+jspattribute.html	0	0	None	None
+jspattribute.jsp	None	None	None	None
+jspattribute.jsp	None	None	None	None
+jspattribute.jsp.html	None	None	None	None
+jsptoservlet.jsp	None	None	None	None
+jsptoservlet.jsp	None	None	None	None
+jsptoservlet.jsp.html	None	None	None	None
+jts.html	0	0	None	None
+listeners.xml	0	0	None	None
+loader.xml	0	0	None	None
+logging.xml	0	0	None	None
+login.html	0	0	None	None
+mail-lists.html	None	None	None	None
+manager-howto.html	None	None	None	None
+manager-howto.xml	0	0	None	None
+manager.xml	0	0	None	None
+manager.xml	0	0	None	None
+maven-jars.xml	0	0	None	None
+mbean-names.xml	0	0	None	None
+mbeans-descriptor-howto.xml	0	0	None	None
+mbeans-descriptors.dtd	None	None	None	None
+mbeans-descriptors.xml	114	0	None	None
+mbeans-descriptors.xml	122	0	None	None
+mbeans-descriptors.xml	819	0	None	None
+mbeans-descriptors.xml	159	0	None	None
+mbeans-descriptors.xml	23	0	None	None
+mbeans-descriptors.xml	26	0	None	None
+mbeans-descriptors.xml	135	0	None	None
+mbeans-descriptors.xml	586	0	None	None
+mbeans-descriptors.xml	1225	0	None	None
+mbeans-descriptors.xml	111	0	None	None
+mbeans-descriptors.xml	125	0	None	None
+mbeans-descriptors.xml	294	0	None	None
+mbeans-descriptors.xml	284	0	None	None
+mbeans-descriptors.xml	286	0	None	None
+mbeans-descriptors.xml	99	0	None	None
+mbeans-descriptors.xml	86	0	None	None
+mbeans-descriptors.xml	83	0	None	None
+mbeans-descriptors.xml	977	0	None	None
+mbeans-descriptors.xml	239	0	None	None
+mbeans-descriptors.xml	304	0	None	None
+mbeans-descriptors.xml	15	0	None	None
+monitoring.html	None	None	None	None
+monitoring.xml	0	0	None	None
+mvn-pub.xml	0	0	None	None
+mx4j.sourceforge.net	None	None	None	None
+notes.html	0	0	None	None
+numguess.html	0	0	None	None
+numguess.jsp	None	None	None	None
+numguess.jsp	None	None	None	None
+numguess.jsp.html	None	None	None	None
+overview.xml	0	0	None	None
+package-summary.html	None	None	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+package.html	0	0	None	None
+panel.html	0	0	None	None
+panel.jsp	None	None	None	None
+panel.jsp	None	None	None	None
+panel.jsp.html	None	None	None	None
+panel.tag.html	None	None	None	None
+plugin.html	0	0	None	None
+plugin.jsp	None	None	None	None
+plugin.jsp	None	None	None	None
+plugin.jsp.html	None	None	None	None
+prelude.jspf.html	None	None	None	None
+processes.xml	0	0	None	None
+products.html	0	0	None	None
+products.jsp	None	None	None	None
+products.jsp	None	None	None	None
+products.jsp.html	None	None	None	None
+project.xml	0	0	None	None
+project.xml	0	0	None	None
+project.xml	0	0	None	None
+project.xml	0	0	None	None
+project.xml	0	0	None	None
+project.xml	0	0	None	None
+proxy-howto.xml	0	0	None	None
+realm-howto.xml	0	0	None	None
+realm.xml	0	0	None	None
+regexp	None	None	None	None
+repeat.html	0	0	None	None
+repeat.jsp	None	None	None	None
+repeat.jsp	None	None	None	None
+repeat.jsp.html	None	None	None	None
+reqheaders.html	0	0	None	None
+reqinfo.html	0	0	None	None
+reqparams.html	0	0	None	None
+requestProcess.xml	0	0	None	None
+resources.xml	0	0	None	None
+return.gif	None	None	None	None
+return.gif	None	None	None	None
+return.gif	None	None	None	None
+rfc1867.txt	None	None	None	None
+sample	None	None	None	None
+sample.war	None	None	None	None
+security-howto.xml	0	0	None	None
+security-manager-howto.xml	0	0	None	None
+server.xml	30	0	None	None
+server.xml	0	0	None	None
+server_1.xml	1	0	None	None
+server_2.xml	3	0	None	None
+service.xml	0	0	None	None
+servlet	None	None	None	None
+servletToJsp.java	14	1	1	0
+servletToJsp.java.html	None	None	None	None
+servlets	None	None	None	None
+servlets	None	None	None	None
+sessions.html	0	0	None	None
+setup.xml	0	0	None	None
+setup.xml	0	0	None	None
+shuffle.html	0	0	None	None
+shuffle.jsp	None	None	None	None
+shuffle.jsp	None	None	None	None
+shuffle.jsp.html	None	None	None	None
+snoop.html	0	0	None	None
+snoop.jsp	None	None	None	None
+snoop.jsp	None	None	None	None
+snoop.jsp.html	None	None	None	None
+source.xml	0	0	None	None
+ssi-howto.xml	0	0	None	None
+ssl-howto.xml	0	0	None	None
+startup.xml	0	0	None	None
+status	None	None	None	None
+struts.apache.org	None	None	None	None
+svgexample.html	0	0	None	None
+systemprops.xml	0	0	None	None
+tagPlugins.xml	47	0	None	None
+textRotate.html	0	0	None	None
+textRotate.jpg	None	None	None	None
+textRotate.jspx	None	None	None	None
+textRotate.jspx	None	None	None	None
+textRotate.jspx.html	None	None	None	None
+tomcat-7.0-doc	None	None	None	None
+tomcat-dev	None	None	None	None
+tomcat-power.gif	None	None	None	None
+tomcat-users	None	None	None	None
+tomcat-users.xml	3	0	None	None
+tomcat-users_1.xml	0	0	None	None
+tomcat-users_2.xml	25	0	None	None
+tomcat.apache.org	None	None	None	None
+tomcat.gif	None	None	None	None
+tomcat.gif	None	None	None	None
+two.html	0	0	None	None
+using.html	None	None	None	None
+valve.xml	0	0	None	None
+virtual-hosting-howto.xml	0	0	None	None
+web.xml	741	0	None	None
+web.xml	1	0	None	None
+web.xml	0	0	None	None
+web.xml	0	0	None	None
+web.xml	0	0	None	None
+web.xml	0	0	None	None
+web.xml	1	0	None	None
+web.xml	0	0	None	None
+web.xml	1	0	None	None
+web.xml	1	0	None	None
+web.xml	0	0	None	None
+web.xml	0	0	None	None
+welcome.bin.html	0	0	None	None
+welcome.main.html	0	0	None	None
+windows-service-howto.xml	0	0	None	None
+www.apache.org	None	None	None	None
+www.jboss.org	None	None	None	None
+www.saxproject.org	None	None	None	None
+xml.html	0	0	None	None
+xml.jsp	None	None	None	None
+xml.jsp	None	None	None	None
+xml.jsp.html	None	None	None	None

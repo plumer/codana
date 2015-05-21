@@ -15,20 +15,31 @@ class DataManager:
         self.packageattr = {}
         datafile = open(r'tomecat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
         for packs in datafile:
-            packslice = packs.strip(' \t\n').split(' ')
+            packslice = packs.strip(' \t\n').split('\t')
             self.packagedict[packslice[0]] = []
-            self.packageattr[packslice[0]] = [packslice[-1]]
+            self.packageattr[packslice[0]] = self.packPackageAttr(packslice[2:])
             filenum = 0
             for files in datafile:
                 fileattr = files.strip(' \t\n').split('\t')
                 if not fileattr[0] in self.packagedict[packslice[0]]:
-                    files.append(fileattr[0])
+                    self.files.append(fileattr[0])
                     self.packagedict[packslice[0]].append(fileattr[0])
-                    self.fileattr[fileattr[0]] = fileattr[1:]
+                    self.fileattr[fileattr[0]] = self.packFileAttr(fileattr[1:])
                 filenum = filenum + 1
-                if filenum >= int(packslice[-1]):
+                if filenum >= int(packslice[1]):
                     break
         self.packages = self.packagedict.keys()
+
+    def packPackageAttr(self, attrs):
+        return {'filenum' : attrs[0],
+                'classnum' : attrs[1],
+                'codelines' : attrs[2]}
+
+    def packFileAttr(self, attrs):
+        return {'codelines' : attrs[0],
+                'classnum' : attrs[1],
+                'localmethodsnum' : attrs[2],
+                'classmethodsnum' : attrs[3]}
 
     def getPackages(self):
         return self.packages
@@ -47,4 +58,3 @@ class DataManager:
 
 if __name__ == '__main__':
     DataManager()
-

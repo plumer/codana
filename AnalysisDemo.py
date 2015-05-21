@@ -114,8 +114,14 @@ class AnalysisDemo(wx.Frame):
             if namestr == 'All files...':
                 # TODO Back to all file figure
                 pass
-            else:
+            elif namestr == 'All packages...':
+                # TODO Back to all package figure
                 pass
+            else:
+                # TODO Update figure here
+                self.showPackage.SetValue(True)
+                self.nameList.Clear()
+                self.nameList.InsertItems(['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
@@ -125,7 +131,10 @@ class AnalysisDemo(wx.Frame):
                 # TODO Back to file figure
                 pass
             else:
-                pass
+                # TODO Update figure here
+                self.showClass.SetValue(True)
+                self.nameList.Clear()
+                self.nameList.InsertItems(['All packages...', 'All files...'] + self.dataManage.getPackages(namestr))
 
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
