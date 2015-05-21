@@ -5,7 +5,7 @@
 + python 2.7 or higher
 + python-matplotlib
 + python-numpy
-+ python-networkx (currently unnecessary)
++ python-networkx
 
 These packages are all available through most Linux package managers.
 
@@ -17,7 +17,10 @@ Debian-based:
     python-networkx
 ```
 
-## TODO
+## Run the Demo
 
-Add file-reading-based visualization: 
-needing graph files
+`creategraph.py` is needed by the main analysis code
+```
+  python AnalysisDemo.py
+```
+
