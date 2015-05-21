@@ -52,7 +52,7 @@ class AnalysisDemo(wx.Frame):
         self.initMenuBar()
 
         self.showPackage = wx.RadioButton(pn, label='Organize in package')
-        self.showClass = wx.RadioButton(pn, label='Organize in class')
+        self.showFile = wx.RadioButton(pn, label='Organize in file')
 
         #self.figure = animate.animationFigure()
         #animate.init()
@@ -78,12 +78,12 @@ class AnalysisDemo(wx.Frame):
 
         optionBoxSizer = wx.BoxSizer()
         optionBoxSizer.Add(self.showPackage, proportion=0, flag=wx.ALL, border=0)
-        optionBoxSizer.Add(self.showClass, proportion=0, flag=wx.ALL, border=0)
+        optionBoxSizer.Add(self.showFile, proportion=0, flag=wx.ALL, border=0)
         optionBoxSizer.Add(self.create, proportion=0, flag=wx.ALL, border=0)
 
         versionBoxSizer = wx.BoxSizer()
-        versionBoxSizer.Add(self.nextVersion, proportion=0, flag=wx.ALL, border=0)
         versionBoxSizer.Add(self.prevVersion, proportion=0, flag=wx.ALL, border=0)
+        versionBoxSizer.Add(self.nextVersion, proportion=0, flag=wx.ALL, border=0)
 
         topBoxSizer = wx.BoxSizer()
         topBoxSizer.Add(versionBoxSizer, proportion=0, flag=wx.RIGHT, border=20)
@@ -104,12 +104,12 @@ class AnalysisDemo(wx.Frame):
         self.createFigure(event)
 
     def organizeInClass(self, event):
-        self.showClass.SetValue(True)
+        self.showFile.SetValue(True)
         self.createFigure(event)
 
     def onNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection())
-        if self.showClass.GetValue() == True:
+        if self.showPackage.GetValue() == True:
             # TODO Select package here, update figure
             if namestr == 'All files...':
                 # TODO Back to all file figure
@@ -119,27 +119,27 @@ class AnalysisDemo(wx.Frame):
                 pass
             else:
                 # TODO Update figure here
-                self.showPackage.SetValue(True)
+                self.showFile.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
+                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
                 # TODO Back to package figure
-                pass
+                self.showPackage.SetValue(True)
+                self.nameList.Clear()
+                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
             elif namestr == 'Files...':
                 # TODO Back to file figure
                 pass
             else:
                 # TODO Update figure here
-                self.showClass.SetValue(True)
-                self.nameList.Clear()
-                self.nameList.InsertItems(['All packages...', 'All files...'] + self.dataManage.getPackages(namestr))
+                pass
 
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
             self.prepare(True)
-        elif self.showClass.GetValue() == True:
+        elif self.showFile.GetValue() == True:
             self.prepare(False)
         self.draw()
        
