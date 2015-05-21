@@ -17,7 +17,6 @@ class AnalysisDemo(wx.Frame):
     def __init__(self, *args, **kw):
         super(AnalysisDemo, self).__init__(*args, **kw)
         self.dataManage = DataManager()
-        self.versionArray = ["6.0.0", "6.0.43", "7.0.0", "7.0.61", "8.0.0", "8.0.21"]
         self.initMain()
 
     def initMenuBar(self):
@@ -63,15 +62,14 @@ class AnalysisDemo(wx.Frame):
         self.create = wx.Button(pn, label='Create Figure')
         self.prevVersion = wx.Button(pn, label='Previous Version')
         self.nextVersion = wx.Button(pn, label='Next Version')
-        self.versionSlider = wx.Slider(pn, minValue=0, maxValue=5, size=(200,-1), style=wx.SL_AUTOTICKS)
-        self.version = wx.TextCtrl(pn, value=self.versionArray[0])
+        self.versionSlider = wx.Slider(pn, minValue=0, maxValue=6, size=(200,-1), style=wx.SL_AUTOTICKS)
+        self.version = wx.TextCtrl(pn)
         self.version.SetEditable(False)
 
         self.create.Bind(wx.EVT_BUTTON, self.createFigure)
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
         self.nextVersion.Bind(wx.EVT_BUTTON, self.moveNextVersion)
         self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onNameList)
-        self.versionSlider.Bind(wx.EVT_SCROLL_CHANGED, self.onVersionScroll)
 
         bodyBoxSizer = wx.BoxSizer()
         bodyBoxSizer.Add(self.nameList, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
@@ -81,17 +79,28 @@ class AnalysisDemo(wx.Frame):
         optionBoxSizer = wx.BoxSizer()
         optionBoxSizer.Add(self.showPackage, proportion=0, flag=wx.ALL, border=0)
         optionBoxSizer.Add(self.showFile, proportion=0, flag=wx.ALL, border=0)
-        optionBoxSizer.Add(self.create, proportion=0, flag=wx.LEFT, border=5)
+        optionBoxSizer.Add(self.create, proportion=0, flag=wx.ALL, border=0)
 
         versionCtrlBoxSizer = wx.BoxSizer()
         versionCtrlBoxSizer.Add(self.prevVersion, proportion=0, flag=wx.ALL, border=0)
         versionCtrlBoxSizer.Add(self.versionSlider, proportion=1, flag=wx.ALL, border=0)
-        versionCtrlBoxSizer.Add(self.version, proportion=0, flag=wx.ALL, border=0)
         versionCtrlBoxSizer.Add(self.nextVersion, proportion=0, flag=wx.ALL, border=0)
 
         topSizer = wx.GridSizer()
         topSizer.Add(optionBoxSizer, proportion=0, flag=wx.LEFT | wx.RIGHT, border=5)
         topSizer.Add(versionCtrlBoxSizer, proportion=0, flag=wx.LEFT | wx.RIGHT | wx.ALIGN_RIGHT, border=5)
+
+        versionBoxSizer = wx.BoxSizer()
+        versionText = wx.StaticText(pn, label='Version:')
+        versionBoxSizer.Add(versionText, proportion=0, flag=wx.ALL, border=0)
+        versionBoxSizer.Add(self.version, proportion=0, flag=wx.ALL, border=0)
+
+#       top2Sizer = wx.GridSizer()
+#       top2Sizer.Add(versionBoxSizer, proportion=0, flag=wx.ALIGN_RIGHT, border=0)
+
+        topBoxSizer = wx.BoxSizer(wx.VERTICAL)
+        topBoxSizer.Add(topSizer, proportion=0, flag=wx.ALL, border=5)
+        topBoxSizer.Add(versionBoxSizer, proportion=0, flag=wx.ALL, border=5)
 
         mainBoxSizer = wx.BoxSizer(wx.VERTICAL)
         mainBoxSizer.Add(topSizer, proportion=0, flag=wx.EXPAND | wx.ALL, border=5)
@@ -140,10 +149,6 @@ class AnalysisDemo(wx.Frame):
                 # TODO Update figure here
                 pass
 
-    def onVersionScroll(self, event):
-        self.version.SetValue(self.versionArray[self.versionSlider.GetValue()])
-        print event.GetEventType()
-
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
             self.prepare(True)
@@ -156,14 +161,12 @@ class AnalysisDemo(wx.Frame):
         if self.versionSlider.GetMin() < versionValue:
             versionValue = versionValue - 1
         self.versionSlider.SetValue(versionValue)
-        self.version.SetValue(self.versionArray[versionValue])
 
     def moveNextVersion(self, event):
         versionValue = self.versionSlider.GetValue()
         if versionValue < self.versionSlider.GetMax():
             versionValue = versionValue + 1
         self.versionSlider.SetValue(versionValue)
-        self.version.SetValue(self.versionArray[versionValue])
         self.pause ^= True
 
     def onQuit(self, event):
@@ -171,6 +174,7 @@ class AnalysisDemo(wx.Frame):
     
     def prepare(self, is_package):
         projectname = "tomcat"
+        version_array = ["6.0.0", "6.0.43", "7.0.0", "7.0.61", "8.0.0", "8.0.21"]
         self.pos = None
         self.x = None
         self.y = None
@@ -179,13 +183,13 @@ class AnalysisDemo(wx.Frame):
         self.sg = None
         self.lines = []
         for i in range(6):
-            data_directory = projectname + "_history/" + projectname + self.versionArray[i] + "/" + projectname
+            data_directory = projectname + "_history/" + projectname + version_array[i] + "/" + projectname
             if is_package == False:
                 [g, self.lines] = creategraph.readfile(data_directory)
                 filter_threshold = 45
             else :
                 [g, self.lines] = creategraph.readpkg(data_directory)
-                filter_threshold = 15
+                filter_threshold = 20
                 #print "|g.V| = ", nx.number_of_nodes(g)
 
             if i == 0:
