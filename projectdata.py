@@ -13,7 +13,7 @@ class DataManager:
         self.fileattr = {}
         self.files = []
         self.packageattr = {}
-        datafile = open(r'tomecat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
+        datafile = open(r'tomcat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
         for packs in datafile:
             packslice = packs.strip(' \t\n').split('\t')
             self.packagedict[packslice[0]] = []

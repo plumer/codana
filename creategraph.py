@@ -28,7 +28,7 @@ def readfile(project_name):
         line = f.readline()
         if not line: break
         u = line.strip().split()
-        if not nodes.has_key(u[0].strip()) and len(u) == 2:
+        if not nodes.has_key(u[0].strip()) and len(u) >= 2:
             if (u[1] != 'None'):
                 nodes[u[0].strip()] = int(u[1])
     
