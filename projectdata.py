@@ -41,6 +41,12 @@ class DataManager:
                 'localmethodsnum' : attrs[2],
                 'classmethodsnum' : attrs[3]}
 
+    def listFileAttr(self):
+        return ('codelines', 'classnum', 'localmethodsnum', 'classmethodsnum')
+
+    def listPackageAttr(self):
+        return ('filenum', 'classnum', 'codelines')
+
     def getPackages(self):
         return self.packages
 

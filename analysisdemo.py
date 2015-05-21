@@ -1,4 +1,5 @@
 import wx
+import wx.grid
 from matplotlib.figure import Figure
 import matplotlib.animation as animation
 import networkx as nx
@@ -54,18 +55,26 @@ class AnalysisDemo(wx.Frame):
 
         self.showPackage = wx.RadioButton(pn, label='Organize in package')
         self.showFile = wx.RadioButton(pn, label='Organize in file')
+        self.create = wx.Button(pn, label='Create Figure')
+
+        self.prevVersion = wx.Button(pn, label='Previous Version')
+        self.nextVersion = wx.Button(pn, label='Next Version')
+        self.versionSlider = wx.Slider(pn, minValue=0, maxValue=5, size=(150,-1), style=wx.SL_AUTOTICKS)
+        self.version = wx.TextCtrl(pn, value=self.versionArray[0], size=(50,-1))
+        self.version.SetEditable(False)
 
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
-
         self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
-        self.create = wx.Button(pn, label='Create Figure')
-        self.prevVersion = wx.Button(pn, label='Previous Version')
-        self.nextVersion = wx.Button(pn, label='Next Version')
-        self.versionSlider = wx.Slider(pn, minValue=0, maxValue=5, size=(200,-1), style=wx.SL_AUTOTICKS)
-        self.version = wx.TextCtrl(pn, value=self.versionArray[0])
-        self.version.SetEditable(False)
+        self.attrField = wx.grid.Grid(pn)
+        self.attrField.CreateGrid(1, len(self.dataManage.listPackageAttr()))
+        self.attrField.SetRowLabelSize(0)
+        readonlyAttr = wx.grid.GridCellAttr()
+        readonlyAttr.SetReadOnly(True)
+        self.attrField.SetRowAttr(0, readonlyAttr)
+        for i in xrange(len(self.dataManage.listPackageAttr())):
+            self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
 
         self.create.Bind(wx.EVT_BUTTON, self.createFigure)
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
@@ -73,9 +82,13 @@ class AnalysisDemo(wx.Frame):
         self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onNameList)
         self.versionSlider.Bind(wx.EVT_SCROLL_CHANGED, self.onVersionScroll)
 
+        contextBoxSizer = wx.BoxSizer(wx.VERTICAL)
+        contextBoxSizer.Add(self.canvas, proportion=1, flag=wx.EXPAND | wx.ALL, border=0)
+        contextBoxSizer.Add(self.attrField, proportion=0, flag=wx.EXPAND | wx.LEFT | wx.RIGHT | wx.ALIGN_CENTER, border=0)
+
         bodyBoxSizer = wx.BoxSizer()
         bodyBoxSizer.Add(self.nameList, proportion=1, flag=wx.EXPAND | wx.ALL, border=5)
-        bodyBoxSizer.Add(self.canvas, proportion=3, flag=wx.EXPAND | wx.ALL, border=5)
+        bodyBoxSizer.Add(contextBoxSizer, proportion=3, flag=wx.EXPAND | wx.ALL, border=5)
         bodyBoxSizer.Add(self.codeField, proportion=2, flag=wx.EXPAND | wx.ALL, border=5)
 
         optionBoxSizer = wx.BoxSizer()
@@ -99,7 +112,7 @@ class AnalysisDemo(wx.Frame):
 
         pn.SetSizer(mainBoxSizer)
         self.SetTitle('Analysis Demo')
-        self.SetSize((1280,800))
+        self.SetSize((1280,700))
         self.Centre()
         self.Show(True)
 
@@ -142,7 +155,6 @@ class AnalysisDemo(wx.Frame):
 
     def onVersionScroll(self, event):
         self.version.SetValue(self.versionArray[self.versionSlider.GetValue()])
-        print event.GetEventType()
 
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
