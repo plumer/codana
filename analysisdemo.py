@@ -65,21 +65,24 @@ class AnalysisDemo(wx.Frame):
 
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
-        self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage.getPackages())
+        self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.dataManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.attrField = wx.grid.Grid(pn)
         self.attrField.CreateGrid(1, len(self.dataManage.listPackageAttr()))
-        self.attrField.SetRowLabelSize(0)
+        self.attrField.SetRowLabelValue(0, 'Package name')
+        self.attrField.SetRowLabelSize(200)
         readonlyAttr = wx.grid.GridCellAttr()
         readonlyAttr.SetReadOnly(True)
         self.attrField.SetRowAttr(0, readonlyAttr)
         for i in xrange(len(self.dataManage.listPackageAttr())):
+            self.attrField.SetColSize(i, 100)
             self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
 
         self.create.Bind(wx.EVT_BUTTON, self.createFigure)
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
         self.nextVersion.Bind(wx.EVT_BUTTON, self.moveNextVersion)
-        self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onNameList)
+        self.nameList.Bind(wx.EVT_LISTBOX, self.onNameList)
+        self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onDNameList)
         self.versionSlider.Bind(wx.EVT_SCROLL_CHANGED, self.onVersionScroll)
 
         contextBoxSizer = wx.BoxSizer(wx.VERTICAL)
@@ -125,6 +128,29 @@ class AnalysisDemo(wx.Frame):
         self.createFigure(event)
 
     def onNameList(self, event):
+        # TODO Center the current selection
+        curChoice = self.nameList.GetString(self.nameList.GetSelection())
+        print curChoice
+        if self.showPackage.GetValue == True:
+            if curChoice == 'All files...' or curChoice == 'All packages...':
+                self.attrField.SetRowLabelValue(0, 'Package Name')
+                for i in xrange(len(self.dataManage.listPackageAttr())):
+                    self.attrField.SetCellValue(0, i, '')
+            else:
+                self.attrField.SetRowLabelValue(0, curChoice)
+                for pair in zip(xrange(len(self.dataManage.listPackageAttr())), self.dataManage.getPackageAttr(curChoice)):
+                    self.attrField.SetCellValue(0, pair[0], pair[1][pair[0]])
+        else:
+            if curChoice == 'Files...' or curChoice == 'Packages...':
+                self.attrField.SetRowLabelValue(0, 'File Name')
+                for i in xrange(len(self.dataManage.listFileAttr())):
+                    self.attrField.SetCellValue(0, i, '')
+            else:
+                self.attrField.SetRowLabelValue(0, curChoice)
+                for pair in zip(xrange(len(self.dataManage.listFileAttr())), self.dataManage.getFileAttr(curChoice)):
+                    self.attrField.SetCellValue(0, pair[0], pair[1][pair[0]])
+
+    def onDNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection())
         if self.showPackage.GetValue() == True:
             # TODO Select package here, update figure
@@ -139,6 +165,15 @@ class AnalysisDemo(wx.Frame):
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
+                if len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
+                    self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
+                elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
+                    self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
+                self.attrField.SetRowLabelValue(0, 'File name')
+                for i in xrange(len(self.dataManage.listFileAttr())):
+                    self.attrField.SetColSize(i, 100)
+                    self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
+
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
@@ -146,6 +181,15 @@ class AnalysisDemo(wx.Frame):
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+                if len(self.dataManage.listPackageAttr()) > len(self.dataManage.listFileAttr()):
+                    self.attrField.AppendCols(len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
+                elif len(self.dataManage.listPackageAttr()) < len(self.dataManage.listFileAttr()):
+                    self.attrField.DeleteCols(len(self.dataManage.listFileAttr())-1, len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
+                self.attrField.SetRowLabelValue(0, 'Package name')
+                for i in xrange(len(self.dataManage.listPackageAttr())):
+                    self.attrField.SetColSize(i, 100)
+                    self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+
             elif namestr == 'Files...':
                 # TODO Back to file figure
                 pass
