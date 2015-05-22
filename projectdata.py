@@ -19,6 +19,8 @@ class DataManager:
             self.packagedict[packslice[0]] = []
             self.packageattr[packslice[0]] = self.packPackageAttr(packslice[2:])
             filenum = 0
+            if int(packslice[1]) == 0:
+                continue
             for files in datafile:
                 fileattr = files.strip(' \t\n').split('\t')
                 if not fileattr[0] in self.packagedict[packslice[0]]:
@@ -48,19 +50,19 @@ class DataManager:
         return ('filenum', 'classnum', 'codelines')
 
     def getPackages(self):
-        return self.packages
+        return self.packages[:]
 
     def getFilenames(self):
-        return self.files
+        return self.files[:]
 
     def getFilesOfPackage(self, package):
-        return self.packagedict[package]
+        return self.packagedict[package][:]
 
     def getFileAttr(self, filename):
-        return self.fileattr[filename]
+        return self.fileattr[filename].copy()
 
     def getPackageAttr(self, package):
-        return self.packageattr[package]
+        return self.packageattr[package].copy()
 
 if __name__ == '__main__':
     DataManager()
