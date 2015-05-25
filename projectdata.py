@@ -48,19 +48,19 @@ class DataManager:
         return ('filenum', 'codelines' , 'cyclomatic')
 
     def getPackages(self):
-        return self.packages[:]
+        return self.packages
 
     def getFilenames(self):
-        return self.files[:]
+        return self.files
 
     def getFilesOfPackage(self, package):
-        return self.packagedict[package][:]
+        return self.packagedict[package]
 
     def getFileAttr(self, filename):
-        return self.fileattr[filename].copy()
+        return self.fileattr[filename]
 
     def getPackageAttr(self, package):
-        return self.packageattr[package].copy()
+        return self.packageattr[package]
 
 if __name__ == '__main__':
     DataManager()
