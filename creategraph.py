@@ -37,24 +37,35 @@ class GraphShell:
     def setEdges(self, edges):
         self.graph.add_edges_from(edges)
 
+    def updateSizes(self):
+        for n in nx.nodes_iter(self.graph):
+            if self.sizeDict.has_key(n):
+                pass
+            else:
+                self.sizeDict[n] = 0;
+        if ( len(self.sizeDict) != len(self.graph.nodes()) ):
+            print 'panic'
+        self.sizes = []
+        for key in self.sizeDict:
+            self.sizes.append(self.sizeDict[key] * 40)
+
+    def updateLayout(self):
+        self.pos = nx.spring_layout(self.graph)
+        self.x = []
+        self.y = []
+        for n in nx.nodes_iter(self.graph):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+
     def refine(self, threshold):
 
         big_nodes = []
         for n in nx.nodes_iter(self.graph):
-#       print "hi"
             if nx.degree(self.graph, n) >= threshold:
                 big_nodes.append(n)
 
         sg = self.graph.subgraph(big_nodes)
         self.setGraph(sg);
-
-        self.sizes = []
-        for n in nx.nodes_iter(self.g):
-            if (node_sizes.has_key(n)):
-                self.sizes.append(self.sizeDict[n])
-            else:
-                self.sizes.append(0)
-
 
 
 
@@ -93,8 +104,6 @@ def readfile(project_name):
             continue
         g.add_edge(u[0], u[1])
 
-    #print g.number_of_nodes()
-    #print g.number_of_edges()
 
     f.close()
 
@@ -143,7 +152,6 @@ def refine(g, threshold):
     big_nodes = []
     
     for n in nx.nodes_iter(g):
-#        print "hi"
         if nx.degree(g, n) >= threshold:
             big_nodes.append(n)
 
@@ -168,21 +176,15 @@ def point_sizes(g, node_sizes):
             sizes.append(node_sizes[n])
         else:
             sizes.append(0)
- #       print n, node_sizes[n]
     return sizes
 
 def pkg_filter(g):
     # removes built-in packages
     non_built_in = g.nodes()
-    print "here"
-    print nx.number_of_nodes(g)
     for n in nx.nodes_iter(g):
-        print "n = ", n
-        prime_pkg = split(n, ',')
-        print prime_pkg
-        if prime_pkg in built_in_pkgs:
-            non_built_in.remove(prime_pkg)
-    print "there"
+        prime_pkg = n.split('.')
+        if prime_pkg[0] in built_in_pkgs:
+            non_built_in.remove(n)
     return g.subgraph(non_built_in)
 
 

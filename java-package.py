@@ -9,12 +9,12 @@ for project in projects:
     p=sorted(db.ents("package"),key=lambda ent: ent.name())
     for ent in p:
         l=ent.refs("contain");
-        m=ent.metric(['CountDeclClass','CountDeclFile','CountLineCode'])       
-        file.write("%s\t%d\t%s\t%s\t%s\n"%(ent.name(),len(l),m['CountDeclFile'],m['CountDeclClass'],m['CountLineCode']))
+        m=ent.metric(['AvgCyclomatic','CountLineCode'])       
+        file.write("%s\t%d\t%s\t%s\n"%(ent.name(),len(l),m['CountLineCode'],m['AvgCyclomatic']))
         for t in l:
                 package[t.file().name()]=ent
-                x=t.file().metric(['CountLineCode','CountDeclClass','CountDeclMethod','CountDeclClassMethod'])
-                file.write("\t%s\t%s\t%s\t%s\t%s\n"%(t.file().name(),x['CountLineCode'],x['CountDeclClass'],x['CountDeclMethod'],x['CountDeclClassMethod']))
+                x=t.file().metric(['CountLineCode','AvgCyclomatic'])
+                file.write("\t%s\t%s\t%s\n"%(t.file().name(),x['CountLineCode'],x['AvgCyclomatic']))
     file.close()
     #for ent in p:
     #   for t in ent.refs("contin"):

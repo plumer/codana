@@ -22,8 +22,10 @@ class DataManager:
         for packs in datafile:
             packslice = packs.strip(' \t\n').split('\t')
             self.packagedict[packslice[0]] = []
-            self.packageattr[packslice[0]] = self.packPackageAttr(packslice[2:])
+            self.packageattr[packslice[0]] = self.packPackageAttr(packslice[1:])
             filenum = 0
+            if int(packslice[1]) == 0:
+                continue
             for files in datafile:
                 fileattr = files.strip(' \t\n').split('\t')
                 if not fileattr[0] in self.packagedict[packslice[0]]:
@@ -51,36 +53,34 @@ class DataManager:
 
     def packPackageAttr(self, attrs):
         return {'filenum' : attrs[0],
-                'classnum' : attrs[1],
-                'codelines' : attrs[2]}
+                'codelines' : attrs[1],
+                'cyclomatic' : attrs[2]}
 
     def packFileAttr(self, attrs):
         return {'codelines' : attrs[0],
-                'classnum' : attrs[1],
-                'localmethodsnum' : attrs[2],
-                'classmethodsnum' : attrs[3]}
+                'cyclomatic' : attrs[1]}
 
     def listFileAttr(self):
-        return ('codelines', 'classnum', 'localmethodsnum', 'classmethodsnum')
+        return ('codelines', 'cyclomatic')
 
     def listPackageAttr(self):
-        return ('filenum', 'classnum', 'codelines')
+        return ('filenum', 'codelines' , 'cyclomatic')
 
     def getPackages(self):
-        return self.packages
+        return self.packages[:]
 
     def getFilenames(self):
-        return self.files
+        return self.files[:]
 
     def getFilesOfPackage(self, package):
-        return self.packagedict[package]
+        return self.packagedict[package][:]
 
     def getFileAttr(self, filename):
-        return self.fileattr[filename]
+        return self.fileattr[filename].copy()
 
     def getPackageAttr(self, package):
-        if packageattr.has_key(package):
-            return self.packageattr[package]
+        if self.packageattr.has_key(package):
+            return self.packageattr[package].copy()
         else:
             return None
 

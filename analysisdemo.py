@@ -36,37 +36,51 @@ class AnalysisDemo(wx.Frame):
         self.loadPackGraph()
 
     def loadPackGraph(self):
-
         self.tpgShell = []
-        self.sizes = []
-        topPackageGraph = nx.Graph()
-
-        # create a graph containing all the nodes in all the versions
+        unionGraph = nx.Graph()
         for dm in self.dataManage:
-            topPackageGraph.add_nodes_from( dm.getPackages() )
-
-        # set the topPackageGraph as all induced graph for all in tpgShell
-        for v in self.versionArray:
             gs = creategraph.GraphShell()
-            gs.setGraph(topPackageGraph)
-            print 2.3
-            self.tpgShell.append(gs)
+            g = nx.Graph()
+            g.add_nodes_from(dm.getPackages())
+            g.add_edges_from(dm.getPackageDependence())
+            g = creategraph.pkg_filter(g)
+            g = creategraph.refine(g, 20)
+            
+            # get size info
 
-        # set edges, positions, sizes for every graph
-        for i in range( len(self.versionArray) ):
-            self.tpgShell[i].setEdges( self.dataManage[0].getPackageDependence() )
-            self.tpgShell[i].graph = creategraph.refine(self.tpgShell[i].graph, 25)
-            print nx.number_of_nodes( self.tpgShell[i].graph )
-
-            s_array = []
-            for node in nx.nodes_iter( topPackageGraph ):
-                attr = self.dataManage[i].getPackageAttr(node)
-                if attr == None or attr['filenum'] == None or attr['filenum'] == 'None':
-                    s_array.append( 0 )
+            sd = {}
+            for n in nx.nodes_iter(g):
+                node_attr = dm.getPackageAttr(n)
+                if node_attr == None:
+                    sd[n] = 0
                 else:
-                    s_array.append( int(attr['filenum']) )
-            self.sizes.append(s_array)
+                    file_num = node_attr['filenum']
+                    if file_num == None:
+                        sd[n] = 0
+                    else:
+                        sd[n] = int(file_num)
 
+            # unionGraph has all the nodes
+
+            unionGraph.add_nodes_from(g)
+            unionGraph.add_edges_from(g.edges())
+
+            self.tpgShell.append( creategraph.GraphShell() )
+            self.tpgShell[-1].setGraph(g)
+            self.tpgShell[-1].setSizeDict(sd)
+
+        # set all bottom graphs as u
+        for gs in self.tpgShell:
+            gs.graph.add_nodes_from(unionGraph)
+            gs.updateSizes()
+
+        self.pos = nx.random_layout(unionGraph)
+        self.x = []
+        self.y = []
+        for n in nx.nodes_iter(unionGraph):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+        
 
     def initMenuBar(self):
         menubar = wx.MenuBar()
@@ -223,18 +237,22 @@ class AnalysisDemo(wx.Frame):
             versionValue = versionValue + 1
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
-        self.pause ^= True
+        if self.pause == True:
+            print 'next version'
+            self.currentSizes = np.array(self.tpgShell[self.step].sizes, dtype=float)
+            self.nextSizes = np.array(self.tpgShell[self.step+1].sizes, dtype=float)
+            self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+            self.pause = False
 
     def onQuit(self, event):
         self.Close()
-    
+    """    
     def prepare(self, is_package):
         projectname = "tomcat"
         self.pos = None
         self.x = None
         self.y = None
         self.size_array = []
-        self.numframes = 40
         self.sg = None
         self.lines = []
         for i in range(6):
@@ -245,7 +263,6 @@ class AnalysisDemo(wx.Frame):
             else :
                 [g, self.lines] = creategraph.readpkg(data_directory)
                 filter_threshold = 15
-                #print "|g.V| = ", nx.number_of_nodes(g)
 
             if i == 0:
                 self.sg = creategraph.refine(g, filter_threshold)
@@ -266,15 +283,16 @@ class AnalysisDemo(wx.Frame):
         self.x = np.array(self.x)
         self.y = np.array(self.y)
         self.size_array = np.array(self.size_array)
-
-        self.pause = False
-        self.drawnFrames = 1
-        self.numsteps = len(self.size_array)
+    """
 
     def draw(self):
-        print "what am I doing"
-        x = np.array(self.tpgShell[0].x)
-        y = np.array(self.tpgShell[0].y)
+        self.pause = True
+        self.drawnFrames = 1
+        self.numframes = 40
+        self.numsteps = len(self.versionArray) + 1
+
+        x = np.array(self.x)
+        y = np.array(self.y)
         xcenter = (x.max() + x.min()) / 2
         ycenter = (y.max() + y.min()) / 2
         xlength = (x.max() - xcenter) * 1.1
@@ -283,35 +301,49 @@ class AnalysisDemo(wx.Frame):
         self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
                   ylim=(ycenter - ylength, ycenter + ylength))
 
-        #self.draw_edges(0)
+        self.draw_edges(0)
         # self.axe.draw()
 
         color = np.random.random( len(x) )
-        self.scat = self.axe.scatter(x, y, c=color, s=self.sizes[0], alpha = 0.5)
+        a = np.random.random( len(x) )
+        self.scat = self.axe.scatter(x, y, c='#13579a', 
+                s=self.tpgShell[0].sizes, alpha = 0.5)
 
         self.axe.set_frame_on(False)
         self.axe.axes.get_yaxis().set_visible(False)
         self.axe.axes.get_xaxis().set_visible(False)
+        self.ani = animation.FuncAnimation(self.figure, self.update_plot, frames=xrange(self.numframes*self.numsteps),
+            interval = 20, fargs=(self.numframes, self.scat), repeat=True, repeat_delay = 80) 
 
-    def draw_edges(self, version):
+        self.c = []
+        self.currentSizes = []
+        self.nextSizes = []
+        self.step = 0
+
+    def draw_edges(self, version, a = .2):
+        self.plot_lines = []
         for e in nx.edges_iter(self.tpgShell[version].graph):
-            print e
-            p1 = self.tpgShell[version].pos[e[0]]
-            p2 = self.tpgShell[version].pos[e[1]]
-            self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=.5, aa=True, color='#666666')
+            p1 = self.pos[e[0]]
+            p2 = self.pos[e[1]]
+            l, = self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=a, aa=True, color='#999999')
+            self.plot_lines.append(l)
+    
 
-    def update_plot(self, i, area, nframes, scat):
+
+    def update_plot(self, i, nframes, scat):
         if not self.pause:
             self.step = self.drawnFrames / nframes
             if self.step >= self.numsteps:
                 self.drawnFrames = 1
                 self.step = 0
             frameno = self.drawnFrames % nframes
-            c = (self.size_array[self.step+1] - self.size_array[self.step])/float(nframes**2)
-            scat._sizes = -c*((frameno-nframes)**2) + self.size_array[self.step+1]
+            scat._sizes = -self.c*((frameno-nframes)**2) + self.nextSizes
             self.drawnFrames = self.drawnFrames + 1
             if (self.drawnFrames % nframes == 0):
                 self.pause = True
+                for l in self.plot_lines:
+                    self.axe.lines.remove(l)
+                self.draw_edges(self.step+1)
         return scat,
 
     def show_file_info(self, event):
@@ -326,16 +358,16 @@ class AnalysisDemo(wx.Frame):
                 nearest_point = p
 
         if nearest_point != None:
-            # print nearest_point#, '\t', lines[nearest_point], ' lines of code'
-            self.codeField.SetValue(nearest_point)
+            message = nearest_point + '\t' + str(self.tpgShell[0].sizeDict[nearest_point])
+            self.codeField.SetValue(message)
 
 def main():
     app = wx.App()
     analysis = AnalysisDemo(None) 
-    analysis.prepare(False)
+#    analysis.prepare(False)
     analysis.draw()
-    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
-        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
+#    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
+#        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
 
     # analysis.figure.canvas.mpl_connect('key_press_event', analysis.next_version)
     analysis.figure.canvas.mpl_connect('button_press_event', analysis.show_file_info)
