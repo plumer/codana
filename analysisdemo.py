@@ -163,6 +163,8 @@ class AnalysisDemo(wx.Frame):
     def onNameList(self, event):
         # TODO Center the current selection
         curChoice = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
+        if curChoice == '':
+            return
         if self.showPackage.GetValue() == True:
             if curChoice == 'All files...' or curChoice == 'All packages...':
                 self.attrField.SetRowLabelValue(0, 'Package Name')
@@ -184,6 +186,8 @@ class AnalysisDemo(wx.Frame):
 
     def onDNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
+        if namestr == '':
+            return
         if self.showPackage.GetValue() == True:
             # TODO Select package here, update figure
             if namestr == 'All files...':
