@@ -15,11 +15,58 @@ class AnalysisDemo(wx.Frame):
     APP_NEXTVERSION = 2
     APP_PACKAGE = 3
     APP_CLASS = 4
+
+
+    """
+    Attributes:
+        versionArray (list) : a list of all versions
+        dataManage (list) : a list of all DataManager objects with corresponding version
+        tpgShell (list) : a GraphShell object containing graph to be drawn
+        sizes (array of arrays) : an array (corresponding to versions) of sizes
+            of all nodes in the graph
+    """
+
     def __init__(self, *args, **kw):
         super(AnalysisDemo, self).__init__(*args, **kw)
-        self.dataManage = DataManager()
+        self.dataManage = []
         self.versionArray = ["6.0.0", "6.0.43", "7.0.0", "7.0.61", "8.0.0", "8.0.21"]
+        for v in self.versionArray:
+            self.dataManage.append( DataManager(v) )
         self.initMain()
+        self.loadPackGraph()
+
+    def loadPackGraph(self):
+
+        self.tpgShell = []
+        self.sizes = []
+        topPackageGraph = nx.Graph()
+
+        # create a graph containing all the nodes in all the versions
+        for dm in self.dataManage:
+            topPackageGraph.add_nodes_from( dm.getPackages() )
+
+        # set the topPackageGraph as all induced graph for all in tpgShell
+        for v in self.versionArray:
+            gs = creategraph.GraphShell()
+            gs.setGraph(topPackageGraph)
+            print 2.3
+            self.tpgShell.append(gs)
+
+        # set edges, positions, sizes for every graph
+        for i in range( len(self.versionArray) ):
+            self.tpgShell[i].setEdges( self.dataManage[0].getPackageDependence() )
+            self.tpgShell[i].graph = creategraph.refine(self.tpgShell[i].graph, 25)
+            print nx.number_of_nodes( self.tpgShell[i].graph )
+
+            s_array = []
+            for node in nx.nodes_iter( topPackageGraph ):
+                attr = self.dataManage[i].getPackageAttr(node)
+                if attr == None or attr['filenum'] == None or attr['filenum'] == 'None':
+                    s_array.append( 0 )
+                else:
+                    s_array.append( int(attr['filenum']) )
+            self.sizes.append(s_array)
+
 
     def initMenuBar(self):
         menubar = wx.MenuBar()
@@ -65,16 +112,16 @@ class AnalysisDemo(wx.Frame):
 
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
-        self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage.getPackages())
+        self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage[0].getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.attrField = wx.grid.Grid(pn)
-        self.attrField.CreateGrid(1, len(self.dataManage.listPackageAttr()))
+        self.attrField.CreateGrid(1, len(self.dataManage[0].listPackageAttr()))
         self.attrField.SetRowLabelSize(0)
         readonlyAttr = wx.grid.GridCellAttr()
         readonlyAttr.SetReadOnly(True)
         self.attrField.SetRowAttr(0, readonlyAttr)
-        for i in xrange(len(self.dataManage.listPackageAttr())):
-            self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+        for i in xrange(len(self.dataManage[0].listPackageAttr())):
+            self.attrField.SetColLabelValue(i, self.dataManage[0].listPackageAttr()[i])
 
         self.create.Bind(wx.EVT_BUTTON, self.createFigure)
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
@@ -138,14 +185,14 @@ class AnalysisDemo(wx.Frame):
                 # TODO Update figure here
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
+                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage[0].getFilesOfPackage(namestr))
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
                 # TODO Back to package figure
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage[0].getPackages())
             elif namestr == 'Files...':
                 # TODO Back to file figure
                 pass
@@ -226,29 +273,32 @@ class AnalysisDemo(wx.Frame):
 
     def draw(self):
         print "what am I doing"
-        xcenter = (self.x.max() + self.x.min()) / 2
-        ycenter = (self.y.max() + self.y.min()) / 2
-        xlength = (self.x.max() - xcenter) * 1.2
-        ylength = (self.y.max() - ycenter) * 1.2
+        x = np.array(self.tpgShell[0].x)
+        y = np.array(self.tpgShell[0].y)
+        xcenter = (x.max() + x.min()) / 2
+        ycenter = (y.max() + y.min()) / 2
+        xlength = (x.max() - xcenter) * 1.1
+        ylength = (y.max() - ycenter) * 1.1
         self.figure.clf()
         self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
                   ylim=(ycenter - ylength, ycenter + ylength))
 
-        # nx.draw_networkx_edges(g,pos)
-        nx.draw(self.sg, self.pos, alpha=.3, node_size=0,
-                  with_labels = False, width=1, edge_color='#666666')
-        for e in nx.edges_iter(self.sg):
-            p1 = self.pos[e[0]]
-            p2 = self.pos[e[1]]
-            self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=.5, aa=True, color='#666666')
+        #self.draw_edges(0)
         # self.axe.draw()
 
-        color = np.random.random( len(self.x) )
-        self.scat = self.axe.scatter(self.x, self.y, c=color, s=self.size_array[0], alpha = 0.5)
+        color = np.random.random( len(x) )
+        self.scat = self.axe.scatter(x, y, c=color, s=self.sizes[0], alpha = 0.5)
 
         self.axe.set_frame_on(False)
         self.axe.axes.get_yaxis().set_visible(False)
         self.axe.axes.get_xaxis().set_visible(False)
+
+    def draw_edges(self, version):
+        for e in nx.edges_iter(self.tpgShell[version].graph):
+            print e
+            p1 = self.tpgShell[version].pos[e[0]]
+            p2 = self.tpgShell[version].pos[e[1]]
+            self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=.5, aa=True, color='#666666')
 
     def update_plot(self, i, area, nframes, scat):
         if not self.pause:

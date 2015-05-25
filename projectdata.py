@@ -4,9 +4,14 @@ class DataManager:
     Attributes:
         packages (list of str): List of packages name
         files (list of str): List of all the files in the project
+
         packagedict (dict): Map of packages(key) and filename(value)
+
         fileattr (dict): Map of filename(key) and the attributes of the file(value)
         packageattr (dict): Map of package(key) and the attributes of the package(value)
+
+        filedepends (list of tuple): List of all the edges in the dependence graph of all files
+        packagedepends (list of tuple) : List of all the edges in the dependence graph of all packages
     """
     def __init__(self, version='6.0.0'):
         self.packagedict = {}
@@ -29,6 +34,20 @@ class DataManager:
                 if filenum >= int(packslice[1]):
                     break
         self.packages = self.packagedict.keys()
+
+        self.packagedepends = []
+        packdependfile = open(r'tomcat_history/tomcat' + version + r'/tomcat_pack_depends.txt', 'r')
+        for e in packdependfile:
+            vertices = e.strip(' \t\n').split(' ')
+            self.packagedepends.append( (vertices[0], vertices[-1]) )
+        packdependfile.close()
+
+        self.filedepends = []
+        filedependfile = open(r'tomcat_history/tomcat' + version + r'/tomcat_depends.txt', 'r')
+        for e in filedependfile:
+            vertices = e.strip(' \t\n').split(' ')
+            self.filedepends.append( (vertices[0], vertices[-1]) )
+        filedependfile.close()
 
     def packPackageAttr(self, attrs):
         return {'filenum' : attrs[0],
@@ -60,7 +79,16 @@ class DataManager:
         return self.fileattr[filename]
 
     def getPackageAttr(self, package):
-        return self.packageattr[package]
+        if packageattr.has_key(package):
+            return self.packageattr[package]
+        else:
+            return None
+
+    def getFileDependence(self):
+        return self.filedepends
+
+    def getPackageDependence(self):
+        return self.packagedepends
 
 if __name__ == '__main__':
     DataManager()

@@ -13,6 +13,52 @@ built_in_pkgs = [
         'concurrent'
 ]
 
+class GraphShell:
+    def __init__(self):
+        self.graph = nx.Graph()
+        self.pos = {}
+        self.x = []
+        self.y = []
+        self.sizeDict = {}          # a dict from node name to integer
+        self.sizes = []
+    
+    def setGraph(self, g):
+        self.graph = g
+        self.pos = nx.spring_layout(g)
+        for n in nx.nodes_iter(g):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+    
+    def setSizeDict(self, sd):
+        self.sizeDict = sd
+        for key in sd:
+            self.sizes.append(sd[key])
+
+    def setEdges(self, edges):
+        self.graph.add_edges_from(edges)
+
+    def refine(self, threshold):
+
+        big_nodes = []
+        for n in nx.nodes_iter(self.graph):
+#       print "hi"
+            if nx.degree(self.graph, n) >= threshold:
+                big_nodes.append(n)
+
+        sg = self.graph.subgraph(big_nodes)
+        self.setGraph(sg);
+
+        self.sizes = []
+        for n in nx.nodes_iter(self.g):
+            if (node_sizes.has_key(n)):
+                self.sizes.append(self.sizeDict[n])
+            else:
+                self.sizes.append(0)
+
+
+
+
+
 def readfile(project_name):
     # read in files
     filename = project_name + ".txt"
@@ -139,28 +185,4 @@ def pkg_filter(g):
     print "there"
     return g.subgraph(non_built_in)
 
-"""
-# get edge info from graph
 
-nx.draw(sg, pos, alpha = .5, node_size = 0, node_color = color,
-       with_labels = False, width=1, edge_color = '#aaaaaa', font_family = 'erewhon')
-# show file points
-plt.scatter(x,y,c=color, s=size, alpha=.5)
-
-# register mouse event
-
-def show_file_info(event):
-#    print event.xdata, event.ydata
-    nearest_dist = 1
-    nearest_point = None
-    for p in pos:
-        dx = pos[p][0] - event.xdata
-        dy = pos[p][1] - event.ydata
-        distance = math.sqrt(dx**2 + dy**2)
-        if (distance < 0.1 and distance < nearest_dist):
-            nearest_dist = distance
-            nearest_point = p
-
-    if nearest_point != None:
-        print nearest_point
-"""
