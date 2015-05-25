@@ -19,6 +19,7 @@ class AnalysisDemo(wx.Frame):
         super(AnalysisDemo, self).__init__(*args, **kw)
         self.dataManage = DataManager()
         self.versionArray = ["6.0.0", "6.0.43", "7.0.0", "7.0.61", "8.0.0", "8.0.21"]
+        self.curPackage = ''
         self.initMain()
 
     def initMenuBar(self):
@@ -191,6 +192,7 @@ class AnalysisDemo(wx.Frame):
                 pass
             else:
                 # TODO Update figure here
+                self.curPackage = namestr
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
@@ -202,10 +204,12 @@ class AnalysisDemo(wx.Frame):
                 for i in xrange(len(self.dataManage.listFileAttr())):
                     self.attrField.SetColSize(i, 100)
                     self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
+                    self.attrField.SetCellValue(0, i, '')
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
                 # TODO Back to package figure
+                self.curPackage = ''
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
@@ -217,6 +221,7 @@ class AnalysisDemo(wx.Frame):
                 for i in xrange(len(self.dataManage.listPackageAttr())):
                     self.attrField.SetColSize(i, 100)
                     self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+                    self.attrField.SetCellValue(0, i, '')
             elif namestr == 'Files...':
                 # TODO Back to file figure
                 pass
@@ -230,7 +235,6 @@ class AnalysisDemo(wx.Frame):
         self.showPackage.SetValue(True)
         self.nameList.Clear()
         self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
-
 
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
@@ -246,9 +250,13 @@ class AnalysisDemo(wx.Frame):
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
         self.dataManage = DataManager(self.versionArray[versionValue])
-        self.showPackage.SetValue(True)
-        self.nameList.Clear()
-        self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+        if self.showPackage.GetValue() == True:
+            self.nameList.Clear()
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+        else:
+            self.nameList.Clear()
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
+        # TODO Move Prev Version
 
     def moveNextVersion(self, event):
         versionValue = self.versionSlider.GetValue()
@@ -257,9 +265,13 @@ class AnalysisDemo(wx.Frame):
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
         self.dataManage = DataManager(self.versionArray[versionValue])
-        self.showPackage.SetValue(True)
-        self.nameList.Clear()
-        self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+        if self.showPackage.GetValue() == True:
+            self.nameList.Clear()
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+        else:
+            self.nameList.Clear()
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
+        # TODO Move Next Version
         self.pause ^= True
 
     def onQuit(self, event):
