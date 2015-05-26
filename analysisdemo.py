@@ -218,6 +218,7 @@ class AnalysisDemo(wx.Frame):
 
     def onRadioButton(self, event):
         if self.showPackage.GetValue() == True:
+            self.curPackage = ''
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
             if len(self.curManage.listPackageAttr()) == self.attrField.GetNumberCols():
@@ -296,6 +297,7 @@ class AnalysisDemo(wx.Frame):
                 pass
             else:
                 # TODO Update figure here
+                self.curPackage = namestr
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(namestr))
@@ -312,6 +314,7 @@ class AnalysisDemo(wx.Frame):
             # TODO Select file here, update figure
             if namestr == 'Packages...':
                 # TODO Back to package figure
+                self.curPackage = namestr
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
