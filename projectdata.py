@@ -1,5 +1,5 @@
-class DataManager:
-    """Manager of all the information of files and packages
+class VersionDataManager:
+    """Manager of all the information of files and packages in a specific version
 
     Attributes:
         packages (list of str): List of packages name
@@ -19,10 +19,6 @@ class DataManager:
         self.filebugnum = {}
         self.packageattr = {}
         self.versionArray = []
-        datafile = open(r'tomcat_history/tomcat_list.txt', 'r')
-        for line in datafile:
-            self.versionArray.append(line.strip(' \n').strip('tomcat'))
-        datafile.close()
         datafile = open(r'tomcat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
         for packs in datafile:
             packslice = packs.strip(' \t\n').split('\t')
@@ -77,9 +73,6 @@ class DataManager:
     def listPackageAttr(self):
         return ('filenum', 'codelines' , 'cyclomatic')
 
-    def getVersionArray(self):
-        return self.versionArray
-
     def getPackages(self):
         return self.packages
 
@@ -126,6 +119,29 @@ class DataManager:
             if filename in self.filebugnum:
                 bugnum = bugnum + self.filebugnum[filename]
         return bugnum
+
+class DataManager:
+    '''Manage all the data in all versions
+
+    Attributes:
+        versionArray (list): List of all the versions
+        dataManages (dict): Map of the version(key) and the specified data manager(value)
+    '''
+    def __init__(self):
+        self.versionArray = []
+        datafile = open(r'tomcat_history/tomcat_list.txt', 'r')
+        for line in datafile:
+            self.versionArray.append(line.strip(' \n').strip('tomcat'))
+        datafile.close()
+        self.dataManages = {}
+        for version in self.versionArray:
+            self.dataManages[version] = VersionDataManager(version)
+
+    def getManager(version):
+        return self.dataManages[version]
+
+    def getVersionArray(self):
+        return self.versionArray
 
 if __name__ == '__main__':
     dm = DataManager()
