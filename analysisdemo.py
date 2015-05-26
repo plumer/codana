@@ -19,6 +19,7 @@ class AnalysisDemo(wx.Frame):
         super(AnalysisDemo, self).__init__(*args, **kw)
         self.dataManage = DataManager()
         self.versionArray = self.dataManage.getVersionArray()
+        self.curManage = self.dataManage.getManager(self.versionArray[0])
         self.curPackage = ''
         self.initMain()
 
@@ -66,18 +67,18 @@ class AnalysisDemo(wx.Frame):
 
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
-        self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.dataManage.getPackages())
+        self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.attrField = wx.grid.Grid(pn)
-        self.attrField.CreateGrid(1, len(self.dataManage.listPackageAttr()))
+        self.attrField.CreateGrid(1, len(self.curManage.listPackageAttr()))
         self.attrField.SetRowLabelValue(0, 'Package name')
         self.attrField.SetRowLabelSize(200)
         readonlyAttr = wx.grid.GridCellAttr()
         readonlyAttr.SetReadOnly(True)
         self.attrField.SetRowAttr(0, readonlyAttr)
-        for i in xrange(len(self.dataManage.listPackageAttr())):
+        for i in xrange(len(self.curManage.listPackageAttr())):
             self.attrField.SetColSize(i, 100)
-            self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+            self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
 
         self.showPackage.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
         self.showFile.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
@@ -132,32 +133,32 @@ class AnalysisDemo(wx.Frame):
     def onRadioButton(self, event):
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
-            if len(self.dataManage.listPackageAttr()) == self.attrField.GetNumberCols():
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
+            if len(self.curManage.listPackageAttr()) == self.attrField.GetNumberCols():
                 return
-            elif len(self.dataManage.listPackageAttr()) > len(self.dataManage.listFileAttr()):
-                self.attrField.AppendCols(len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-            elif len(self.dataManage.listPackageAttr()) < len(self.dataManage.listFileAttr()):
-                self.attrField.DeleteCols(len(self.dataManage.listFileAttr())-1, len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
+            elif len(self.curManage.listPackageAttr()) > len(self.curManage.listFileAttr()):
+                self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+            elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
+                self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
             self.attrField.SetRowLabelValue(0, 'Package name')
-            for i in xrange(len(self.dataManage.listPackageAttr())):
+            for i in xrange(len(self.curManage.listPackageAttr())):
                 self.attrField.SetColSize(i, 100)
-                self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+                self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
                 self.attrField.SetCellValue(0, i, '')
         else:
             self.curPackage = ''
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
-            if len(self.dataManage.listFileAttr()) == self.attrField.GetNumberCols():
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
+            if len(self.curManage.listFileAttr()) == self.attrField.GetNumberCols():
                 return
-            elif len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
-                self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-            elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
-                self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
+            elif len(self.curManage.listFileAttr()) > len(self.curManage.listPackageAttr()):
+                self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+            elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
+                self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
             self.attrField.SetRowLabelValue(0, 'File name')
-            for i in xrange(len(self.dataManage.listFileAttr())):
+            for i in xrange(len(self.curManage.listFileAttr())):
                 self.attrField.SetColSize(i, 100)
-                self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
+                self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
                 self.attrField.SetCellValue(0, i, '')
 
     def onNameList(self, event):
@@ -168,21 +169,21 @@ class AnalysisDemo(wx.Frame):
         if self.showPackage.GetValue() == True:
             if curChoice == 'All files...' or curChoice == 'All packages...':
                 self.attrField.SetRowLabelValue(0, 'Package Name')
-                for i in xrange(len(self.dataManage.listPackageAttr())):
+                for i in xrange(len(self.curManage.listPackageAttr())):
                     self.attrField.SetCellValue(0, i, '')
             else:
                 self.attrField.SetRowLabelValue(0, curChoice)
-                for i in xrange(len(self.dataManage.listPackageAttr())):
-                    self.attrField.SetCellValue(0, i, self.dataManage.getPackageAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+                for i in xrange(len(self.curManage.listPackageAttr())):
+                    self.attrField.SetCellValue(0, i, self.curManage.getPackageAttr(curChoice)[self.attrField.GetColLabelValue(i)])
         else:
             if curChoice == 'Files...' or curChoice == 'Packages...':
                 self.attrField.SetRowLabelValue(0, 'File Name')
-                for i in xrange(len(self.dataManage.listFileAttr())):
+                for i in xrange(len(self.curManage.listFileAttr())):
                     self.attrField.SetCellValue(0, i, '')
             else:
                 self.attrField.SetRowLabelValue(0, curChoice)
-                for i in xrange(len(self.dataManage.listFileAttr())):
-                    self.attrField.SetCellValue(0, i, self.dataManage.getFileAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+                for i in xrange(len(self.curManage.listFileAttr())):
+                    self.attrField.SetCellValue(0, i, self.curManage.getFileAttr(curChoice)[self.attrField.GetColLabelValue(i)])
 
     def onDNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
@@ -194,15 +195,15 @@ class AnalysisDemo(wx.Frame):
                 # TODO Back to all file figure
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
-                if len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
-                    self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-                elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
-                    self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
+                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
+                if len(self.curManage.listFileAttr()) > len(self.curManage.listPackageAttr()):
+                    self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+                elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
+                    self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 self.attrField.SetRowLabelValue(0, 'File name')
-                for i in xrange(len(self.dataManage.listFileAttr())):
+                for i in xrange(len(self.curManage.listFileAttr())):
                     self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
+                    self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
                     self.attrField.SetCellValue(0, i, '')
             elif namestr == 'All packages...':
                 # TODO Back to all package figure
@@ -212,15 +213,15 @@ class AnalysisDemo(wx.Frame):
                 self.curPackage = namestr
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
-                if len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
-                    self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-                elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
-                    self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
+                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(namestr))
+                if len(self.curManage.listFileAttr()) > len(self.curManage.listPackageAttr()):
+                    self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+                elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
+                    self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 self.attrField.SetRowLabelValue(0, 'File name')
-                for i in xrange(len(self.dataManage.listFileAttr())):
+                for i in xrange(len(self.curManage.listFileAttr())):
                     self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
+                    self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
                     self.attrField.SetCellValue(0, i, '')
         else:
             # TODO Select file here, update figure
@@ -229,15 +230,15 @@ class AnalysisDemo(wx.Frame):
                 self.curPackage = ''
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
-                if len(self.dataManage.listPackageAttr()) > len(self.dataManage.listFileAttr()):
-                    self.attrField.AppendCols(len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-                elif len(self.dataManage.listPackageAttr()) < len(self.dataManage.listFileAttr()):
-                    self.attrField.DeleteCols(len(self.dataManage.listFileAttr())-1, len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
+                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
+                if len(self.curManage.listPackageAttr()) > len(self.curManage.listFileAttr()):
+                    self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+                elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
+                    self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
                 self.attrField.SetRowLabelValue(0, 'Package name')
-                for i in xrange(len(self.dataManage.listPackageAttr())):
+                for i in xrange(len(self.curManage.listPackageAttr())):
                     self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+                    self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
                     self.attrField.SetCellValue(0, i, '')
             elif namestr == 'Files...':
                 # TODO Back to file figure
@@ -248,16 +249,16 @@ class AnalysisDemo(wx.Frame):
 
     def onVersionScroll(self, event):
         self.version.SetValue(self.versionArray[self.versionSlider.GetValue()])
-        self.dataManage = DataManager(self.versionArray[self.versionSlider.GetValue()])
+        self.curManage = DataManager(self.versionArray[self.versionSlider.GetValue()])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
         elif self.curPackage == '':
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
         else:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
 
     def createFigure(self, event):
         if self.showPackage.GetValue() == True:
@@ -272,16 +273,16 @@ class AnalysisDemo(wx.Frame):
             versionValue = versionValue - 1
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
-        self.dataManage = DataManager(self.versionArray[versionValue])
+        self.curManage = self.dataManage.getManager(self.versionArray[versionValue])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
         elif self.curPackage == '':
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
         else:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
         # TODO Move Prev Version
 
     def moveNextVersion(self, event):
@@ -290,16 +291,16 @@ class AnalysisDemo(wx.Frame):
             versionValue = versionValue + 1
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
-        self.dataManage = DataManager(self.versionArray[versionValue])
+        self.curManage = self.dataManage.getManager(self.versionArray[versionValue])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
         elif self.curPackage == '':
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
         else:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
         # TODO Move Next Version
         self.pause ^= True
 
