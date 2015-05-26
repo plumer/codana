@@ -28,10 +28,16 @@ class AnalysisDemo(wx.Frame):
 
     def __init__(self, *args, **kw):
         super(AnalysisDemo, self).__init__(*args, **kw)
+<<<<<<< HEAD
         self.dataManage = []
         self.versionArray = ["6.0.0", "6.0.43", "7.0.0", "7.0.61", "8.0.0", "8.0.21"]
         for v in self.versionArray:
             self.dataManage.append( DataManager(v) )
+=======
+        self.dataManage = DataManager()
+        self.versionArray = self.dataManage.getVersionArray()
+        self.curPackage = ''
+>>>>>>> 767f7a63b21177c105f98d8e7020c2b4b019ba00
         self.initMain()
         self.loadPackGraph()
 
@@ -148,7 +154,7 @@ class AnalysisDemo(wx.Frame):
 
         self.prevVersion = wx.Button(pn, label='Previous Version')
         self.nextVersion = wx.Button(pn, label='Next Version')
-        self.versionSlider = wx.Slider(pn, minValue=0, maxValue=5, size=(150,-1), style=wx.SL_AUTOTICKS)
+        self.versionSlider = wx.Slider(pn, minValue=0, maxValue=len(self.versionArray)-1, size=(150,-1), style=wx.SL_AUTOTICKS)
         self.version = wx.TextCtrl(pn, value=self.versionArray[0], size=(50,-1))
         self.version.SetEditable(False)
 
