@@ -214,7 +214,33 @@ class AnalysisDemo(wx.Frame):
         self.createFigure(event)
 
     def onNameList(self, event):
-        namestr = self.nameList.GetString(self.nameList.GetSelection())
+        # TODO Center the current selection
+        curChoice = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
+        if curChoice == '':
+            return
+        if self.showPackage.GetValue() == True:
+            if curChoice == 'All files...' or curChoice == 'All packages...':
+                self.attrField.SetRowLabelValue(0, 'Package Name')
+                for i in xrange(len(self.dataManage.listPackageAttr())):
+                    self.attrField.SetCellValue(0, i, '')
+            else:
+                self.attrField.SetRowLabelValue(0, curChoice)
+                for i in xrange(len(self.dataManage.listPackageAttr())):
+                    self.attrField.SetCellValue(0, i, self.dataManage.getPackageAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+        else:
+            if curChoice == 'Files...' or curChoice == 'Packages...':
+                self.attrField.SetRowLabelValue(0, 'File Name')
+                for i in xrange(len(self.dataManage.listFileAttr())):
+                    self.attrField.SetCellValue(0, i, '')
+            else:
+                self.attrField.SetRowLabelValue(0, curChoice)
+                for i in xrange(len(self.dataManage.listFileAttr())):
+                    self.attrField.SetCellValue(0, i, self.dataManage.getFileAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+
+    def onDNameList(self, event):
+        namestr = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
+        if namestr == '':
+            return
         if self.showPackage.GetValue() == True:
             # TODO Select package here, update figure
             if namestr == 'All files...':

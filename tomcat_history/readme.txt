@@ -4,5 +4,6 @@ tomcat.txt			项目中所有文件名
 tomcat_depends.txt		项目中各个文件间的依赖关系
 tomcat_pack.txt			项目中所有java package名称  包名后跟有包中文件个数，之后n行分别其中每个文件的名				称及代码行数
 tomcat_pack_depends.txt		项目中各个package间的依赖关系
+log.txt				一段时间内修改过的文件中修复的bug数
 
-文件名 代码行数 文件中类的数目 方法数(local method number) 类方法数(class method number)
+文件名 代码行数 平均圈复杂度

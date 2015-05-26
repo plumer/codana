@@ -1,7 +1,7 @@
 import subprocess
 import re
 bugnum={}
-filein=open("","r")
+filein=open("8.0.22","r")
 a=filein.read()
 filein.close()
 file=open("log.txt","w")
