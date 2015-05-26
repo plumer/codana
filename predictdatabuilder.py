@@ -2,7 +2,7 @@ from projectdata import DataManager
 
 class PredictDataBuilder:
     def __init__(self, version):
-        self.dataManage = DataManager(version)
+        self.dataManage = DataManager().getManager(version)
 
     def buildCsv(self, csvPath):
         csvFile = open(csvPath, 'w')
@@ -14,13 +14,46 @@ class PredictDataBuilder:
             for attr in attrlist:
                 csvFile.write(attrs[attr] + ',')
             bugnum = self.dataManage.getBugNumberOfFile(filename)
-            csvFile.write(str(bugnum) + ',')
             if bugnum == 0:
                 csvFile.write('0\n')
             else:
                 csvFile.write('1\n')
         csvFile.close()
 
+class PredictTestBuilder:
+    def __init__(self, version):
+        self.filename = []
+        self.fileattr = []
+        testFile = open(r'tomcat_history/tomcat' + version + '/tomcat_pack.txt', 'r')
+        for packs in testFile:
+            packslice = packs.strip(' \t\n').split('\t')
+            filenum = 0
+            if int(packslice[1]) == 0:
+                continue
+            for files in testFile:
+                fileslice = files.strip(' \t\n').split('\t')
+                if not fileslice[0] in self.filename:
+                    self.filename.append(fileslice[0])
+                    self.fileattr.append(fileslice)
+                filenum = filenum + 1
+                if filenum >= int(packslice[1]):
+                    break
+        testFile.close()
+
+    def buildCsv(self, csvPath):
+        csvFile = open(csvPath, 'w')
+        for files in self.fileattr:
+            attrnum = 0
+            for attrs in files:
+                csvFile.write(attrs)
+                if attrnum >= len(files) - 1:
+                    break
+                csvFile.write(',')
+                attrnum = attrnum + 1
+            csvFile.write('\n')
+        csvFile.close()
+
 if __name__ == '__main__':
     PredictDataBuilder('8.0.21').buildCsv('predict.csv')
+    PredictTestBuilder('8.0.23').buildCsv('predicttest.csv')
 
