@@ -74,13 +74,41 @@ class AnalysisDemo(wx.Frame):
             gs.graph.add_nodes_from(unionGraph)
             gs.updateSizes()
 
-        self.pos = nx.random_layout(unionGraph)
-        self.x = []
-        self.y = []
-        for n in nx.nodes_iter(unionGraph):
-            self.x.append(self.pos[n][0])
-            self.y.append(self.pos[n][1])
         
+    def loadFileGraph(self, package):
+        self.fgShell = []
+        unionGraph = nx.Graph()
+        for dm in self.dataManage:
+            gs = creategraph.GraphShell()
+            g = nx.Graph()
+            g.add_nodes_from(dm.getFilesOfPackage(package))
+            g.add_edges_from(dm.getFileDependenceOfPackage(package))
+            g = creategraph.pkg_filter(g)
+            g = creategraph.refine(g, 20)
+
+            sd = {}
+            for n in nx.nodes_iter(g):
+                node_attr = dm.getFileAttr(n)
+                if node_attr == None:
+                    sd[n] = 0
+                else:
+                    code_line = node_attr['codelines']
+                    if file_num == None:
+                        sd[n] = 0
+                    else:
+                        sd[n] = int(code_line)
+
+            unionGraph.add_nodes_from(g)
+            unionGraph.add_edges_from(g.edges())
+
+            self.fgShell.append( creategraph.GraphShell() )
+            self.fgShell[-1].setGraph(g)
+            self.fgShell[-1].setSizeDict(sd)
+
+        for gs in self.fgShell:
+            gs.graph.add_nodes_from(unionGraph)
+            gs.updateSizes()
+
 
     def initMenuBar(self):
         menubar = wx.MenuBar()
@@ -230,6 +258,14 @@ class AnalysisDemo(wx.Frame):
             versionValue = versionValue - 1
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
+        if self.pause == True:
+            if (self.step > 0):
+                print 'prev version, step = ', self.step
+                self.currentSizes = np.array(self.tpgShell[self.step].sizes)
+                self.nextSizes = np.array(self.tpgShell[self.step - 1].sizes)
+                self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+                self.stepdelta = -1
+                self.pause = False
 
     def moveNextVersion(self, event):
         versionValue = self.versionSlider.GetValue()
@@ -238,11 +274,13 @@ class AnalysisDemo(wx.Frame):
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
         if self.pause == True:
-            print 'next version'
-            self.currentSizes = np.array(self.tpgShell[self.step].sizes, dtype=float)
-            self.nextSizes = np.array(self.tpgShell[self.step+1].sizes, dtype=float)
-            self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
-            self.pause = False
+            print 'next version, step = ', self.step
+            if (self.step < len(self.versionArray)):
+                self.currentSizes = np.array(self.tpgShell[self.step].sizes, dtype=float)
+                self.nextSizes = np.array(self.tpgShell[self.step+1].sizes, dtype=float)
+                self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+                self.stepdelta = 1
+                self.pause = False
 
     def onQuit(self, event):
         self.Close()
@@ -284,6 +322,28 @@ class AnalysisDemo(wx.Frame):
         self.y = np.array(self.y)
         self.size_array = np.array(self.size_array)
     """
+
+    def preparePackGraph(self):
+        self.gShell = self.tpgShell
+        self.updatePosition()
+
+    def prepareFileGraph(self, package):
+        self.loadFileGraph(package)
+        self.gShell = self.fgShell
+        self.updatePosition()
+
+    def updatePosition(self):
+        unionGraph = nx.Graph()
+        for g in self.gShell:
+            unionGraph.add_nodes_from(g.graph)
+            unionGraph.add_edges_from(g.graph.edges())
+        self.pos = nx.random_layout(unionGraph)
+        self.x = []
+        self.y = []
+        for n in nx.nodes_iter(unionGraph):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+        
 
     def draw(self):
         self.pause = True
@@ -327,12 +387,10 @@ class AnalysisDemo(wx.Frame):
             p2 = self.pos[e[1]]
             l, = self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=a, aa=True, color='#999999')
             self.plot_lines.append(l)
-    
-
 
     def update_plot(self, i, nframes, scat):
         if not self.pause:
-            self.step = self.drawnFrames / nframes
+            # self.step = self.drawnFrames / nframes
             if self.step >= self.numsteps:
                 self.drawnFrames = 1
                 self.step = 0
@@ -341,9 +399,10 @@ class AnalysisDemo(wx.Frame):
             self.drawnFrames = self.drawnFrames + 1
             if (self.drawnFrames % nframes == 0):
                 self.pause = True
-                for l in self.plot_lines:
-                    self.axe.lines.remove(l)
-                self.draw_edges(self.step+1)
+            #    for l in self.plot_lines:
+            #        self.axe.lines.remove(l)
+            #   self.draw_edges(self.step+1)
+                self.step = self.step + self.stepdelta
         return scat,
 
     def show_file_info(self, event):
@@ -364,7 +423,7 @@ class AnalysisDemo(wx.Frame):
 def main():
     app = wx.App()
     analysis = AnalysisDemo(None) 
-#    analysis.prepare(False)
+    analysis.preparePackGraph()
     analysis.draw()
 #    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
 #        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
