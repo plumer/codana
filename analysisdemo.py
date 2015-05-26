@@ -152,10 +152,6 @@ class AnalysisDemo(wx.Frame):
         self.version = wx.TextCtrl(pn, value=self.versionArray[0], size=(50,-1))
         self.version.SetEditable(False)
 
-        # note: get data manager for first version
-
-
-
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
         self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
@@ -173,7 +169,10 @@ class AnalysisDemo(wx.Frame):
 
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
         self.nextVersion.Bind(wx.EVT_BUTTON, self.moveNextVersion)
-        self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onNameList)
+        self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onDNameList)
+        self.nameList.Bind(wx.EVT_LISTBOX, self.onNameList)
+        self.showPackage.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
+        self.showFile.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
         self.versionSlider.Bind(wx.EVT_SCROLL_CHANGED, self.onVersionScroll)
 
         contextBoxSizer = wx.BoxSizer(wx.VERTICAL)
