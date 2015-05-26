@@ -4,3 +4,5 @@ tomcat7.0.0
 tomcat7.0.61
 tomcat8.0.0
 tomcat8.0.21
+tomcat8.0.22
+tomcat8.0.23

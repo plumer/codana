@@ -1,7 +1,8 @@
 import understand
 #import matplotlib.pyplot as plt
 #import networkx as nx
-projects=['6.0.0','6.0.43','7.0.0','7.0.61','8.0.0','8.0.21']
+#projects=['6.0.0','6.0.43','7.0.0','7.0.61','8.0.0','8.0.21']
+projects=['8.0.22','8.0.23']
 for project in projects:
     udb = understand.open("../tomcat"+project+".udb")
     file=open("tomcat_history//tomcat"+project+"//tomcat.txt","w")
