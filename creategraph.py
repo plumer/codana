@@ -21,6 +21,7 @@ class GraphShell:
         self.y = []
         self.sizeDict = {}          # a dict from node name to integer
         self.sizes = []
+        self.bugList = []
     
     def setGraph(self, g):
         self.graph = g
@@ -34,10 +35,14 @@ class GraphShell:
         for key in sd:
             self.sizes.append(sd[key])
 
+    def setBugList(self, l):
+        self.bugList = l
+        #print 'buglist: ', self.bugList
+
     def setEdges(self, edges):
         self.graph.add_edges_from(edges)
 
-    def updateSizes(self):
+    def updateSizes(self, amplification = 40):
         for n in nx.nodes_iter(self.graph):
             if self.sizeDict.has_key(n):
                 pass
@@ -47,7 +52,7 @@ class GraphShell:
             print 'panic'
         self.sizes = []
         for key in self.sizeDict:
-            self.sizes.append(self.sizeDict[key] * 40)
+            self.sizes.append(self.sizeDict[key] * amplification)
 
     def updateLayout(self):
         self.pos = nx.spring_layout(self.graph)
@@ -66,7 +71,6 @@ class GraphShell:
 
         sg = self.graph.subgraph(big_nodes)
         self.setGraph(sg);
-0
 
 
 

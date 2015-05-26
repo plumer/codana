@@ -66,9 +66,15 @@ class AnalysisDemo(wx.Frame):
             unionGraph.add_nodes_from(g)
             unionGraph.add_edges_from(g.edges())
 
+            bugList = []
+            for p in g.nodes():
+                if dm.getBugNumberOfPackage(p) != 0:
+                    bugList.append(p)
+
             self.tpgShell.append( creategraph.GraphShell() )
             self.tpgShell[-1].setGraph(g)
             self.tpgShell[-1].setSizeDict(sd)
+            self.tpgShell[-1].setBugList(bugList)
 
         # set all bottom graphs as u
         for gs in self.tpgShell:
@@ -86,7 +92,7 @@ class AnalysisDemo(wx.Frame):
             g.add_nodes_from(dm.getFilesOfPackage(package))
             g.add_edges_from(dm.getFileDependenceOfPackage(package))
             g = creategraph.pkg_filter(g)
-            g = creategraph.refine(g, 2)
+            #g = creategraph.refine(g, 2)
 
             sd = {}
             for n in nx.nodes_iter(g):
@@ -103,13 +109,19 @@ class AnalysisDemo(wx.Frame):
             unionGraph.add_nodes_from(g)
             unionGraph.add_edges_from(g.edges())
 
+            bugList = []
+            for f in g.nodes():
+                if dm.getBugNumberOfFile(f) != 0:
+                    bugList.append(f)
+
             self.fgShell.append( creategraph.GraphShell() )
             self.fgShell[-1].setGraph(g)
             self.fgShell[-1].setSizeDict(sd)
+            self.fgShell[-1].setBugList(bugList)
 
         for gs in self.fgShell:
             gs.graph.add_nodes_from(unionGraph)
-            gs.updateSizes()
+            gs.updateSizes(8)
 
 
     def initMenuBar(self):
@@ -155,6 +167,8 @@ class AnalysisDemo(wx.Frame):
 
         self.figure = pyplot.figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
+        self.axe = self.figure.add_subplot(111,aspect='equal')
+
         self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.attrField = wx.grid.Grid(pn)
@@ -262,7 +276,7 @@ class AnalysisDemo(wx.Frame):
         if namestr == '':
             return
         if self.showPackage.GetValue() == True:
-            # TODO Select package here, update figure
+            # Select package here, update figure
             if namestr == 'All files...':
                 # TODO Back to all file figure
                 self.showFile.SetValue(True)
@@ -274,8 +288,11 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 self.setAttrs('File name')
             elif namestr == 'All packages...':
-                # TODO Back to all package figure
-                pass
+                # Done Back to all package figure
+                self.preparePackGraph()
+                self.scat.remove()
+                self.remove_lines()
+                self.draw()
             else:
                 self.curPackage = namestr
                 self.showFile.SetValue(True)
@@ -287,14 +304,14 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 self.setAttrs('File name')
 
-                # TODO Update figure here
+                # Done Update figure here
                 self.prepareFileGraph(self.curPackage)
                 self.scat.remove()
+                self.remove_lines()
                 self.draw()
         else:
-            # TODO Select file here, update figure
+            # Select file here, update figure
             if namestr == 'Packages...':
-                # TODO Back to package figure
                 self.curPackage = namestr
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
@@ -303,12 +320,25 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+""" the following 5 lines are deleted in merging conflict
+                self.attrField.SetRowLabelValue(0, 'Package name')
+                for i in xrange(len(self.curManage.listPackageAttr())):
+                    self.attrField.SetColSize(i, 100)
+                    self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
+                    self.attrField.SetCellValue(0, i, '')
+
+"""
+                # Done Back to package figure
+                self.preparePackGraph()
+                self.scat.remove()
+                self.remove_lines()
+                self.draw()
                 self.setAttrs('Package name')
             elif namestr == 'Files...':
-                # TODO Back to file figure
+                # TODO Back to file figure, circular
                 pass
             else:
-                # TODO Update figure here
+                # TODO Update figure here, circular
                 pass
 
     def onVersionScroll(self, event):
@@ -342,9 +372,9 @@ class AnalysisDemo(wx.Frame):
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
         if self.pause == True:
             if (self.step > 0):
-                print 'prev version, step = ', self.step
-                self.currentSizes = np.array(self.tpgShell[self.step].sizes)
-                self.nextSizes = np.array(self.tpgShell[self.step - 1].sizes)
+                #print 'prev version, step = ', self.step
+                self.currentSizes = np.array(self.gShell[self.step].sizes)
+                self.nextSizes = np.array(self.gShell[self.step - 1].sizes)
                 self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
                 self.stepdelta = -1
                 self.pause = False
@@ -366,10 +396,10 @@ class AnalysisDemo(wx.Frame):
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
         if self.pause == True:
-            print 'next version, step = ', self.step
+            #print 'next version, step = ', self.step
             if (self.step < len(self.versionArray)):
                 self.currentSizes = np.array(self.gShell[self.step].sizes, dtype=float)
-                self.nextSizes = np.array(self.gShell[self.step+1].sizes, dtype=float)
+                self.nextSizes = np.array(self.gShell[self.step + 1].sizes, dtype=float)
                 self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
                 self.stepdelta = 1
                 self.pause = False
@@ -405,18 +435,43 @@ class AnalysisDemo(wx.Frame):
         self.loadFileGraph(package)
         self.gShell = self.fgShell
         self.updatePosition()
+        #print self.pos
 
     def updatePosition(self):
         unionGraph = nx.Graph()
         for g in self.gShell:
             unionGraph.add_nodes_from(g.graph)
             unionGraph.add_edges_from(g.graph.edges())
-        self.pos = nx.random_layout(unionGraph)
+        self.pos = nx.spring_layout(unionGraph)
         self.x = []
         self.y = []
         for n in nx.nodes_iter(unionGraph):
             self.x.append(self.pos[n][0])
             self.y.append(self.pos[n][1])
+
+    def updateColor(self, version):
+        self.color = []
+        bugList = self.gShell[version].bugList
+        for k in self.pos.keys():
+            if k in bugList:
+                self.color.append( self.randomBadColor() )
+            else:
+                self.color.append( self.randomNormalColor() )
+
+    def randomNormalColor(self):
+        rcolor = int(np.random.random() * 60)
+        gcolor = int(np.random.random() * 60 + 80)
+        bcolor = int(np.random.random() * 60 + 160)
+
+        return '#%06x' % (rcolor * 65536 + gcolor * 256 + bcolor)
+
+    def randomBadColor(self):
+        rcolor = int(np.random.random() * 60 + 160)
+        gcolor = int(np.random.random() * 60 + 80)
+        bcolor = int(np.random.random() * 60)
+
+        return '#%06x' % (rcolor * 65536 + gcolor * 256 + bcolor)
+
         
 
     def draw(self):
@@ -435,16 +490,16 @@ class AnalysisDemo(wx.Frame):
         ycenter = (y.max() + y.min()) / 2
         xlength = (x.max() - xcenter) * 1.1
         ylength = (y.max() - ycenter) * 1.1
-        self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
-                  ylim=(ycenter - ylength, ycenter + ylength))
+        self.axe.set_xlim(xcenter-xlength, xcenter+xlength)
+        self.axe.set_ylim(ycenter-ylength, ycenter+ylength)
 
-        self.draw_edges(0)
+        self.draw_edges()
         # self.axe.draw()
 
-        color = np.random.random( len(x) )
-        a = np.random.random( len(x) )
-        self.scat = self.axe.scatter(x, y, c='#1357aa', 
-                s=self.gShell[self.step].sizes, alpha = 0.5)
+        self.color = []
+        self.updateColor(self.step)
+        self.scat = self.axe.scatter(x, y, c=self.color,
+                s=self.gShell[self.step].sizes, alpha = .6)
 
         self.axe.set_frame_on(False)
         self.axe.axes.get_yaxis().set_visible(False)
@@ -454,7 +509,7 @@ class AnalysisDemo(wx.Frame):
         #self.figure.show()
 
 
-    def draw_edges(self, version, a = .2):
+    def draw_edges(self, a = .2):
         self.plot_lines = []
         for e in nx.edges_iter(self.gShell[self.step].graph):
             p1 = self.pos[e[0]]
@@ -465,35 +520,45 @@ class AnalysisDemo(wx.Frame):
     def update_plot(self, i, nframes, scat):
         if not self.pause:
             # self.step = self.drawnFrames / nframes
+            self.updateColor(self.step)
+
             if self.step >= self.numsteps:
                 self.drawnFrames = 1
                 self.step = 0
             frameno = self.drawnFrames % nframes
             scat._sizes = -self.c*((frameno-nframes)**2) + self.nextSizes
+            scat._color = self.color
             self.drawnFrames = self.drawnFrames + 1
             if (self.drawnFrames % nframes == 0):
                 self.pause = True
-            #    for l in self.plot_lines:
-            #        self.axe.lines.remove(l)
-            #   self.draw_edges(self.step+1)
+                self.remove_lines()
                 self.step = self.step + self.stepdelta
         return scat,
 
-    def show_file_info(self, event):
+    def show_info(self, event):
+        if event.xdata == None or event.ydata == None:
+            return
         nearest_dist = 1
         nearest_point = None
+        sd = self.gShell[self.step].sizeDict
         for p in self.pos:
             dx = self.pos[p][0] - event.xdata
             dy = self.pos[p][1] - event.ydata
             distance = math.sqrt(dx**2 + dy**2)
-            if (distance < 0.1 and distance < nearest_dist):
+            if (distance < 0.1 and distance < nearest_dist and sd[p] != 0):
                 nearest_dist = distance
                 nearest_point = p
 
         if nearest_point != None:
-            message = nearest_point + '\t' + str(self.gShell[self.step].sizeDict[nearest_point])
+            message = nearest_point + '\t' + str(sd[nearest_point])
             self.codeField.SetValue(message)
             self.setAttrs(nearest_point)
+    
+    def remove_lines(self):
+        while not self.plot_lines:
+            l = self.plot_lines.pop(0)
+            l.remove
+            del l
 
 def main():
     app = wx.App()
@@ -504,7 +569,7 @@ def main():
 #        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
 
     # analysis.figure.canvas.mpl_connect('key_press_event', analysis.next_version)
-    analysis.figure.canvas.mpl_connect('button_press_event', analysis.show_file_info)
+    analysis.figure.canvas.mpl_connect('button_press_event', analysis.show_info)
     app.MainLoop()
 
 if __name__ == '__main__':
