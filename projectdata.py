@@ -1,5 +1,5 @@
-class DataManager:
-    """Manager of all the information of files and packages
+class VersionDataManager:
+    """Manager of all the information of files and packages in a specific version
 
     Attributes:
         packages (list of str): List of packages name
@@ -8,6 +8,9 @@ class DataManager:
         filebugnum (dict): Map of filename(key) and bug numbers(value)
         fileattr (dict): Map of filename(key) and the attributes of the file(value)
         packageattr (dict): Map of package(key) and the attributes of the package(value)
+
+        filedepends (list of tuple): List of all the edges in the dependence graph of all files
+        packagedepends (list of tuple) : List of all the edges in the dependence graph of all packages
     """
     def __init__(self, version='6.0.0'):
         self.packagedict = {}
@@ -16,10 +19,6 @@ class DataManager:
         self.filebugnum = {}
         self.packageattr = {}
         self.versionArray = []
-        datafile = open(r'tomcat_history/tomcat_list.txt', 'r')
-        for line in datafile:
-            self.versionArray.append(line.strip(' \n').strip('tomcat'))
-        datafile.close()
         datafile = open(r'tomcat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
         for packs in datafile:
             packslice = packs.strip(' \t\n').split('\t')
@@ -45,6 +44,20 @@ class DataManager:
         datafile.close()
         self.packages = self.packagedict.keys()
 
+        self.packagedepends = []
+        packdependfile = open(r'tomcat_history/tomcat' + version + r'/tomcat_pack_depends.txt', 'r')
+        for e in packdependfile:
+            vertices = e.strip(' \t\n').split(' ')
+            self.packagedepends.append( (vertices[0], vertices[-1]) )
+        packdependfile.close()
+
+        self.filedepends = []
+        filedependfile = open(r'tomcat_history/tomcat' + version + r'/tomcat_depends.txt', 'r')
+        for e in filedependfile:
+            vertices = e.strip(' \t\n').split('\t')
+            self.filedepends.append( (vertices[0], vertices[-1]) )
+        filedependfile.close()
+
     def packPackageAttr(self, attrs):
         return {'filenum' : attrs[0],
                 'codelines' : attrs[1],
@@ -59,9 +72,6 @@ class DataManager:
 
     def listPackageAttr(self):
         return ('filenum', 'codelines' , 'cyclomatic')
-
-    def getVersionArray(self):
-        return self.versionArray
 
     def getPackages(self):
         return self.packages
@@ -81,6 +91,21 @@ class DataManager:
     def getPackageAttr(self, package):
         return self.packageattr[package]
 
+    def getFileDependence(self):
+        return self.filedepends
+
+    def getPackageDependence(self):
+        return self.packagedepends
+
+    def getFileDependenceOfPackage(self, package):
+        deplist = []
+        filelist = self.getFilesOfPackage(package)
+        for dep in self.filedepends:
+            if dep[0] in filelist and dep[1] in filelist:
+                deplist.append(dep)
+        return deplist
+
+
     def getBugNumberOfFile(self, filename):
         if filename in self.filebugnum:
             return self.filebugnum[filename]
@@ -93,5 +118,29 @@ class DataManager:
                 bugnum = bugnum + self.filebugnum[filename]
         return bugnum
 
+class DataManager:
+    '''Manage all the data in all versions
+
+    Attributes:
+        versionArray (list): List of all the versions
+        dataManages (dict): Map of the version(key) and the specified data manager(value)
+    '''
+    def __init__(self):
+        self.versionArray = []
+        datafile = open(r'tomcat_history/tomcat_list.txt', 'r')
+        for line in datafile:
+            self.versionArray.append(line.strip(' \n').strip('tomcat'))
+        datafile.close()
+        self.dataManages = {}
+        for version in self.versionArray:
+            self.dataManages[version] = VersionDataManager(version)
+
+    def getManager(self, version):
+        return self.dataManages[version]
+
+    def getVersionArray(self):
+        return self.versionArray
+
 if __name__ == '__main__':
-    DataManager()
+    dm = DataManager()
+    dm.getFileDependenceOfPackage('apache.catalina')

@@ -1,6 +1,7 @@
 import wx
 import wx.grid
 from matplotlib.figure import Figure
+from matplotlib import pyplot
 import matplotlib.animation as animation
 import networkx as nx
 import numpy as np
@@ -10,17 +11,106 @@ import creategraph
 from projectdata import DataManager
 
 class AnalysisDemo(wx.Frame):
+    """
+    Attributes:
+        versionArray (list) : a list of all versions
+        dataManager(DataManager) : DataManager objects providing all versions of VersionDataManager
+        curManager (VersionDataManager) : VersionDataManager object with corresponding version
+        tpgShell (list) : a GraphShell object containing graph to be drawn
+        sizes (array of arrays) : an array (corresponding to versions) of sizes
+            of all nodes in the graph
+    """
     APP_EXIT = 0
     APP_PREVVERSION = 1
     APP_NEXTVERSION = 2
     APP_PACKAGE = 3
     APP_CLASS = 4
+
     def __init__(self, *args, **kw):
         super(AnalysisDemo, self).__init__(*args, **kw)
         self.dataManage = DataManager()
         self.versionArray = self.dataManage.getVersionArray()
+        self.curManage = self.dataManage.getManager(self.versionArray[0])
         self.curPackage = ''
         self.initMain()
+        self.loadPackGraph()
+
+    def loadPackGraph(self):
+        self.tpgShell = []
+        unionGraph = nx.Graph()
+        for version in self.versionArray:
+            dm = self.dataManage.getManager(version)
+            gs = creategraph.GraphShell()
+            g = nx.Graph()
+            g.add_nodes_from(dm.getPackages())
+            g.add_edges_from(dm.getPackageDependence())
+            g = creategraph.pkg_filter(g)
+            g = creategraph.refine(g, 20)
+            
+            # get size info
+
+            sd = {}
+            for n in nx.nodes_iter(g):
+                node_attr = dm.getPackageAttr(n)
+                if node_attr == None:
+                    sd[n] = 0
+                else:
+                    file_num = node_attr['filenum']
+                    if file_num == None:
+                        sd[n] = 0
+                    else:
+                        sd[n] = int(file_num)
+
+            # unionGraph has all the nodes
+
+            unionGraph.add_nodes_from(g)
+            unionGraph.add_edges_from(g.edges())
+
+            self.tpgShell.append( creategraph.GraphShell() )
+            self.tpgShell[-1].setGraph(g)
+            self.tpgShell[-1].setSizeDict(sd)
+
+        # set all bottom graphs as u
+        for gs in self.tpgShell:
+            gs.graph.add_nodes_from(unionGraph)
+            gs.updateSizes()
+
+        
+    def loadFileGraph(self, package):
+        self.fgShell = []
+        unionGraph = nx.Graph()
+        for version in self.versionArray:
+            dm = self.dataManage.getManager(version)
+            # gs = creategraph.GraphShell()
+            g = nx.Graph()
+            g.add_nodes_from(dm.getFilesOfPackage(package))
+            g.add_edges_from(dm.getFileDependenceOfPackage(package))
+            g = creategraph.pkg_filter(g)
+            g = creategraph.refine(g, 2)
+
+            sd = {}
+            for n in nx.nodes_iter(g):
+                node_attr = dm.getFileAttr(n)
+                if node_attr == None:
+                    sd[n] = 0
+                else:
+                    code_line = node_attr['codelines']
+                    if code_line == None:
+                        sd[n] = 0
+                    else:
+                        sd[n] = int(code_line)
+
+            unionGraph.add_nodes_from(g)
+            unionGraph.add_edges_from(g.edges())
+
+            self.fgShell.append( creategraph.GraphShell() )
+            self.fgShell[-1].setGraph(g)
+            self.fgShell[-1].setSizeDict(sd)
+
+        for gs in self.fgShell:
+            gs.graph.add_nodes_from(unionGraph)
+            gs.updateSizes()
+
 
     def initMenuBar(self):
         menubar = wx.MenuBar()
@@ -32,7 +122,7 @@ class AnalysisDemo(wx.Frame):
         prevVer = wx.MenuItem(ctrlMenu, self.APP_PREVVERSION, '&Prev Version\tCtrl+P')
         nextVer = wx.MenuItem(ctrlMenu, self.APP_NEXTVERSION, '&Next Version\tCtrl+N')
         orgInPackage = wx.MenuItem(ctrlMenu, self.APP_PACKAGE, 'Organize in &Package\tF5')
-        orgInClass = wx.MenuItem(ctrlMenu, self.APP_CLASS, 'Organize in &File\tF6')
+        orgInClass = wx.MenuItem(ctrlMenu, self.APP_CLASS, 'Organize in &Class\tF6')
         ctrlMenu.AppendItem(prevVer)
         ctrlMenu.AppendItem(nextVer)
         ctrlMenu.AppendSeparator()
@@ -56,7 +146,6 @@ class AnalysisDemo(wx.Frame):
 
         self.showPackage = wx.RadioButton(pn, label='Organize in package')
         self.showFile = wx.RadioButton(pn, label='Organize in file')
-        self.create = wx.Button(pn, label='Create Figure')
 
         self.prevVersion = wx.Button(pn, label='Previous Version')
         self.nextVersion = wx.Button(pn, label='Next Version')
@@ -64,27 +153,27 @@ class AnalysisDemo(wx.Frame):
         self.version = wx.TextCtrl(pn, value=self.versionArray[0], size=(50,-1))
         self.version.SetEditable(False)
 
-        self.figure = Figure(facecolor='#f3f3f3')
+        self.figure = pyplot.figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
-        self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.dataManage.getPackages())
+        self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.attrField = wx.grid.Grid(pn)
-        self.attrField.CreateGrid(1, len(self.dataManage.listPackageAttr()))
+        self.attrField.CreateGrid(1, len(self.curManage.listPackageAttr()))
         self.attrField.SetRowLabelValue(0, 'Package name')
         self.attrField.SetRowLabelSize(200)
         readonlyAttr = wx.grid.GridCellAttr()
         readonlyAttr.SetReadOnly(True)
         self.attrField.SetRowAttr(0, readonlyAttr)
-        for i in xrange(len(self.dataManage.listPackageAttr())):
+        for i in xrange(len(self.curManage.listPackageAttr())):
             self.attrField.SetColSize(i, 100)
-            self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
+            self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
 
-        self.showPackage.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
-        self.showFile.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
         self.nextVersion.Bind(wx.EVT_BUTTON, self.moveNextVersion)
-        self.nameList.Bind(wx.EVT_LISTBOX, self.onNameList)
         self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onDNameList)
+        self.nameList.Bind(wx.EVT_LISTBOX, self.onNameList)
+        self.showPackage.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
+        self.showFile.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
         self.versionSlider.Bind(wx.EVT_SCROLL_CHANGED, self.onVersionScroll)
 
         contextBoxSizer = wx.BoxSizer(wx.VERTICAL)
@@ -99,7 +188,6 @@ class AnalysisDemo(wx.Frame):
         optionBoxSizer = wx.BoxSizer()
         optionBoxSizer.Add(self.showPackage, proportion=0, flag=wx.ALL, border=0)
         optionBoxSizer.Add(self.showFile, proportion=0, flag=wx.ALL, border=0)
-        optionBoxSizer.Add(self.create, proportion=0, flag=wx.LEFT, border=5)
 
         versionCtrlBoxSizer = wx.BoxSizer()
         versionCtrlBoxSizer.Add(self.prevVersion, proportion=0, flag=wx.ALL, border=0)
@@ -123,7 +211,7 @@ class AnalysisDemo(wx.Frame):
 
     def organizeInPackage(self, event):
         self.showPackage.SetValue(True)
-        self.onRadioButton(event)
+        self.createFigure(event)
 
     def organizeInClass(self, event):
         self.showFile.SetValue(True)
@@ -131,34 +219,27 @@ class AnalysisDemo(wx.Frame):
 
     def onRadioButton(self, event):
         if self.showPackage.GetValue() == True:
+            self.curPackage = ''
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
-            if len(self.dataManage.listPackageAttr()) == self.attrField.GetNumberCols():
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
+            if len(self.curManage.listPackageAttr()) == self.attrField.GetNumberCols():
                 return
-            elif len(self.dataManage.listPackageAttr()) > len(self.dataManage.listFileAttr()):
-                self.attrField.AppendCols(len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-            elif len(self.dataManage.listPackageAttr()) < len(self.dataManage.listFileAttr()):
-                self.attrField.DeleteCols(len(self.dataManage.listFileAttr())-1, len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-            self.attrField.SetRowLabelValue(0, 'Package name')
-            for i in xrange(len(self.dataManage.listPackageAttr())):
-                self.attrField.SetColSize(i, 100)
-                self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
-                self.attrField.SetCellValue(0, i, '')
+            elif len(self.curManage.listPackageAttr()) > len(self.curManage.listFileAttr()):
+                self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+            elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
+                self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+            self.setAttrs('Package name')
         else:
             self.curPackage = ''
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
-            if len(self.dataManage.listFileAttr()) == self.attrField.GetNumberCols():
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
+            if len(self.curManage.listFileAttr()) == self.attrField.GetNumberCols():
                 return
-            elif len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
-                self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-            elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
-                self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-            self.attrField.SetRowLabelValue(0, 'File name')
-            for i in xrange(len(self.dataManage.listFileAttr())):
-                self.attrField.SetColSize(i, 100)
-                self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
-                self.attrField.SetCellValue(0, i, '')
+            elif len(self.curManage.listFileAttr()) > len(self.curManage.listPackageAttr()):
+                self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+            elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
+                self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+            self.setAttrs('File name')
 
     def onNameList(self, event):
         # TODO Center the current selection
@@ -167,22 +248,14 @@ class AnalysisDemo(wx.Frame):
             return
         if self.showPackage.GetValue() == True:
             if curChoice == 'All files...' or curChoice == 'All packages...':
-                self.attrField.SetRowLabelValue(0, 'Package Name')
-                for i in xrange(len(self.dataManage.listPackageAttr())):
-                    self.attrField.SetCellValue(0, i, '')
+                self.setAttrs('Package Name')
             else:
-                self.attrField.SetRowLabelValue(0, curChoice)
-                for i in xrange(len(self.dataManage.listPackageAttr())):
-                    self.attrField.SetCellValue(0, i, self.dataManage.getPackageAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+                self.setAttrs(curChoice)
         else:
             if curChoice == 'Files...' or curChoice == 'Packages...':
-                self.attrField.SetRowLabelValue(0, 'File Name')
-                for i in xrange(len(self.dataManage.listFileAttr())):
-                    self.attrField.SetCellValue(0, i, '')
+                self.setAttrs('File name')
             else:
-                self.attrField.SetRowLabelValue(0, curChoice)
-                for i in xrange(len(self.dataManage.listFileAttr())):
-                    self.attrField.SetCellValue(0, i, self.dataManage.getFileAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+                self.setAttrs(curChoice)
 
     def onDNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
@@ -194,51 +267,43 @@ class AnalysisDemo(wx.Frame):
                 # TODO Back to all file figure
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
-                if len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
-                    self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-                elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
-                    self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-                self.attrField.SetRowLabelValue(0, 'File name')
-                for i in xrange(len(self.dataManage.listFileAttr())):
-                    self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
-                    self.attrField.SetCellValue(0, i, '')
+                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
+                if len(self.curManage.listFileAttr()) > len(self.curManage.listPackageAttr()):
+                    self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+                elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
+                    self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+                self.setAttrs('File name')
             elif namestr == 'All packages...':
                 # TODO Back to all package figure
                 pass
             else:
-                # TODO Update figure here
                 self.curPackage = namestr
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(namestr))
-                if len(self.dataManage.listFileAttr()) > len(self.dataManage.listPackageAttr()):
-                    self.attrField.AppendCols(len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-                elif len(self.dataManage.listFileAttr()) < len(self.dataManage.listPackageAttr()):
-                    self.attrField.DeleteCols(len(self.dataManage.listPackageAttr())-1, len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-                self.attrField.SetRowLabelValue(0, 'File name')
-                for i in xrange(len(self.dataManage.listFileAttr())):
-                    self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.dataManage.listFileAttr()[i])
-                    self.attrField.SetCellValue(0, i, '')
+                self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(namestr))
+                if len(self.curManage.listFileAttr()) > len(self.curManage.listPackageAttr()):
+                    self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+                elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
+                    self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+                self.setAttrs('File name')
+
+                # TODO Update figure here
+                self.prepareFileGraph(self.curPackage)
+                self.scat.remove()
+                self.draw()
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
                 # TODO Back to package figure
-                self.curPackage = ''
+                self.curPackage = namestr
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
-                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
-                if len(self.dataManage.listPackageAttr()) > len(self.dataManage.listFileAttr()):
-                    self.attrField.AppendCols(len(self.dataManage.listPackageAttr()) - len(self.dataManage.listFileAttr()))
-                elif len(self.dataManage.listPackageAttr()) < len(self.dataManage.listFileAttr()):
-                    self.attrField.DeleteCols(len(self.dataManage.listFileAttr())-1, len(self.dataManage.listFileAttr()) - len(self.dataManage.listPackageAttr()))
-                self.attrField.SetRowLabelValue(0, 'Package name')
-                for i in xrange(len(self.dataManage.listPackageAttr())):
-                    self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.dataManage.listPackageAttr()[i])
-                    self.attrField.SetCellValue(0, i, '')
+                self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
+                if len(self.curManage.listPackageAttr()) > len(self.curManage.listFileAttr()):
+                    self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
+                elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
+                    self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+                self.setAttrs('Package name')
             elif namestr == 'Files...':
                 # TODO Back to file figure
                 pass
@@ -248,23 +313,16 @@ class AnalysisDemo(wx.Frame):
 
     def onVersionScroll(self, event):
         self.version.SetValue(self.versionArray[self.versionSlider.GetValue()])
-        self.dataManage = DataManager(self.versionArray[self.versionSlider.GetValue()])
+        self.curManage = self.dataManage.getManager(self.versionArray[self.versionSlider.GetValue()])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
         elif self.curPackage == '':
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
         else:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
-
-    def createFigure(self, event):
-        if self.showPackage.GetValue() == True:
-            self.prepare(True)
-        elif self.showFile.GetValue() == True:
-            self.prepare(False)
-        self.draw()
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
        
     def movePrevVersion(self, event):
         versionValue = self.versionSlider.GetValue()
@@ -272,17 +330,24 @@ class AnalysisDemo(wx.Frame):
             versionValue = versionValue - 1
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
-        self.dataManage = DataManager(self.versionArray[versionValue])
+        self.curManage = self.dataManage.getManager(self.versionArray[versionValue])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
         elif self.curPackage == '':
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
         else:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
-        # TODO Move Prev Version
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
+        if self.pause == True:
+            if (self.step > 0):
+                print 'prev version, step = ', self.step
+                self.currentSizes = np.array(self.tpgShell[self.step].sizes)
+                self.nextSizes = np.array(self.tpgShell[self.step - 1].sizes)
+                self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+                self.stepdelta = -1
+                self.pause = False
 
     def moveNextVersion(self, event):
         versionValue = self.versionSlider.GetValue()
@@ -290,103 +355,128 @@ class AnalysisDemo(wx.Frame):
             versionValue = versionValue + 1
         self.versionSlider.SetValue(versionValue)
         self.version.SetValue(self.versionArray[versionValue])
-        self.dataManage = DataManager(self.versionArray[versionValue])
+        self.curManage = self.dataManage.getManager(self.versionArray[versionValue])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.dataManage.getPackages())
+            self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
         elif self.curPackage == '':
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilenames())
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilenames())
         else:
             self.nameList.Clear()
-            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.dataManage.getFilesOfPackage(self.curPackage))
-        # TODO Move Next Version
-        self.pause ^= True
+            self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
+        if self.pause == True:
+            print 'next version, step = ', self.step
+            if (self.step < len(self.versionArray)):
+                self.currentSizes = np.array(self.gShell[self.step].sizes, dtype=float)
+                self.nextSizes = np.array(self.gShell[self.step+1].sizes, dtype=float)
+                self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+                self.stepdelta = 1
+                self.pause = False
+
+    def setAttrs(self, name):
+        self.attrField.SetRowLabelValue(0, name)
+        if name == 'Package name':
+            for i in xrange(len(self.curManage.listPackageAttr())):
+                self.attrField.SetColSize(i, 100)
+                self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
+                self.attrField.SetCellValue(0, i, '')
+        elif name == 'File name':
+            for i in xrange(len(self.curManage.listFileAttr())):
+                self.attrField.SetColSize(i, 100)
+                self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
+                self.attrField.SetCellValue(0, i, '')
+        else:
+            if self.showPackage.GetValue() == True:
+                for i in xrange(len(self.curManage.listPackageAttr())):
+                    self.attrField.SetCellValue(0, i, self.curManage.getPackageAttr(name)[self.attrField.GetColLabelValue(i)])
+            else:
+                for i in xrange(len(self.curManage.listFileAttr())):
+                    self.attrField.SetCellValue(0, i, self.curManage.getFileAttr(name)[self.attrField.GetColLabelValue(i)])
 
     def onQuit(self, event):
         self.Close()
-    
-    def prepare(self, is_package):
-        projectname = "tomcat"
-        self.pos = None
-        self.x = None
-        self.y = None
-        self.size_array = []
-        self.numframes = 40
-        self.sg = None
-        self.lines = []
-        for i in range(6):
-            data_directory = projectname + "_history/" + projectname + self.versionArray[i] + "/" + projectname
-            if is_package == False:
-                [g, self.lines] = creategraph.readfile(data_directory)
-                filter_threshold = 45
-            else :
-                [g, self.lines] = creategraph.readpkg(data_directory)
-                filter_threshold = 15
-                #print "|g.V| = ", nx.number_of_nodes(g)
 
-            if i == 0:
-                self.sg = creategraph.refine(g, filter_threshold)
-                print nx.number_of_nodes(self.sg)
-                [self.pos, self.x, self.y] = creategraph.coordinate(self.sg)
-                size = creategraph.point_sizes(self.sg, self.lines)
-                zeros = np.array([0] * len(size))
-                self.size_array.append(zeros)
-                self.size_array.append(size)
-            else:
-                # create the graph induced by nodes from sg
-                subg = nx.subgraph(g, nx.nodes(self.sg))
-                if nx.number_of_nodes(subg) != nx.number_of_nodes(self.sg):
-                    print 'panic at 34', nx.number_of_nodes(subg), nx.number_of_nodes(self.sg)
-                #else: #                            v  this seems to be a error, but not
-                size = creategraph.point_sizes(self.sg, self.lines)
-                self.size_array.append(size)
-        self.x = np.array(self.x)
-        self.y = np.array(self.y)
-        self.size_array = np.array(self.size_array)
+    def preparePackGraph(self):
+        self.gShell = self.tpgShell
+        self.updatePosition()
 
-        self.pause = False
-        self.drawnFrames = 1
-        self.numsteps = len(self.size_array)
+    def prepareFileGraph(self, package):
+        self.loadFileGraph(package)
+        self.gShell = self.fgShell
+        self.updatePosition()
+
+    def updatePosition(self):
+        unionGraph = nx.Graph()
+        for g in self.gShell:
+            unionGraph.add_nodes_from(g.graph)
+            unionGraph.add_edges_from(g.graph.edges())
+        self.pos = nx.random_layout(unionGraph)
+        self.x = []
+        self.y = []
+        for n in nx.nodes_iter(unionGraph):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+        
 
     def draw(self):
-        print "what am I doing"
-        xcenter = (self.x.max() + self.x.min()) / 2
-        ycenter = (self.y.max() + self.y.min()) / 2
-        xlength = (self.x.max() - xcenter) * 1.2
-        ylength = (self.y.max() - ycenter) * 1.2
-        self.figure.clf()
+        self.pause = True
+        self.drawnFrames = 1
+        self.numframes = 40
+        self.numsteps = len(self.versionArray) + 1
+        self.c = []
+        self.currentSizes = []
+        self.nextSizes = []
+        self.step = 0
+
+        x = np.array(self.x)
+        y = np.array(self.y)
+        xcenter = (x.max() + x.min()) / 2
+        ycenter = (y.max() + y.min()) / 2
+        xlength = (x.max() - xcenter) * 1.1
+        ylength = (y.max() - ycenter) * 1.1
         self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
                   ylim=(ycenter - ylength, ycenter + ylength))
 
-        # nx.draw_networkx_edges(g,pos)
-        nx.draw(self.sg, self.pos, alpha=.3, node_size=0,
-                  with_labels = False, width=1, edge_color='#666666')
-        for e in nx.edges_iter(self.sg):
-            p1 = self.pos[e[0]]
-            p2 = self.pos[e[1]]
-            self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=.5, aa=True, color='#666666')
+        self.draw_edges(0)
         # self.axe.draw()
 
-        color = np.random.random( len(self.x) )
-        self.scat = self.axe.scatter(self.x, self.y, c=color, s=self.size_array[0], alpha = 0.5)
+        color = np.random.random( len(x) )
+        a = np.random.random( len(x) )
+        self.scat = self.axe.scatter(x, y, c='#1357aa', 
+                s=self.gShell[self.step].sizes, alpha = 0.5)
 
         self.axe.set_frame_on(False)
         self.axe.axes.get_yaxis().set_visible(False)
         self.axe.axes.get_xaxis().set_visible(False)
+        self.ani = animation.FuncAnimation(self.figure, self.update_plot, frames=xrange(self.numframes*self.numsteps),
+            interval = 20, fargs=(self.numframes, self.scat), repeat=True, repeat_delay = 80) 
+        #self.figure.show()
 
-    def update_plot(self, i, area, nframes, scat):
+
+    def draw_edges(self, version, a = .2):
+        self.plot_lines = []
+        for e in nx.edges_iter(self.gShell[self.step].graph):
+            p1 = self.pos[e[0]]
+            p2 = self.pos[e[1]]
+            l, = self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=a, aa=True, color='#999999')
+            self.plot_lines.append(l)
+
+    def update_plot(self, i, nframes, scat):
         if not self.pause:
-            self.step = self.drawnFrames / nframes
+            # self.step = self.drawnFrames / nframes
             if self.step >= self.numsteps:
                 self.drawnFrames = 1
                 self.step = 0
             frameno = self.drawnFrames % nframes
-            c = (self.size_array[self.step+1] - self.size_array[self.step])/float(nframes**2)
-            scat._sizes = -c*((frameno-nframes)**2) + self.size_array[self.step+1]
+            scat._sizes = -self.c*((frameno-nframes)**2) + self.nextSizes
             self.drawnFrames = self.drawnFrames + 1
             if (self.drawnFrames % nframes == 0):
                 self.pause = True
+            #    for l in self.plot_lines:
+            #        self.axe.lines.remove(l)
+            #   self.draw_edges(self.step+1)
+                self.step = self.step + self.stepdelta
         return scat,
 
     def show_file_info(self, event):
@@ -401,16 +491,17 @@ class AnalysisDemo(wx.Frame):
                 nearest_point = p
 
         if nearest_point != None:
-            # print nearest_point#, '\t', lines[nearest_point], ' lines of code'
-            self.codeField.SetValue(nearest_point)
+            message = nearest_point + '\t' + str(self.gShell[self.step].sizeDict[nearest_point])
+            self.codeField.SetValue(message)
+            self.setAttrs(nearest_point)
 
 def main():
     app = wx.App()
     analysis = AnalysisDemo(None) 
-    analysis.prepare(False)
+    analysis.preparePackGraph()
     analysis.draw()
-    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
-        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
+#    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
+#        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
 
     # analysis.figure.canvas.mpl_connect('key_press_event', analysis.next_version)
     analysis.figure.canvas.mpl_connect('button_press_event', analysis.show_file_info)
