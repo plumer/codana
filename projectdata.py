@@ -137,7 +137,7 @@ class DataManager:
         for version in self.versionArray:
             self.dataManages[version] = VersionDataManager(version)
 
-    def getManager(version):
+    def getManager(self, version):
         return self.dataManages[version]
 
     def getVersionArray(self):
