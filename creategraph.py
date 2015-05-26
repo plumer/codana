@@ -13,6 +13,63 @@ built_in_pkgs = [
         'concurrent'
 ]
 
+class GraphShell:
+    def __init__(self):
+        self.graph = nx.Graph()
+        self.pos = {}
+        self.x = []
+        self.y = []
+        self.sizeDict = {}          # a dict from node name to integer
+        self.sizes = []
+    
+    def setGraph(self, g):
+        self.graph = g
+        self.pos = nx.spring_layout(g)
+        for n in nx.nodes_iter(g):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+    
+    def setSizeDict(self, sd):
+        self.sizeDict = sd
+        for key in sd:
+            self.sizes.append(sd[key])
+
+    def setEdges(self, edges):
+        self.graph.add_edges_from(edges)
+
+    def updateSizes(self):
+        for n in nx.nodes_iter(self.graph):
+            if self.sizeDict.has_key(n):
+                pass
+            else:
+                self.sizeDict[n] = 0;
+        if ( len(self.sizeDict) != len(self.graph.nodes()) ):
+            print 'panic'
+        self.sizes = []
+        for key in self.sizeDict:
+            self.sizes.append(self.sizeDict[key] * 40)
+
+    def updateLayout(self):
+        self.pos = nx.spring_layout(self.graph)
+        self.x = []
+        self.y = []
+        for n in nx.nodes_iter(self.graph):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+
+    def refine(self, threshold):
+
+        big_nodes = []
+        for n in nx.nodes_iter(self.graph):
+            if nx.degree(self.graph, n) >= threshold:
+                big_nodes.append(n)
+
+        sg = self.graph.subgraph(big_nodes)
+        self.setGraph(sg);
+
+
+
+
 def readfile(project_name):
     # read in files
     filename = project_name + ".txt"
@@ -47,8 +104,6 @@ def readfile(project_name):
             continue
         g.add_edge(u[0], u[1])
 
-    #print g.number_of_nodes()
-    #print g.number_of_edges()
 
     f.close()
 
@@ -97,7 +152,6 @@ def refine(g, threshold):
     big_nodes = []
     
     for n in nx.nodes_iter(g):
-#        print "hi"
         if nx.degree(g, n) >= threshold:
             big_nodes.append(n)
 
@@ -122,45 +176,15 @@ def point_sizes(g, node_sizes):
             sizes.append(node_sizes[n])
         else:
             sizes.append(0)
- #       print n, node_sizes[n]
     return sizes
 
 def pkg_filter(g):
     # removes built-in packages
     non_built_in = g.nodes()
-    print "here"
-    print nx.number_of_nodes(g)
     for n in nx.nodes_iter(g):
-        print "n = ", n
-        prime_pkg = split(n, ',')
-        print prime_pkg
-        if prime_pkg in built_in_pkgs:
-            non_built_in.remove(prime_pkg)
-    print "there"
+        prime_pkg = n.split('.')
+        if prime_pkg[0] in built_in_pkgs:
+            non_built_in.remove(n)
     return g.subgraph(non_built_in)
 
-"""
-# get edge info from graph
 
-nx.draw(sg, pos, alpha = .5, node_size = 0, node_color = color,
-       with_labels = False, width=1, edge_color = '#aaaaaa', font_family = 'erewhon')
-# show file points
-plt.scatter(x,y,c=color, s=size, alpha=.5)
-
-# register mouse event
-
-def show_file_info(event):
-#    print event.xdata, event.ydata
-    nearest_dist = 1
-    nearest_point = None
-    for p in pos:
-        dx = pos[p][0] - event.xdata
-        dy = pos[p][1] - event.ydata
-        distance = math.sqrt(dx**2 + dy**2)
-        if (distance < 0.1 and distance < nearest_dist):
-            nearest_dist = distance
-            nearest_point = p
-
-    if nearest_point != None:
-        print nearest_point
-"""

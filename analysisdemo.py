@@ -10,11 +10,21 @@ import creategraph
 from projectdata import DataManager
 
 class AnalysisDemo(wx.Frame):
+    """
+    Attributes:
+        versionArray (list) : a list of all versions
+        dataManager(DataManager) : DataManager objects providing all versions of VersionDataManager
+        curManager (VersionDataManager) : VersionDataManager object with corresponding version
+        tpgShell (list) : a GraphShell object containing graph to be drawn
+        sizes (array of arrays) : an array (corresponding to versions) of sizes
+            of all nodes in the graph
+    """
     APP_EXIT = 0
     APP_PREVVERSION = 1
     APP_NEXTVERSION = 2
     APP_PACKAGE = 3
     APP_CLASS = 4
+
     def __init__(self, *args, **kw):
         super(AnalysisDemo, self).__init__(*args, **kw)
         self.dataManage = DataManager()
@@ -22,6 +32,84 @@ class AnalysisDemo(wx.Frame):
         self.curManage = self.dataManage.getManager(self.versionArray[0])
         self.curPackage = ''
         self.initMain()
+        self.loadPackGraph()
+
+    def loadPackGraph(self):
+        self.tpgShell = []
+        unionGraph = nx.Graph()
+        for version in self.versionArray:
+            dm = self.dataManage.getManager(version)
+            gs = creategraph.GraphShell()
+            g = nx.Graph()
+            g.add_nodes_from(dm.getPackages())
+            g.add_edges_from(dm.getPackageDependence())
+            g = creategraph.pkg_filter(g)
+            g = creategraph.refine(g, 20)
+            
+            # get size info
+
+            sd = {}
+            for n in nx.nodes_iter(g):
+                node_attr = dm.getPackageAttr(n)
+                if node_attr == None:
+                    sd[n] = 0
+                else:
+                    file_num = node_attr['filenum']
+                    if file_num == None:
+                        sd[n] = 0
+                    else:
+                        sd[n] = int(file_num)
+
+            # unionGraph has all the nodes
+
+            unionGraph.add_nodes_from(g)
+            unionGraph.add_edges_from(g.edges())
+
+            self.tpgShell.append( creategraph.GraphShell() )
+            self.tpgShell[-1].setGraph(g)
+            self.tpgShell[-1].setSizeDict(sd)
+
+        # set all bottom graphs as u
+        for gs in self.tpgShell:
+            gs.graph.add_nodes_from(unionGraph)
+            gs.updateSizes()
+
+        
+    def loadFileGraph(self, package):
+        self.fgShell = []
+        unionGraph = nx.Graph()
+        for version in self.versionArray:
+            dm = self.dataManage.getManager(version)
+            gs = creategraph.GraphShell()
+            g = nx.Graph()
+            g.add_nodes_from(dm.getFilesOfPackage(package))
+            g.add_edges_from(dm.getFileDependenceOfPackage(package))
+            g = creategraph.pkg_filter(g)
+            g = creategraph.refine(g, 20)
+
+            sd = {}
+            for n in nx.nodes_iter(g):
+                node_attr = dm.getFileAttr(n)
+                if node_attr == None:
+                    sd[n] = 0
+                else:
+                    code_line = node_attr['codelines']
+                    if file_num == None:
+                        sd[n] = 0
+                    else:
+                        sd[n] = int(code_line)
+
+            unionGraph.add_nodes_from(g)
+            unionGraph.add_edges_from(g.edges())
+
+            self.fgShell.append( creategraph.GraphShell() )
+            self.fgShell[-1].setGraph(g)
+            self.fgShell[-1].setSizeDict(sd)
+
+        for gs in self.fgShell:
+            gs.graph.add_nodes_from(unionGraph)
+            gs.updateSizes()
+
 
     def initMenuBar(self):
         menubar = wx.MenuBar()
@@ -33,7 +121,7 @@ class AnalysisDemo(wx.Frame):
         prevVer = wx.MenuItem(ctrlMenu, self.APP_PREVVERSION, '&Prev Version\tCtrl+P')
         nextVer = wx.MenuItem(ctrlMenu, self.APP_NEXTVERSION, '&Next Version\tCtrl+N')
         orgInPackage = wx.MenuItem(ctrlMenu, self.APP_PACKAGE, 'Organize in &Package\tF5')
-        orgInClass = wx.MenuItem(ctrlMenu, self.APP_CLASS, 'Organize in &File\tF6')
+        orgInClass = wx.MenuItem(ctrlMenu, self.APP_CLASS, 'Organize in &Class\tF6')
         ctrlMenu.AppendItem(prevVer)
         ctrlMenu.AppendItem(nextVer)
         ctrlMenu.AppendSeparator()
@@ -57,7 +145,6 @@ class AnalysisDemo(wx.Frame):
 
         self.showPackage = wx.RadioButton(pn, label='Organize in package')
         self.showFile = wx.RadioButton(pn, label='Organize in file')
-        self.create = wx.Button(pn, label='Create Figure')
 
         self.prevVersion = wx.Button(pn, label='Previous Version')
         self.nextVersion = wx.Button(pn, label='Next Version')
@@ -80,12 +167,9 @@ class AnalysisDemo(wx.Frame):
             self.attrField.SetColSize(i, 100)
             self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
 
-        self.showPackage.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
-        self.showFile.Bind(wx.EVT_RADIOBUTTON, self.onRadioButton)
         self.prevVersion.Bind(wx.EVT_BUTTON, self.movePrevVersion)
         self.nextVersion.Bind(wx.EVT_BUTTON, self.moveNextVersion)
-        self.nameList.Bind(wx.EVT_LISTBOX, self.onNameList)
-        self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onDNameList)
+        self.nameList.Bind(wx.EVT_LISTBOX_DCLICK, self.onNameList)
         self.versionSlider.Bind(wx.EVT_SCROLL_CHANGED, self.onVersionScroll)
 
         contextBoxSizer = wx.BoxSizer(wx.VERTICAL)
@@ -100,7 +184,6 @@ class AnalysisDemo(wx.Frame):
         optionBoxSizer = wx.BoxSizer()
         optionBoxSizer.Add(self.showPackage, proportion=0, flag=wx.ALL, border=0)
         optionBoxSizer.Add(self.showFile, proportion=0, flag=wx.ALL, border=0)
-        optionBoxSizer.Add(self.create, proportion=0, flag=wx.LEFT, border=5)
 
         versionCtrlBoxSizer = wx.BoxSizer()
         versionCtrlBoxSizer.Add(self.prevVersion, proportion=0, flag=wx.ALL, border=0)
@@ -124,7 +207,7 @@ class AnalysisDemo(wx.Frame):
 
     def organizeInPackage(self, event):
         self.showPackage.SetValue(True)
-        self.onRadioButton(event)
+        self.createFigure(event)
 
     def organizeInClass(self, event):
         self.showFile.SetValue(True)
@@ -210,7 +293,6 @@ class AnalysisDemo(wx.Frame):
                 pass
             else:
                 # TODO Update figure here
-                self.curPackage = namestr
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(namestr))
@@ -227,7 +309,6 @@ class AnalysisDemo(wx.Frame):
             # TODO Select file here, update figure
             if namestr == 'Packages...':
                 # TODO Back to package figure
-                self.curPackage = ''
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
@@ -249,7 +330,7 @@ class AnalysisDemo(wx.Frame):
 
     def onVersionScroll(self, event):
         self.version.SetValue(self.versionArray[self.versionSlider.GetValue()])
-        self.curManage = DataManager(self.versionArray[self.versionSlider.GetValue()])
+        self.curManage = self.dataManage.getManager(self.versionArray[self.versionSlider.GetValue()])
         if self.showPackage.GetValue() == True:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
@@ -259,13 +340,6 @@ class AnalysisDemo(wx.Frame):
         else:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
-
-    def createFigure(self, event):
-        if self.showPackage.GetValue() == True:
-            self.prepare(True)
-        elif self.showFile.GetValue() == True:
-            self.prepare(False)
-        self.draw()
        
     def movePrevVersion(self, event):
         versionValue = self.versionSlider.GetValue()
@@ -283,7 +357,14 @@ class AnalysisDemo(wx.Frame):
         else:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
-        # TODO Move Prev Version
+        if self.pause == True:
+            if (self.step > 0):
+                print 'prev version, step = ', self.step
+                self.currentSizes = np.array(self.tpgShell[self.step].sizes)
+                self.nextSizes = np.array(self.tpgShell[self.step - 1].sizes)
+                self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+                self.stepdelta = -1
+                self.pause = False
 
     def moveNextVersion(self, event):
         versionValue = self.versionSlider.GetValue()
@@ -301,93 +382,99 @@ class AnalysisDemo(wx.Frame):
         else:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
-        # TODO Move Next Version
         self.pause ^= True
+        if self.pause == True:
+            print 'next version, step = ', self.step
+            if (self.step < len(self.versionArray)):
+                self.currentSizes = np.array(self.tpgShell[self.step].sizes, dtype=float)
+                self.nextSizes = np.array(self.tpgShell[self.step+1].sizes, dtype=float)
+                self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
+                self.stepdelta = 1
+                self.pause = False
 
     def onQuit(self, event):
         self.Close()
-    
-    def prepare(self, is_package):
-        projectname = "tomcat"
-        self.pos = None
-        self.x = None
-        self.y = None
-        self.size_array = []
-        self.numframes = 40
-        self.sg = None
-        self.lines = []
-        for i in range(6):
-            data_directory = projectname + "_history/" + projectname + self.versionArray[i] + "/" + projectname
-            if is_package == False:
-                [g, self.lines] = creategraph.readfile(data_directory)
-                filter_threshold = 45
-            else :
-                [g, self.lines] = creategraph.readpkg(data_directory)
-                filter_threshold = 15
-                #print "|g.V| = ", nx.number_of_nodes(g)
 
-            if i == 0:
-                self.sg = creategraph.refine(g, filter_threshold)
-                print nx.number_of_nodes(self.sg)
-                [self.pos, self.x, self.y] = creategraph.coordinate(self.sg)
-                size = creategraph.point_sizes(self.sg, self.lines)
-                zeros = np.array([0] * len(size))
-                self.size_array.append(zeros)
-                self.size_array.append(size)
-            else:
-                # create the graph induced by nodes from sg
-                subg = nx.subgraph(g, nx.nodes(self.sg))
-                if nx.number_of_nodes(subg) != nx.number_of_nodes(self.sg):
-                    print 'panic at 34', nx.number_of_nodes(subg), nx.number_of_nodes(self.sg)
-                #else: #                            v  this seems to be a error, but not
-                size = creategraph.point_sizes(self.sg, self.lines)
-                self.size_array.append(size)
-        self.x = np.array(self.x)
-        self.y = np.array(self.y)
-        self.size_array = np.array(self.size_array)
+    def preparePackGraph(self):
+        self.gShell = self.tpgShell
+        self.updatePosition()
 
-        self.pause = False
-        self.drawnFrames = 1
-        self.numsteps = len(self.size_array)
+    def prepareFileGraph(self, package):
+        self.loadFileGraph(package)
+        self.gShell = self.fgShell
+        self.updatePosition()
+
+    def updatePosition(self):
+        unionGraph = nx.Graph()
+        for g in self.gShell:
+            unionGraph.add_nodes_from(g.graph)
+            unionGraph.add_edges_from(g.graph.edges())
+        self.pos = nx.random_layout(unionGraph)
+        self.x = []
+        self.y = []
+        for n in nx.nodes_iter(unionGraph):
+            self.x.append(self.pos[n][0])
+            self.y.append(self.pos[n][1])
+        
 
     def draw(self):
-        print "what am I doing"
-        xcenter = (self.x.max() + self.x.min()) / 2
-        ycenter = (self.y.max() + self.y.min()) / 2
-        xlength = (self.x.max() - xcenter) * 1.2
-        ylength = (self.y.max() - ycenter) * 1.2
+        self.pause = True
+        self.drawnFrames = 1
+        self.numframes = 40
+        self.numsteps = len(self.versionArray) + 1
+
+        x = np.array(self.x)
+        y = np.array(self.y)
+        xcenter = (x.max() + x.min()) / 2
+        ycenter = (y.max() + y.min()) / 2
+        xlength = (x.max() - xcenter) * 1.1
+        ylength = (y.max() - ycenter) * 1.1
         self.figure.clf()
         self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
                   ylim=(ycenter - ylength, ycenter + ylength))
 
-        # nx.draw_networkx_edges(g,pos)
-        nx.draw(self.sg, self.pos, alpha=.3, node_size=0,
-                  with_labels = False, width=1, edge_color='#666666')
-        for e in nx.edges_iter(self.sg):
-            p1 = self.pos[e[0]]
-            p2 = self.pos[e[1]]
-            self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=.5, aa=True, color='#666666')
+        self.draw_edges(0)
         # self.axe.draw()
 
-        color = np.random.random( len(self.x) )
-        self.scat = self.axe.scatter(self.x, self.y, c=color, s=self.size_array[0], alpha = 0.5)
+        color = np.random.random( len(x) )
+        a = np.random.random( len(x) )
+        self.scat = self.axe.scatter(x, y, c='#13579a', 
+                s=self.tpgShell[0].sizes, alpha = 0.5)
 
         self.axe.set_frame_on(False)
         self.axe.axes.get_yaxis().set_visible(False)
         self.axe.axes.get_xaxis().set_visible(False)
+        self.ani = animation.FuncAnimation(self.figure, self.update_plot, frames=xrange(self.numframes*self.numsteps),
+            interval = 20, fargs=(self.numframes, self.scat), repeat=True, repeat_delay = 80) 
 
-    def update_plot(self, i, area, nframes, scat):
+        self.c = []
+        self.currentSizes = []
+        self.nextSizes = []
+        self.step = 0
+
+    def draw_edges(self, version, a = .2):
+        self.plot_lines = []
+        for e in nx.edges_iter(self.tpgShell[version].graph):
+            p1 = self.pos[e[0]]
+            p2 = self.pos[e[1]]
+            l, = self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=a, aa=True, color='#999999')
+            self.plot_lines.append(l)
+
+    def update_plot(self, i, nframes, scat):
         if not self.pause:
-            self.step = self.drawnFrames / nframes
+            # self.step = self.drawnFrames / nframes
             if self.step >= self.numsteps:
                 self.drawnFrames = 1
                 self.step = 0
             frameno = self.drawnFrames % nframes
-            c = (self.size_array[self.step+1] - self.size_array[self.step])/float(nframes**2)
-            scat._sizes = -c*((frameno-nframes)**2) + self.size_array[self.step+1]
+            scat._sizes = -self.c*((frameno-nframes)**2) + self.nextSizes
             self.drawnFrames = self.drawnFrames + 1
             if (self.drawnFrames % nframes == 0):
                 self.pause = True
+            #    for l in self.plot_lines:
+            #        self.axe.lines.remove(l)
+            #   self.draw_edges(self.step+1)
+                self.step = self.step + self.stepdelta
         return scat,
 
     def show_file_info(self, event):
@@ -402,16 +489,16 @@ class AnalysisDemo(wx.Frame):
                 nearest_point = p
 
         if nearest_point != None:
-            # print nearest_point#, '\t', lines[nearest_point], ' lines of code'
-            self.codeField.SetValue(nearest_point)
+            message = nearest_point + '\t' + str(self.tpgShell[0].sizeDict[nearest_point])
+            self.codeField.SetValue(message)
 
 def main():
     app = wx.App()
     analysis = AnalysisDemo(None) 
-    analysis.prepare(False)
+    analysis.preparePackGraph()
     analysis.draw()
-    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
-        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
+#    ani = animation.FuncAnimation(analysis.figure, analysis.update_plot, frames=xrange(analysis.numframes*analysis.numsteps),
+#        interval = 20, fargs=(analysis.size_array, analysis.numframes, analysis.scat), repeat=True)
 
     # analysis.figure.canvas.mpl_connect('key_press_event', analysis.next_version)
     analysis.figure.canvas.mpl_connect('button_press_event', analysis.show_file_info)
