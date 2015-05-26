@@ -37,11 +37,12 @@ class AnalysisDemo(wx.Frame):
     def loadPackGraph(self):
         self.tpgShell = []
         unionGraph = nx.Graph()
-        for dm in self.dataManage:
+        for v in self.versionArray:
+            vdm = self.dataManage.getManager(v)
             gs = creategraph.GraphShell()
             g = nx.Graph()
-            g.add_nodes_from(dm.getPackages())
-            g.add_edges_from(dm.getPackageDependence())
+            g.add_nodes_from(vdm.getPackages())
+            g.add_edges_from(vdm.getPackageDependence())
             g = creategraph.pkg_filter(g)
             g = creategraph.refine(g, 20)
             
@@ -49,7 +50,7 @@ class AnalysisDemo(wx.Frame):
 
             sd = {}
             for n in nx.nodes_iter(g):
-                node_attr = dm.getPackageAttr(n)
+                node_attr = vdm.getPackageAttr(n)
                 if node_attr == None:
                     sd[n] = 0
                 else:
@@ -77,17 +78,18 @@ class AnalysisDemo(wx.Frame):
     def loadFileGraph(self, package):
         self.fgShell = []
         unionGraph = nx.Graph()
-        for dm in self.dataManage:
+        for v in self.versionArray:
+            vdm = self.dataManage.getManager(v)
             gs = creategraph.GraphShell()
             g = nx.Graph()
-            g.add_nodes_from(dm.getFilesOfPackage(package))
-            g.add_edges_from(dm.getFileDependenceOfPackage(package))
+            g.add_nodes_from(vdm.getFilesOfPackage(package))
+            g.add_edges_from(vdm.getFileDependenceOfPackage(package))
             g = creategraph.pkg_filter(g)
             g = creategraph.refine(g, 20)
 
             sd = {}
             for n in nx.nodes_iter(g):
-                node_attr = dm.getFileAttr(n)
+                node_attr = vdm.getFileAttr(n)
                 if node_attr == None:
                     sd[n] = 0
                 else:
@@ -151,9 +153,13 @@ class AnalysisDemo(wx.Frame):
         self.version = wx.TextCtrl(pn, value=self.versionArray[0], size=(50,-1))
         self.version.SetEditable(False)
 
+        # note: get data manager for first version
+
+
+
         self.figure = Figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
-        self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage[0].getPackages())
+        self.nameList = wx.ListBox(pn, choices=['Packages...', 'Files...'] + self.dataManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.attrField = wx.grid.Grid(pn)
         self.attrField.CreateGrid(1, len(self.dataManage[0].listPackageAttr()))
@@ -309,44 +315,6 @@ class AnalysisDemo(wx.Frame):
 
     def onQuit(self, event):
         self.Close()
-    """    
-    def prepare(self, is_package):
-        projectname = "tomcat"
-        self.pos = None
-        self.x = None
-        self.y = None
-        self.size_array = []
-        self.sg = None
-        self.lines = []
-        for i in range(6):
-            data_directory = projectname + "_history/" + projectname + self.versionArray[i] + "/" + projectname
-            if is_package == False:
-                [g, self.lines] = creategraph.readfile(data_directory)
-                filter_threshold = 45
-            else :
-                [g, self.lines] = creategraph.readpkg(data_directory)
-                filter_threshold = 15
-
-            if i == 0:
-                self.sg = creategraph.refine(g, filter_threshold)
-                print nx.number_of_nodes(self.sg)
-                [self.pos, self.x, self.y] = creategraph.coordinate(self.sg)
-                size = creategraph.point_sizes(self.sg, self.lines)
-                zeros = np.array([0] * len(size))
-                self.size_array.append(zeros)
-                self.size_array.append(size)
-            else:
-                # create the graph induced by nodes from sg
-                subg = nx.subgraph(g, nx.nodes(self.sg))
-                if nx.number_of_nodes(subg) != nx.number_of_nodes(self.sg):
-                    print 'panic at 34', nx.number_of_nodes(subg), nx.number_of_nodes(self.sg)
-                #else: #                            v  this seems to be a error, but not
-                size = creategraph.point_sizes(self.sg, self.lines)
-                self.size_array.append(size)
-        self.x = np.array(self.x)
-        self.y = np.array(self.y)
-        self.size_array = np.array(self.size_array)
-    """
 
     def preparePackGraph(self):
         self.gShell = self.tpgShell
