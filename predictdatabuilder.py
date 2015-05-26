@@ -9,7 +9,7 @@ class PredictDataBuilder:
         filelist = self.dataManage.getFilenames()
         attrlist = self.dataManage.listFileAttr()
         for filename in filelist:
-            csvFile.write(filename + ',')
+            csvFile.write(str(hash(filename)) + ',')
             attrs = self.dataManage.getFileAttr(filename)
             for attr in attrlist:
                 csvFile.write(attrs[attr] + ',')
@@ -34,7 +34,7 @@ class PredictTestBuilder:
                 fileslice = files.strip(' \t\n').split('\t')
                 if not fileslice[0] in self.filename:
                     self.filename.append(fileslice[0])
-                    self.fileattr.append(fileslice)
+                    self.fileattr.append([str(hash(fileslice[0]))] + fileslice[1:])
                 filenum = filenum + 1
                 if filenum >= int(packslice[1]):
                     break
