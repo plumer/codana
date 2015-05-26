@@ -15,6 +15,11 @@ class DataManager:
         self.files = []
         self.filebugnum = {}
         self.packageattr = {}
+        self.versionArray = []
+        datafile = open(r'tomcat_history/tomcat_list.txt', 'r')
+        for line in datafile:
+            self.versionArray.append(line.strip(' \n').strip('tomcat'))
+        datafile.close()
         datafile = open(r'tomcat_history/tomcat' + version + r'/tomcat_pack.txt', 'r')
         for packs in datafile:
             packslice = packs.strip(' \t\n').split('\t')
@@ -54,6 +59,9 @@ class DataManager:
 
     def listPackageAttr(self):
         return ('filenum', 'codelines' , 'cyclomatic')
+
+    def getVersionArray(self):
+        return self.versionArray
 
     def getPackages(self):
         return self.packages
