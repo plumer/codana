@@ -242,11 +242,7 @@ class AnalysisDemo(wx.Frame):
                 self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
             elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
                 self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
-            self.attrField.SetRowLabelValue(0, 'Package name')
-            for i in xrange(len(self.curManage.listPackageAttr())):
-                self.attrField.SetColSize(i, 100)
-                self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
-                self.attrField.SetCellValue(0, i, '')
+            self.setAttrs('Package name')
         else:
             self.curPackage = ''
             self.nameList.Clear()
@@ -257,11 +253,7 @@ class AnalysisDemo(wx.Frame):
                 self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
             elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
                 self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
-            self.attrField.SetRowLabelValue(0, 'File name')
-            for i in xrange(len(self.curManage.listFileAttr())):
-                self.attrField.SetColSize(i, 100)
-                self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
-                self.attrField.SetCellValue(0, i, '')
+            self.setAttrs('File name')
 
     def onNameList(self, event):
         # TODO Center the current selection
@@ -270,22 +262,14 @@ class AnalysisDemo(wx.Frame):
             return
         if self.showPackage.GetValue() == True:
             if curChoice == 'All files...' or curChoice == 'All packages...':
-                self.attrField.SetRowLabelValue(0, 'Package Name')
-                for i in xrange(len(self.curManage.listPackageAttr())):
-                    self.attrField.SetCellValue(0, i, '')
+                self.setAttrs('Package Name')
             else:
-                self.attrField.SetRowLabelValue(0, curChoice)
-                for i in xrange(len(self.curManage.listPackageAttr())):
-                    self.attrField.SetCellValue(0, i, self.curManage.getPackageAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+                self.setAttrs(curChoice)
         else:
             if curChoice == 'Files...' or curChoice == 'Packages...':
-                self.attrField.SetRowLabelValue(0, 'File Name')
-                for i in xrange(len(self.curManage.listFileAttr())):
-                    self.attrField.SetCellValue(0, i, '')
+                self.setAttrs('File name')
             else:
-                self.attrField.SetRowLabelValue(0, curChoice)
-                for i in xrange(len(self.curManage.listFileAttr())):
-                    self.attrField.SetCellValue(0, i, self.curManage.getFileAttr(curChoice)[self.attrField.GetColLabelValue(i)])
+                self.setAttrs(curChoice)
 
     def onDNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
@@ -302,11 +286,7 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
                 elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
-                self.attrField.SetRowLabelValue(0, 'File name')
-                for i in xrange(len(self.curManage.listFileAttr())):
-                    self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
-                    self.attrField.SetCellValue(0, i, '')
+                self.setAttrs('File name')
             elif namestr == 'All packages...':
                 # Done Back to all package figure
                 self.preparePackGraph()
@@ -322,11 +302,7 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.AppendCols(len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
                 elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
-                self.attrField.SetRowLabelValue(0, 'File name')
-                for i in xrange(len(self.curManage.listFileAttr())):
-                    self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
-                    self.attrField.SetCellValue(0, i, '')
+                self.setAttrs('File name')
 
                 # Done Update figure here
                 self.prepareFileGraph(self.curPackage)
@@ -344,17 +320,20 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
+""" the following 5 lines are deleted in merging conflict
                 self.attrField.SetRowLabelValue(0, 'Package name')
                 for i in xrange(len(self.curManage.listPackageAttr())):
                     self.attrField.SetColSize(i, 100)
                     self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
                     self.attrField.SetCellValue(0, i, '')
+
+"""
                 # Done Back to package figure
                 self.preparePackGraph()
                 self.scat.remove()
                 self.remove_lines()
                 self.draw()
-
+                self.setAttrs('Package name')
             elif namestr == 'Files...':
                 # TODO Back to file figure, circular
                 pass
@@ -424,6 +403,26 @@ class AnalysisDemo(wx.Frame):
                 self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
                 self.stepdelta = 1
                 self.pause = False
+
+    def setAttrs(self, name):
+        self.attrField.SetRowLabelValue(0, name)
+        if name == 'Package name':
+            for i in xrange(len(self.curManage.listPackageAttr())):
+                self.attrField.SetColSize(i, 100)
+                self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
+                self.attrField.SetCellValue(0, i, '')
+        elif name == 'File name':
+            for i in xrange(len(self.curManage.listFileAttr())):
+                self.attrField.SetColSize(i, 100)
+                self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
+                self.attrField.SetCellValue(0, i, '')
+        else:
+            if self.showPackage.GetValue() == True:
+                for i in xrange(len(self.curManage.listPackageAttr())):
+                    self.attrField.SetCellValue(0, i, self.curManage.getPackageAttr(name)[self.attrField.GetColLabelValue(i)])
+            else:
+                for i in xrange(len(self.curManage.listFileAttr())):
+                    self.attrField.SetCellValue(0, i, self.curManage.getFileAttr(name)[self.attrField.GetColLabelValue(i)])
 
     def onQuit(self, event):
         self.Close()
@@ -553,6 +552,7 @@ class AnalysisDemo(wx.Frame):
         if nearest_point != None:
             message = nearest_point + '\t' + str(sd[nearest_point])
             self.codeField.SetValue(message)
+            self.setAttrs(nearest_point)
     
     def remove_lines(self):
         while not self.plot_lines:
