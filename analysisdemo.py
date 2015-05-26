@@ -385,12 +385,11 @@ class AnalysisDemo(wx.Frame):
         else:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
-        self.pause ^= True
         if self.pause == True:
             print 'next version, step = ', self.step
             if (self.step < len(self.versionArray)):
-                self.currentSizes = np.array(self.tpgShell[self.step].sizes, dtype=float)
-                self.nextSizes = np.array(self.tpgShell[self.step+1].sizes, dtype=float)
+                self.currentSizes = np.array(self.gShell[self.step].sizes, dtype=float)
+                self.nextSizes = np.array(self.gShell[self.step+1].sizes, dtype=float)
                 self.c = np.array(self.nextSizes - self.currentSizes) / float(self.numframes**2)
                 self.stepdelta = 1
                 self.pause = False
