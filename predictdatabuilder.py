@@ -15,9 +15,9 @@ class PredictDataBuilder:
                 csvFile.write(attrs[attr] + ',')
             bugnum = self.dataManage.getBugNumberOfFile(filename)
             if bugnum == 0:
-                csvFile.write('0\n')
+                csvFile.write('NoBug\n')
             else:
-                csvFile.write('1\n')
+                csvFile.write('Buggy\n')
         csvFile.close()
 
 class PredictTestBuilder:
@@ -43,14 +43,9 @@ class PredictTestBuilder:
     def buildCsv(self, csvPath):
         csvFile = open(csvPath, 'w')
         for files in self.fileattr:
-            attrnum = 0
             for attrs in files:
-                csvFile.write(attrs)
-                if attrnum >= len(files) - 1:
-                    break
-                csvFile.write(',')
-                attrnum = attrnum + 1
-            csvFile.write('\n')
+                csvFile.write(attrs + ',')
+            csvFile.write('NoBug\n')
         csvFile.close()
 
 if __name__ == '__main__':
