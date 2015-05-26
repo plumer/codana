@@ -74,12 +74,15 @@ class DataManager:
         return self.packageattr[package]
 
     def getBugNumberOfFile(self, filename):
-        return self.filebugnum[filename]
+        if filename in self.filebugnum:
+            return self.filebugnum[filename]
+        return 0
 
     def getBugNumberOfPackage(self, package):
         bugnum = 0
         for filename in self.packagedict[package]:
-            bugnum = bugnum + self.filebugnum[filename]
+            if filename in self.filebugnum:
+                bugnum = bugnum + self.filebugnum[filename]
         return bugnum
 
 if __name__ == '__main__':
