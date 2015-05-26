@@ -66,7 +66,7 @@ class GraphShell:
 
         sg = self.graph.subgraph(big_nodes)
         self.setGraph(sg);
-
+0
 
 
 

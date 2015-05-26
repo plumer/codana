@@ -1,6 +1,7 @@
 import wx
 import wx.grid
 from matplotlib.figure import Figure
+from matplotlib import pyplot
 import matplotlib.animation as animation
 import networkx as nx
 import numpy as np
@@ -80,12 +81,12 @@ class AnalysisDemo(wx.Frame):
         unionGraph = nx.Graph()
         for version in self.versionArray:
             dm = self.dataManage.getManager(version)
-            gs = creategraph.GraphShell()
+            # gs = creategraph.GraphShell()
             g = nx.Graph()
             g.add_nodes_from(dm.getFilesOfPackage(package))
             g.add_edges_from(dm.getFileDependenceOfPackage(package))
             g = creategraph.pkg_filter(g)
-            g = creategraph.refine(g, 20)
+            g = creategraph.refine(g, 2)
 
             sd = {}
             for n in nx.nodes_iter(g):
@@ -94,7 +95,7 @@ class AnalysisDemo(wx.Frame):
                     sd[n] = 0
                 else:
                     code_line = node_attr['codelines']
-                    if file_num == None:
+                    if code_line == None:
                         sd[n] = 0
                     else:
                         sd[n] = int(code_line)
@@ -152,7 +153,7 @@ class AnalysisDemo(wx.Frame):
         self.version = wx.TextCtrl(pn, value=self.versionArray[0], size=(50,-1))
         self.version.SetEditable(False)
 
-        self.figure = Figure(facecolor='#f3f3f3')
+        self.figure = pyplot.figure(facecolor='#f3f3f3')
         self.canvas = FigureCanvas(pn, -1, self.figure)
         self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
@@ -296,7 +297,6 @@ class AnalysisDemo(wx.Frame):
                 # TODO Back to all package figure
                 pass
             else:
-                # TODO Update figure here
                 self.curPackage = namestr
                 self.showFile.SetValue(True)
                 self.nameList.Clear()
@@ -310,6 +310,11 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.SetColSize(i, 100)
                     self.attrField.SetColLabelValue(i, self.curManage.listFileAttr()[i])
                     self.attrField.SetCellValue(0, i, '')
+
+                # TODO Update figure here
+                self.prepareFileGraph(self.curPackage)
+                self.scat.remove()
+                self.draw()
         else:
             # TODO Select file here, update figure
             if namestr == 'Packages...':
@@ -427,6 +432,10 @@ class AnalysisDemo(wx.Frame):
         self.drawnFrames = 1
         self.numframes = 40
         self.numsteps = len(self.versionArray) + 1
+        self.c = []
+        self.currentSizes = []
+        self.nextSizes = []
+        self.step = 0
 
         x = np.array(self.x)
         y = np.array(self.y)
@@ -434,7 +443,6 @@ class AnalysisDemo(wx.Frame):
         ycenter = (y.max() + y.min()) / 2
         xlength = (x.max() - xcenter) * 1.1
         ylength = (y.max() - ycenter) * 1.1
-        self.figure.clf()
         self.axe = self.figure.add_subplot(111,aspect='equal', xlim=(xcenter - xlength, xcenter + xlength),
                   ylim=(ycenter - ylength, ycenter + ylength))
 
@@ -443,23 +451,20 @@ class AnalysisDemo(wx.Frame):
 
         color = np.random.random( len(x) )
         a = np.random.random( len(x) )
-        self.scat = self.axe.scatter(x, y, c='#13579a', 
-                s=self.tpgShell[0].sizes, alpha = 0.5)
+        self.scat = self.axe.scatter(x, y, c='#1357aa', 
+                s=self.gShell[self.step].sizes, alpha = 0.5)
 
         self.axe.set_frame_on(False)
         self.axe.axes.get_yaxis().set_visible(False)
         self.axe.axes.get_xaxis().set_visible(False)
         self.ani = animation.FuncAnimation(self.figure, self.update_plot, frames=xrange(self.numframes*self.numsteps),
             interval = 20, fargs=(self.numframes, self.scat), repeat=True, repeat_delay = 80) 
+        #self.figure.show()
 
-        self.c = []
-        self.currentSizes = []
-        self.nextSizes = []
-        self.step = 0
 
     def draw_edges(self, version, a = .2):
         self.plot_lines = []
-        for e in nx.edges_iter(self.tpgShell[version].graph):
+        for e in nx.edges_iter(self.gShell[self.step].graph):
             p1 = self.pos[e[0]]
             p2 = self.pos[e[1]]
             l, = self.axe.plot([p1[0],p2[0]], [p1[1], p2[1]], alpha=a, aa=True, color='#999999')
@@ -494,7 +499,7 @@ class AnalysisDemo(wx.Frame):
                 nearest_point = p
 
         if nearest_point != None:
-            message = nearest_point + '\t' + str(self.tpgShell[0].sizeDict[nearest_point])
+            message = nearest_point + '\t' + str(self.gShell[self.step].sizeDict[nearest_point])
             self.codeField.SetValue(message)
 
 def main():

@@ -103,8 +103,6 @@ class VersionDataManager:
         for dep in self.filedepends:
             if dep[0] in filelist and dep[1] in filelist:
                 deplist.append(dep)
-        print filelist
-        print deplist
         return deplist
 
 
