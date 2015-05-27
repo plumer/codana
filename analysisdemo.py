@@ -502,15 +502,16 @@ class AnalysisDemo(wx.Frame):
         rcolor = int(np.random.random() * 60)
         gcolor = int(np.random.random() * 60 + 80)
         bcolor = int(np.random.random() * 60 + 160)
-
-        return '#%06x' % (rcolor * 65536 + gcolor * 256 + bcolor)
+        c = '#%06x' % (rcolor * 65536 + gcolor * 256 + bcolor)
+        return c
 
     def randomBadColor(self):
         rcolor = int(np.random.random() * 60 + 160)
         gcolor = int(np.random.random() * 60 + 80)
         bcolor = int(np.random.random() * 60)
 
-        return '#%06x' % (rcolor * 65536 + gcolor * 256 + bcolor)
+        c = '#%06x' % (rcolor * 65536 + gcolor * 256 + bcolor)
+        return c
 
         
 
@@ -534,7 +535,6 @@ class AnalysisDemo(wx.Frame):
         self.axe.set_ylim(ycenter-ylength, ycenter+ylength)
 
         self.draw_edges()
-        # self.axe.draw()
 
         self.color = []
         self.updateColor(self.step)
@@ -549,7 +549,7 @@ class AnalysisDemo(wx.Frame):
         #self.figure.show()
 
 
-    def draw_edges(self, a = .2):
+    def draw_edges(self, a = .4):
         self.plot_lines = []
         for e in nx.edges_iter(self.gShell[self.step].graph):
             p1 = self.pos[e[0]]
@@ -560,24 +560,25 @@ class AnalysisDemo(wx.Frame):
     def update_plot(self, i, nframes, scat):
         if not self.pause:
             # self.step = self.drawnFrames / nframes
-            self.updateColor(self.step)
 
             if self.step >= self.numsteps:
                 self.drawnFrames = 1
                 self.step = 0
             frameno = self.drawnFrames % nframes
             scat._sizes = -self.c*((frameno-nframes)**2) + self.nextSizes
-            scat._color = self.color
             self.drawnFrames = self.drawnFrames + 1
             if (self.drawnFrames % nframes == 0):
                 self.pause = True
                 self.remove_lines()
                 self.step = self.step + self.stepdelta
                 self.draw_edges()
+                self.updateColor(self.step)
+                scat.set_color(self.color)
         return scat,
 
     def show_info(self, event):
         if event.xdata == None or event.ydata == None:
+            print 'None'
             return
         nearest_dist = 1
         nearest_point = None
@@ -589,6 +590,7 @@ class AnalysisDemo(wx.Frame):
             if (distance < 0.1 and distance < nearest_dist and sd[p] != 0):
                 nearest_dist = distance
                 nearest_point = p
+#        print 'nearest_point = ', nearest_point
 
         if nearest_point != None:
             #message = nearest_point + '\t' + str(sd[nearest_point])

@@ -37,7 +37,6 @@ class GraphShell:
 
     def setBugList(self, l):
         self.bugList = l
-        #print 'buglist: ', self.bugList
 
     def setEdges(self, edges):
         self.graph.add_edges_from(edges)
