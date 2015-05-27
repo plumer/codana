@@ -588,9 +588,10 @@ class AnalysisDemo(wx.Frame):
                 nearest_point = p
 
         if nearest_point != None:
-            message = nearest_point + '\t' + str(sd[nearest_point])
-            self.codeField.SetValue(message)
+            #message = nearest_point + '\t' + str(sd[nearest_point])
+            #self.codeField.SetValue(message)
             self.setAttrs(nearest_point)
+            self.showDetails(nearest_point)
     
     def remove_lines(self):
         while not self.plot_lines:
