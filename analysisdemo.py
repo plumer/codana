@@ -456,7 +456,8 @@ class AnalysisDemo(wx.Frame):
                     showstr = showstr + files + '\n'
                 self.codeField.SetValue(showstr)
             else:
-                if os.name == 'posix' and self.version.GetValue() != self.versionArray[0]:
+                if os.name == 'posix' and self.version.GetValue() != self.versionArray[0]\
+                    and name in self.dataManage.getManager(self.versionArray[self.versionSlider.GetValue()-1]).getFilenames():
                     self.codeField.SetValue(os.popen(r"diff --new-line-format='+%L' --old-line-format='-%L' --unchanged-line-format='%L' tomcat_files/"
                                                      + self.version.GetValue() + "/" + name + " tomcat_files/" + self.versionArray[self.versionSlider.GetValue() - 1]
                                                      + "/" + name).read())
