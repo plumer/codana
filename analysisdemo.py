@@ -320,14 +320,14 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
-""" the following 5 lines are deleted in merging conflict
+                """ the following 5 lines are deleted in merging conflict
                 self.attrField.SetRowLabelValue(0, 'Package name')
                 for i in xrange(len(self.curManage.listPackageAttr())):
                     self.attrField.SetColSize(i, 100)
                     self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
                     self.attrField.SetCellValue(0, i, '')
 
-"""
+                """
                 # Done Back to package figure
                 self.preparePackGraph()
                 self.scat.remove()
