@@ -9,6 +9,7 @@ import math
 from matplotlib.backends.backend_wxagg import FigureCanvasWxAgg as FigureCanvas
 import creategraph
 from projectdata import DataManager
+import os
 
 class AnalysisDemo(wx.Frame):
     """
@@ -171,6 +172,8 @@ class AnalysisDemo(wx.Frame):
 
         self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
+        self.codeField.SetEditable(False)
+
         self.attrField = wx.grid.Grid(pn)
         self.attrField.CreateGrid(1, len(self.curManage.listPackageAttr()))
         self.attrField.SetRowLabelValue(0, 'Package name')
@@ -452,7 +455,12 @@ class AnalysisDemo(wx.Frame):
                     showstr = showstr + files + '\n'
                 self.codeField.SetValue(showstr)
             else:
-                self.codeField.LoadFile(r'tomcat_files/' + self.version.GetValue() + '/' + name)
+                if os.name == 'posix' and self.version != self.versionArray[0]:
+                    self.codeField.SetValue(os.popen(r"diff --new-line-format='+%L' --old-line-format='-%L' --unchanged-line-format='%L' tomcat_files/"
+                                                     + self.version.GetValue() + "/" + name + " tomcat_files/" + self.versionArray[self.versionSlider.GetValue() - 1]
+                                                     + "/" + name).read())
+                else:
+                    self.codeField.LoadFile(r'tomcat_files/' + self.version.GetValue() + '/' + name)
 
     def onQuit(self, event):
         self.Close()
