@@ -243,6 +243,7 @@ class AnalysisDemo(wx.Frame):
             elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
                 self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
             self.setAttrs('Package name')
+            self.showDetails('Package name')
         else:
             self.curPackage = ''
             self.nameList.Clear()
@@ -254,6 +255,7 @@ class AnalysisDemo(wx.Frame):
             elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
                 self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
             self.setAttrs('File name')
+            self.showDetails('File name')
 
     def onNameList(self, event):
         # TODO Center the current selection
@@ -262,14 +264,18 @@ class AnalysisDemo(wx.Frame):
             return
         if self.showPackage.GetValue() == True:
             if curChoice == 'All files...' or curChoice == 'All packages...':
-                self.setAttrs('Package Name')
+                self.setAttrs('Package name')
+                self.showDetails('Package name')
             else:
                 self.setAttrs(curChoice)
+                self.showDetails(curChoice)
         else:
             if curChoice == 'Files...' or curChoice == 'Packages...':
                 self.setAttrs('File name')
+                self.showDetails('File name')
             else:
                 self.setAttrs(curChoice)
+                self.showDetails(curChoice)
 
     def onDNameList(self, event):
         namestr = self.nameList.GetString(self.nameList.GetSelection()).encode('ascii', 'ignore')
@@ -287,6 +293,7 @@ class AnalysisDemo(wx.Frame):
                 elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 self.setAttrs('File name')
+                self.showDetails('File name')
             elif namestr == 'All packages...':
                 # Done Back to all package figure
                 self.preparePackGraph()
@@ -303,6 +310,7 @@ class AnalysisDemo(wx.Frame):
                 elif len(self.curManage.listFileAttr()) < len(self.curManage.listPackageAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listPackageAttr())-1, len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 self.setAttrs('File name')
+                self.showDetails('File name')
 
                 # Done Update figure here
                 self.prepareFileGraph(self.curPackage)
@@ -312,7 +320,7 @@ class AnalysisDemo(wx.Frame):
         else:
             # Select file here, update figure
             if namestr == 'Packages...':
-                self.curPackage = namestr
+                self.curPackage = ''
                 self.showPackage.SetValue(True)
                 self.nameList.Clear()
                 self.nameList.InsertItems(pos=0, items=['All files...', 'All packages...'] + self.curManage.getPackages())
@@ -320,20 +328,13 @@ class AnalysisDemo(wx.Frame):
                     self.attrField.AppendCols(len(self.curManage.listPackageAttr()) - len(self.curManage.listFileAttr()))
                 elif len(self.curManage.listPackageAttr()) < len(self.curManage.listFileAttr()):
                     self.attrField.DeleteCols(len(self.curManage.listFileAttr())-1, len(self.curManage.listFileAttr()) - len(self.curManage.listPackageAttr()))
-                """ the following 5 lines are deleted in merging conflict
-                self.attrField.SetRowLabelValue(0, 'Package name')
-                for i in xrange(len(self.curManage.listPackageAttr())):
-                    self.attrField.SetColSize(i, 100)
-                    self.attrField.SetColLabelValue(i, self.curManage.listPackageAttr()[i])
-                    self.attrField.SetCellValue(0, i, '')
-
-                """
+                self.setAttrs('Package name')
+                self.showDetails('Package name')
                 # Done Back to package figure
                 self.preparePackGraph()
                 self.scat.remove()
                 self.remove_lines()
                 self.draw()
-                self.setAttrs('Package name')
             elif namestr == 'Files...':
                 # TODO Back to file figure, circular
                 pass
@@ -370,6 +371,7 @@ class AnalysisDemo(wx.Frame):
         else:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
+        self.codeField.SetValue('Move to previous version')
         if self.pause == True:
             if (self.step > 0):
                 #print 'prev version, step = ', self.step
@@ -395,6 +397,7 @@ class AnalysisDemo(wx.Frame):
         else:
             self.nameList.Clear()
             self.nameList.InsertItems(pos=0, items=['Packages...', 'Files...'] + self.curManage.getFilesOfPackage(self.curPackage))
+        self.codeField.SetValue('Move to next version...')
         if self.pause == True:
             #print 'next version, step = ', self.step
             if (self.step < len(self.versionArray)):
@@ -423,6 +426,33 @@ class AnalysisDemo(wx.Frame):
             else:
                 for i in xrange(len(self.curManage.listFileAttr())):
                     self.attrField.SetCellValue(0, i, self.curManage.getFileAttr(name)[self.attrField.GetColLabelValue(i)])
+
+    def showDetails(self, name):
+        if name == 'Package name':
+            showstr = 'Packages in this project:\n'
+            for packs in self.curManage.getPackages():
+                showstr = showstr + packs + '\n'
+            self.codeField.SetValue(showstr)
+        elif name == 'File name':
+            showstr = ''
+            if self.curPackage == '':
+                showstr = showstr + 'Files in this project:\n'
+                for files in self.curManage.getFilenames():
+                    showstr = showstr + files + '\n'
+            else:
+                showstr = showstr + 'Files in ' + self.curPackage + ' package:\n'
+                for files in self.curManage.getFilesOfPackage(self.curPackage):
+                    showstr = showstr + files + '\n'
+            self.codeField.SetValue(showstr)
+        else:
+            showstr = ''
+            if self.showPackage.GetValue() == True:
+                showstr = showstr + 'Files in ' + name + ' package:\n'
+                for files in self.curManage.getFilesOfPackage(name):
+                    showstr = showstr + files + '\n'
+                self.codeField.SetValue(showstr)
+            else:
+                self.codeField.LoadFile(r'tomcat_files/' + self.version.GetValue() + '/' + name)
 
     def onQuit(self, event):
         self.Close()
