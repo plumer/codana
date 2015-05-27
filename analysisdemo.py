@@ -173,6 +173,7 @@ class AnalysisDemo(wx.Frame):
         self.nameList = wx.ListBox(pn, choices=['All packages...', 'All files...'] + self.curManage.getPackages())
         self.codeField = wx.TextCtrl(pn, style=wx.TE_MULTILINE | wx.HSCROLL)
         self.codeField.SetEditable(False)
+        self.codeField.SetFont( wx.Font(11,wx.FONTFAMILY_MODERN,wx.FONTSTYLE_NORMAL,wx.FONTWEIGHT_NORMAL, faceName="Ubuntu Mono") )
 
         self.attrField = wx.grid.Grid(pn)
         self.attrField.CreateGrid(1, len(self.curManage.listPackageAttr()))
@@ -455,7 +456,7 @@ class AnalysisDemo(wx.Frame):
                     showstr = showstr + files + '\n'
                 self.codeField.SetValue(showstr)
             else:
-                if os.name == 'posix' and self.version != self.versionArray[0]:
+                if os.name == 'posix' and self.version.GetValue() != self.versionArray[0]:
                     self.codeField.SetValue(os.popen(r"diff --new-line-format='+%L' --old-line-format='-%L' --unchanged-line-format='%L' tomcat_files/"
                                                      + self.version.GetValue() + "/" + name + " tomcat_files/" + self.versionArray[self.versionSlider.GetValue() - 1]
                                                      + "/" + name).read())
@@ -571,6 +572,7 @@ class AnalysisDemo(wx.Frame):
                 self.pause = True
                 self.remove_lines()
                 self.step = self.step + self.stepdelta
+                self.draw_edges()
         return scat,
 
     def show_info(self, event):
@@ -594,9 +596,9 @@ class AnalysisDemo(wx.Frame):
             self.showDetails(nearest_point)
     
     def remove_lines(self):
-        while not self.plot_lines:
+        while self.plot_lines:
             l = self.plot_lines.pop(0)
-            l.remove
+            l.remove()
             del l
 
 def main():
